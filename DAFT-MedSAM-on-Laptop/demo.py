@@ -90,12 +90,17 @@ from inference import (filename_to_modelname, preprocess,
                        process_2d, process_3d)
 from evaluate  import file_dsc
 
-
+def get_best_device():
+    if torch.backends.mps.is_available():
+        return "mps"
+    if torch.cuda.is_available():
+        return "cuda"
+    return "cpu"
 # ===========================================================================
 # CONFIG
 # ===========================================================================
 
-DEVICE     = "cuda" if torch.cuda.is_available() else "cpu"
+DEVICE = get_best_device()
 GLOBAL_PTH = "checkpoints/global.pth"       # the downloaded model
 IMGS_DIR   = "data/test_imgs"
 GTS_DIR    = "data/test_gts"

@@ -45,7 +45,14 @@ import numpy as np
 import cv2
 import torch
 
+def get_best_device():
+    if torch.backends.mps.is_available():
+        return "mps"
+    if torch.cuda.is_available():
+        return "cuda"
+    return "cpu"
 from model import MedSAM
+
 
 
 # --- DAFT routing ---
@@ -329,8 +336,7 @@ def get_args():
                    help="Directory where prediction .npz files will be saved")
     p.add_argument("--ckpt_dir", default="checkpoints",
                    help="Root checkpoint directory (searched for specialist + global)")
-    p.add_argument("--device",
-                   default="cuda" if torch.cuda.is_available() else "cpu")
+    p.add_argument("--device", default=get_best_device())
     return p.parse_args()
 
 

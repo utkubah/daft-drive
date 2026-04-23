@@ -52,6 +52,12 @@ import matplotlib
 matplotlib.use("Agg")           # no display needed
 import matplotlib.pyplot as plt
 
+def get_best_device():
+    if torch.backends.mps.is_available():
+        return "mps"
+    if torch.cuda.is_available():
+        return "cuda"
+    return "cpu"
 from model   import MedSAM
 from dataset import MedSegDataset
 
@@ -131,8 +137,7 @@ def get_args():
     p.add_argument("--ce_weight",    type=float, default=1.0, help="BCE  loss weight")
     p.add_argument("--iou_weight",   type=float, default=1.0, help="IoU  loss weight")
     # --- device ---
-    p.add_argument("--device",
-                   default="cuda" if torch.cuda.is_available() else "cpu")
+    p.add_argument("--device", default=get_best_device())
     return p.parse_args()
 
 
