@@ -1,0 +1,26 @@
+# Model checkpoints (too large for GitHub -- share via HuggingFace)
+checkpoints/
+*.pth
+*.pt
+*.zip
+
+# Generated data (recreated by running demo.py)
+data/demo_combined/
+data/demo_train/
+data/demo_val/
+data/demo_preds/
+data/datasplit/demo_modalities/
+
+# Full training dataset (never commit -- too large)
+data/train/
+data/val/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
