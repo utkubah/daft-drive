@@ -22,12 +22,15 @@ DATA_DIR=/mnt/beegfsstudents/scratch_3223837/medsam-data
 source /software/miniconda3/etc/profile.d/conda.sh
 conda activate daft
 
+which gdown
+gdown --version
+
 mkdir -p $DATA_DIR
 cd $DATA_DIR
 
 echo "  Downloading training data to $DATA_DIR ..."
 # Source: https://drive.google.com/drive/folders/1LCux2WYYQC9Kh3JpX_kONs4pOyd43PjR
-gdown --folder 1LCux2WYYQC9Kh3JpX_kONs4pOyd43PjR --remaining-ok
+gdown --folder 1LCux2WYYQC9Kh3JpX_kONs4pOyd43PjR
 
 echo ""
 echo "  Done. Per-folder disk usage:"
