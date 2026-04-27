@@ -4,10 +4,10 @@
 #
 # Prerequisites:
 #   - conda env "daft" is set up (run hpc/setup_env.sh)
-#   - checkpoints/global.pth exists
-#   - data/datasplit/modalities/ CSVs exist (run prepare_data.py)
+#   - checkpoints/global/best.pth exists (run hpc/pretrain.sh first)
+#   - data/datasplit/modalities/ CSVs exist (built by pretrain.sh)
 #
-# Usage:  sbatch hpc/train_all.sh
+# Usage:  sbatch hpc/train_daft.sh
 #
 # Array index -> modality:
 #   0 Dermoscopy  1 Endoscopy  2 Fundus  3 Mammography  4 Microscopy
@@ -40,7 +40,7 @@ echo "  Training specialist: $MOD  (array task $SLURM_ARRAY_TASK_ID)"
 python train.py \
     --train_csv data/datasplit/modalities/${MOD}.train.csv \
     --val_csv   data/datasplit/modalities/${MOD}.val.csv   \
-    --weights   checkpoints/global.pth                     \
+    --weights   checkpoints/global/best.pth                \
     --name      ${MOD}                                     \
     --epochs    20                                         \
     --batch_size 8                                         \
