@@ -1,0 +1,1001 @@
+image_name,image_path,scene,scene_group,timeofday,weather,num_detections,has_drivable
+c07733d0-6b75a5ee.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c07733d0-6b75a5ee.jpg,highway,highway,daytime,partly cloudy,13,True
+b8b03ee1-9444cbd8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8b03ee1-9444cbd8.jpg,city street,city street,dawn/dusk,clear,34,True
+c94958a6-beac6097.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c94958a6-beac6097.jpg,city street,city street,daytime,clear,29,True
+b77a6ed6-5661f543.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b77a6ed6-5661f543.jpg,city street,city street,daytime,clear,35,True
+bbf29c70-20e48f5b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbf29c70-20e48f5b.jpg,city street,city street,daytime,clear,12,True
+bbd20d96-3f8c363a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbd20d96-3f8c363a.jpg,city street,city street,night,snowy,5,True
+c8c40f8e-73bfa1bb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8c40f8e-73bfa1bb.jpg,city street,city street,night,snowy,22,True
+c740132e-3c47b4b5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c740132e-3c47b4b5.jpg,city street,city street,night,clear,13,True
+c5c48d80-4204c6c7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5c48d80-4204c6c7.jpg,city street,city street,night,clear,28,True
+b9a8d20a-4c0028f7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9a8d20a-4c0028f7.jpg,city street,city street,night,clear,25,True
+b7ad4512-145bbccb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7ad4512-145bbccb.jpg,residential,residential,daytime,rainy,10,True
+bd4518ef-be6a7922.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd4518ef-be6a7922.jpg,city street,city street,dawn/dusk,overcast,15,True
+c57cda5b-7783c7cb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c57cda5b-7783c7cb.jpg,residential,residential,daytime,clear,4,True
+c57a466b-876d29df.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c57a466b-876d29df.jpg,city street,city street,night,clear,32,True
+c1f35f18-3c5f84a8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f35f18-3c5f84a8.jpg,city street,city street,night,clear,31,True
+b8fa884b-5cad0e15.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8fa884b-5cad0e15.jpg,city street,city street,daytime,undefined,27,True
+c4f65761-4cdc3348.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4f65761-4cdc3348.jpg,city street,city street,daytime,undefined,20,True
+c092eed0-3b36e79d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c092eed0-3b36e79d.jpg,residential,residential,daytime,overcast,21,True
+c09b6e1f-e23f6359.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c09b6e1f-e23f6359.jpg,city street,city street,daytime,undefined,41,True
+c42cd95d-d4b78e2d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c42cd95d-d4b78e2d.jpg,city street,city street,night,clear,19,True
+b674bc13-dceb1013.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b674bc13-dceb1013.jpg,highway,highway,night,rainy,7,True
+c447f74e-c458f6c5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c447f74e-c458f6c5.jpg,city street,city street,daytime,clear,12,True
+b4998daa-2074f0c8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4998daa-2074f0c8.jpg,city street,city street,night,clear,21,True
+bf668f9e-a12cb035.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf668f9e-a12cb035.jpg,residential,residential,daytime,clear,8,True
+c53986c1-a827a10a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c53986c1-a827a10a.jpg,city street,city street,daytime,snowy,21,True
+c174b1bd-4b33c65a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c174b1bd-4b33c65a.jpg,city street,city street,daytime,clear,11,True
+c02cb208-81964a07.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c02cb208-81964a07.jpg,city street,city street,daytime,overcast,19,True
+ba362b8d-2855bf4e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba362b8d-2855bf4e.jpg,highway,highway,daytime,undefined,16,True
+c82d6978-af07c78d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c82d6978-af07c78d.jpg,city street,city street,daytime,clear,32,True
+c0d1a6d9-54ae850d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0d1a6d9-54ae850d.jpg,city street,city street,daytime,overcast,35,True
+c1d9b74d-f9ebe548.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1d9b74d-f9ebe548.jpg,city street,city street,night,clear,20,True
+b5172858-da5e71cc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5172858-da5e71cc.jpg,city street,city street,night,rainy,19,True
+b48c7b5f-d1d94eaf.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b48c7b5f-d1d94eaf.jpg,highway,highway,daytime,clear,10,True
+b5b44d2d-60f87448.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5b44d2d-60f87448.jpg,city street,city street,daytime,clear,29,True
+bda35230-332be7ac.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bda35230-332be7ac.jpg,city street,city street,night,clear,15,True
+b6a1d94c-6e3fcf27.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6a1d94c-6e3fcf27.jpg,city street,city street,night,clear,7,True
+b59d9baf-5fe6c3c0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b59d9baf-5fe6c3c0.jpg,city street,city street,daytime,clear,30,True
+c7c042ec-4986a853.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7c042ec-4986a853.jpg,city street,city street,night,clear,12,True
+bfe0801e-20388316.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfe0801e-20388316.jpg,city street,city street,daytime,clear,12,True
+c81079a0-5816ae39.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c81079a0-5816ae39.jpg,city street,city street,daytime,clear,17,True
+c24ab4b6-3f1b1b45.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c24ab4b6-3f1b1b45.jpg,residential,residential,night,clear,13,True
+c20ae70f-fb4f0da6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c20ae70f-fb4f0da6.jpg,city street,city street,night,clear,4,True
+c752e922-ed300ef6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c752e922-ed300ef6.jpg,city street,city street,night,clear,22,True
+c43fe5b8-45b12c52.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c43fe5b8-45b12c52.jpg,highway,highway,daytime,overcast,12,True
+bd99da12-66a3321c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd99da12-66a3321c.jpg,city street,city street,night,clear,34,True
+bb185003-ebc11af9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb185003-ebc11af9.jpg,city street,city street,night,clear,24,True
+b6ffe7bd-fd52b51e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6ffe7bd-fd52b51e.jpg,city street,city street,night,clear,11,True
+c69d1519-f8c8bbe8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c69d1519-f8c8bbe8.jpg,highway,highway,night,clear,13,True
+c0fce69f-42d06912.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0fce69f-42d06912.jpg,residential,residential,daytime,undefined,20,True
+c30be28e-bc8fd997.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c30be28e-bc8fd997.jpg,city street,city street,night,rainy,10,True
+b69d5b1d-03bd6daa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b69d5b1d-03bd6daa.jpg,highway,highway,night,clear,20,True
+be10fa73-799d904b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be10fa73-799d904b.jpg,highway,highway,night,clear,12,True
+bbf2bd83-fb721687.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbf2bd83-fb721687.jpg,city street,city street,night,clear,16,True
+b249e7f2-92d2efad.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b249e7f2-92d2efad.jpg,highway,highway,night,clear,5,True
+bd686201-03e84da0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd686201-03e84da0.jpg,city street,city street,night,clear,11,True
+b20b69d2-ca16c907.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b20b69d2-ca16c907.jpg,highway,highway,daytime,clear,6,True
+b332df78-6765dddc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b332df78-6765dddc.jpg,residential,residential,dawn/dusk,clear,13,True
+c75c7c7c-8e13bb04.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c75c7c7c-8e13bb04.jpg,residential,residential,night,clear,15,True
+bc223780-e6658085.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc223780-e6658085.jpg,city street,city street,night,snowy,13,True
+c6bb8a0c-bdba1c5d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6bb8a0c-bdba1c5d.jpg,residential,residential,daytime,clear,6,True
+ca049e30-f0a8ccd4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca049e30-f0a8ccd4.jpg,city street,city street,night,clear,14,True
+c343e9dc-f2dcbc21.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c343e9dc-f2dcbc21.jpg,residential,residential,daytime,partly cloudy,5,True
+c2775fbb-7b8764dc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2775fbb-7b8764dc.jpg,highway,highway,daytime,overcast,12,True
+b71cef92-3492a923.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b71cef92-3492a923.jpg,tunnel,other,night,clear,10,True
+b3064012-5a01e51a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3064012-5a01e51a.jpg,residential,residential,daytime,clear,26,True
+b394dd7a-db2b62a1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b394dd7a-db2b62a1.jpg,city street,city street,dawn/dusk,clear,17,True
+c96ffe59-868ab1ed.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c96ffe59-868ab1ed.jpg,city street,city street,dawn/dusk,clear,8,True
+be8b8284-01e2400c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be8b8284-01e2400c.jpg,city street,city street,night,clear,18,True
+bd14a97d-cb209ed9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd14a97d-cb209ed9.jpg,residential,residential,night,clear,14,True
+c53c8bba-e8fa6bc6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c53c8bba-e8fa6bc6.jpg,residential,residential,daytime,overcast,23,True
+c48cfadb-fcbdaa65.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c48cfadb-fcbdaa65.jpg,highway,highway,daytime,partly cloudy,9,True
+c9a2a6db-a5b0a35d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9a2a6db-a5b0a35d.jpg,city street,city street,daytime,clear,23,True
+b82f91d7-808670c6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b82f91d7-808670c6.jpg,residential,residential,daytime,snowy,8,True
+be463595-34d59d57.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be463595-34d59d57.jpg,city street,city street,night,clear,21,True
+b26ba07a-2b68a502.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b26ba07a-2b68a502.jpg,city street,city street,night,clear,26,True
+c3787c5e-8a246457.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3787c5e-8a246457.jpg,residential,residential,daytime,undefined,17,True
+b678cf28-16eac9dc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b678cf28-16eac9dc.jpg,city street,city street,daytime,snowy,10,True
+c149583d-ba5e16cb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c149583d-ba5e16cb.jpg,city street,city street,night,clear,24,True
+bd7c460d-4a317a77.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd7c460d-4a317a77.jpg,highway,highway,daytime,overcast,5,True
+b216243d-ad4306b9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b216243d-ad4306b9.jpg,city street,city street,dawn/dusk,clear,13,True
+c65fad1e-d790b8ce.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c65fad1e-d790b8ce.jpg,highway,highway,night,clear,29,True
+bffa2c3f-b28b13ed.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bffa2c3f-b28b13ed.jpg,residential,residential,night,clear,18,True
+c37b9f20-e161a563.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c37b9f20-e161a563.jpg,city street,city street,daytime,clear,34,True
+c359e7b1-5b68aea4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c359e7b1-5b68aea4.jpg,highway,highway,dawn/dusk,rainy,17,True
+bff7ed18-63d4857d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bff7ed18-63d4857d.jpg,highway,highway,night,clear,11,True
+c48bcc55-fb68d6b7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c48bcc55-fb68d6b7.jpg,city street,city street,daytime,overcast,23,True
+c5792511-7e5cec42.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5792511-7e5cec42.jpg,city street,city street,night,clear,21,True
+c95f4860-7342216b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c95f4860-7342216b.jpg,highway,highway,dawn/dusk,clear,26,True
+bfbe2ad2-03a46467.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfbe2ad2-03a46467.jpg,city street,city street,night,rainy,19,True
+c96519fa-d85ac570.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c96519fa-d85ac570.jpg,residential,residential,night,clear,13,True
+b37f2b89-44772e64.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b37f2b89-44772e64.jpg,highway,highway,daytime,overcast,6,True
+c121f402-2e25ddb9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c121f402-2e25ddb9.jpg,city street,city street,night,clear,19,True
+b336bdb9-ed5d2cc3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b336bdb9-ed5d2cc3.jpg,city street,city street,daytime,rainy,25,True
+c49c8353-82bc1d4d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c49c8353-82bc1d4d.jpg,city street,city street,night,clear,27,True
+b568371d-a596d2d4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b568371d-a596d2d4.jpg,tunnel,other,undefined,undefined,5,True
+b3674f80-8070d692.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3674f80-8070d692.jpg,city street,city street,daytime,overcast,23,True
+c11fb0c4-16ba72ea.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c11fb0c4-16ba72ea.jpg,highway,highway,night,clear,7,True
+b583e115-1ba9114c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b583e115-1ba9114c.jpg,residential,residential,daytime,clear,16,True
+bb3be317-6db8a61d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb3be317-6db8a61d.jpg,city street,city street,night,clear,14,True
+c9f5283d-30641e3e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9f5283d-30641e3e.jpg,highway,highway,dawn/dusk,overcast,22,True
+bf482378-efc17f31.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf482378-efc17f31.jpg,highway,highway,night,clear,4,True
+c0d3128e-8adf0493.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0d3128e-8adf0493.jpg,highway,highway,daytime,clear,9,True
+c0625a26-fc1f04b9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0625a26-fc1f04b9.jpg,highway,highway,night,clear,21,True
+ba79a103-c606265f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba79a103-c606265f.jpg,city street,city street,dawn/dusk,clear,20,True
+b5465c6e-5bed4504.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5465c6e-5bed4504.jpg,city street,city street,night,clear,17,True
+b6f4b139-744f76c0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6f4b139-744f76c0.jpg,city street,city street,daytime,rainy,21,True
+be46639a-25990c25.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be46639a-25990c25.jpg,city street,city street,night,clear,12,True
+b9baae14-474c5be2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9baae14-474c5be2.jpg,city street,city street,daytime,overcast,21,True
+bef60eb6-b92e9131.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bef60eb6-b92e9131.jpg,highway,highway,night,clear,14,True
+b246c8e8-4dd36bfc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b246c8e8-4dd36bfc.jpg,residential,residential,night,snowy,4,True
+bb391d59-8c851310.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb391d59-8c851310.jpg,city street,city street,daytime,snowy,28,True
+c6406d76-b7b64e81.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6406d76-b7b64e81.jpg,residential,residential,daytime,undefined,14,True
+bf54973d-ad129b06.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf54973d-ad129b06.jpg,city street,city street,dawn/dusk,clear,32,True
+bb4fca33-75125e31.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb4fca33-75125e31.jpg,residential,residential,daytime,undefined,22,True
+b279bc06-4fa57251.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b279bc06-4fa57251.jpg,highway,highway,daytime,undefined,10,True
+b61212a0-44b799c0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b61212a0-44b799c0.jpg,city street,city street,dawn/dusk,clear,26,True
+c0da08cc-adbbb7b3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0da08cc-adbbb7b3.jpg,highway,highway,night,clear,24,True
+bef271e3-99f9020e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bef271e3-99f9020e.jpg,city street,city street,daytime,clear,12,True
+b90cbc2c-4f9a1c58.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b90cbc2c-4f9a1c58.jpg,city street,city street,night,clear,11,True
+b3121071-195ffbf7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3121071-195ffbf7.jpg,city street,city street,night,snowy,6,True
+bf601f23-a680411c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf601f23-a680411c.jpg,residential,residential,daytime,partly cloudy,18,True
+bc67b362-fb6767aa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc67b362-fb6767aa.jpg,highway,highway,daytime,clear,15,True
+bf568d39-2bac1d09.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf568d39-2bac1d09.jpg,city street,city street,daytime,clear,24,True
+c413a89b-fb60c163.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c413a89b-fb60c163.jpg,city street,city street,dawn/dusk,overcast,12,True
+bd95af88-2228e86b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd95af88-2228e86b.jpg,residential,residential,daytime,overcast,27,True
+b843ef1b-2756a85d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b843ef1b-2756a85d.jpg,highway,highway,daytime,clear,11,True
+b93942f9-ff411dce.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b93942f9-ff411dce.jpg,highway,highway,night,clear,7,True
+c5b6c311-c7351dcf.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5b6c311-c7351dcf.jpg,city street,city street,night,clear,17,True
+c0e834fd-74036e84.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0e834fd-74036e84.jpg,city street,city street,daytime,overcast,25,True
+ca177f63-6cb08f25.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca177f63-6cb08f25.jpg,city street,city street,daytime,clear,27,True
+c3719317-3ea7c35e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3719317-3ea7c35e.jpg,city street,city street,night,clear,33,True
+c9aa50be-62caa81b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9aa50be-62caa81b.jpg,city street,city street,daytime,clear,43,True
+b6d2717a-d8d1bc0c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6d2717a-d8d1bc0c.jpg,highway,highway,night,clear,10,True
+c3ba4a87-4d02b5ab.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3ba4a87-4d02b5ab.jpg,city street,city street,night,clear,9,True
+b9fc97df-9b839325.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9fc97df-9b839325.jpg,city street,city street,dawn/dusk,rainy,16,True
+c88f9916-2a874e4d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c88f9916-2a874e4d.jpg,city street,city street,night,clear,17,True
+b6e683d2-84d2dfbf.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6e683d2-84d2dfbf.jpg,city street,city street,daytime,overcast,20,True
+b3e0345b-20d013f8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3e0345b-20d013f8.jpg,highway,highway,daytime,clear,12,True
+c993615f-768a9187.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c993615f-768a9187.jpg,residential,residential,daytime,overcast,5,True
+c540a708-e532e378.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c540a708-e532e378.jpg,highway,highway,night,clear,14,True
+c3a26429-70b45205.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3a26429-70b45205.jpg,highway,highway,daytime,clear,8,True
+c6ef5bc4-96451c0f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6ef5bc4-96451c0f.jpg,highway,highway,night,clear,5,True
+c332a2f5-ee258489.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c332a2f5-ee258489.jpg,highway,highway,daytime,partly cloudy,14,True
+bb9071ac-4ee8ed8c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb9071ac-4ee8ed8c.jpg,city street,city street,daytime,clear,51,True
+c2f3e924-031246d8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2f3e924-031246d8.jpg,highway,highway,daytime,overcast,19,True
+c8478dfd-74b4ed62.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8478dfd-74b4ed62.jpg,city street,city street,dawn/dusk,clear,36,True
+ba1ab927-a44a701b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba1ab927-a44a701b.jpg,city street,city street,night,snowy,12,True
+b6ea0cd9-aa1cbdf5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6ea0cd9-aa1cbdf5.jpg,city street,city street,night,clear,15,True
+bcf7f6b9-88bfed8f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcf7f6b9-88bfed8f.jpg,highway,highway,daytime,clear,39,True
+c1c8cf02-3ada98f8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1c8cf02-3ada98f8.jpg,highway,highway,dawn/dusk,overcast,7,True
+bcbc98a8-a22cb67b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcbc98a8-a22cb67b.jpg,city street,city street,night,clear,15,True
+c3dde797-f180bf54.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3dde797-f180bf54.jpg,residential,residential,dawn/dusk,overcast,9,True
+c327ace4-f06a47fc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c327ace4-f06a47fc.jpg,parking lot,other,daytime,overcast,8,True
+c2e9a1b8-e631ecd9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2e9a1b8-e631ecd9.jpg,city street,city street,night,clear,8,True
+c81ff2c0-6243618f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c81ff2c0-6243618f.jpg,highway,highway,night,rainy,8,True
+c459408e-3dd887d7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c459408e-3dd887d7.jpg,city street,city street,daytime,undefined,31,True
+c055ff34-c10a74d4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c055ff34-c10a74d4.jpg,city street,city street,daytime,rainy,16,True
+c837d2ef-25f73789.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c837d2ef-25f73789.jpg,city street,city street,daytime,clear,19,True
+c730a403-03ecee1b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c730a403-03ecee1b.jpg,highway,highway,daytime,undefined,24,True
+bcbbfd82-bcc937d0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcbbfd82-bcc937d0.jpg,city street,city street,night,clear,30,True
+ca297f76-c2ce18f5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca297f76-c2ce18f5.jpg,residential,residential,night,clear,32,True
+bb3bb8c0-89d55028.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb3bb8c0-89d55028.jpg,city street,city street,night,snowy,27,True
+c146d100-c0e4da58.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c146d100-c0e4da58.jpg,city street,city street,daytime,partly cloudy,7,True
+bc05da8e-e0eda9bd.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc05da8e-e0eda9bd.jpg,city street,city street,daytime,undefined,26,True
+c179d309-bbf612b9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c179d309-bbf612b9.jpg,city street,city street,dawn/dusk,rainy,11,True
+c7a1b520-811842d8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7a1b520-811842d8.jpg,city street,city street,night,clear,12,True
+bf1e5669-e6da49f2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf1e5669-e6da49f2.jpg,highway,highway,night,undefined,9,True
+bb2c5719-1244dd67.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb2c5719-1244dd67.jpg,city street,city street,daytime,rainy,10,True
+c155d65b-2d961d55.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c155d65b-2d961d55.jpg,city street,city street,daytime,undefined,15,True
+c7d564fe-7c51e3a3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7d564fe-7c51e3a3.jpg,city street,city street,daytime,clear,40,True
+c41ae6bb-8973ad18.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c41ae6bb-8973ad18.jpg,city street,city street,daytime,undefined,25,True
+bd60d984-66b1a49f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd60d984-66b1a49f.jpg,city street,city street,night,clear,16,True
+c6af6422-ca528e3b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6af6422-ca528e3b.jpg,city street,city street,daytime,undefined,11,True
+bb8f6c9a-e2c6dc5a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb8f6c9a-e2c6dc5a.jpg,highway,highway,night,rainy,14,True
+c0775b6f-de6addd1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0775b6f-de6addd1.jpg,city street,city street,night,clear,26,True
+bf6fda4e-0a49960f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf6fda4e-0a49960f.jpg,city street,city street,night,clear,8,True
+ba8c90a0-b82731e9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba8c90a0-b82731e9.jpg,city street,city street,daytime,clear,26,True
+c0e8b725-a6daa3a3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0e8b725-a6daa3a3.jpg,city street,city street,daytime,undefined,18,True
+c3ad67db-0e969ba8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3ad67db-0e969ba8.jpg,city street,city street,night,clear,9,True
+bd4a61fd-fb447d72.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd4a61fd-fb447d72.jpg,city street,city street,night,clear,24,True
+c962949b-dddd40b2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c962949b-dddd40b2.jpg,highway,highway,daytime,clear,6,True
+b95c97a9-48663434.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b95c97a9-48663434.jpg,highway,highway,night,rainy,18,True
+b398327e-f873cb8b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b398327e-f873cb8b.jpg,city street,city street,daytime,clear,7,True
+b988086f-caed8036.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b988086f-caed8036.jpg,city street,city street,night,clear,33,True
+bef7c739-c71a55d9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bef7c739-c71a55d9.jpg,city street,city street,night,snowy,25,True
+b48dd7b4-6462b6f7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b48dd7b4-6462b6f7.jpg,highway,highway,night,clear,16,True
+c82b8f6c-b7c57473.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c82b8f6c-b7c57473.jpg,city street,city street,dawn/dusk,clear,10,True
+c237ce66-cf2860b7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c237ce66-cf2860b7.jpg,highway,highway,night,clear,12,True
+c3ae39d6-f5f25d64.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3ae39d6-f5f25d64.jpg,city street,city street,daytime,snowy,28,True
+b5465c6e-b2fb645f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5465c6e-b2fb645f.jpg,residential,residential,night,clear,21,True
+b24d283f-33783d1b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b24d283f-33783d1b.jpg,city street,city street,daytime,overcast,22,True
+b3488ceb-84e6ade1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3488ceb-84e6ade1.jpg,highway,highway,daytime,overcast,26,True
+c54ec43c-1aa7875b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c54ec43c-1aa7875b.jpg,city street,city street,daytime,partly cloudy,29,True
+bbc06e30-aba95b88.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbc06e30-aba95b88.jpg,highway,highway,night,clear,8,True
+bb269a85-bd43ab11.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb269a85-bd43ab11.jpg,undefined,other,dawn/dusk,snowy,6,True
+c6864b90-498a3912.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6864b90-498a3912.jpg,city street,city street,daytime,overcast,6,True
+b979b89c-d7e084b9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b979b89c-d7e084b9.jpg,city street,city street,night,clear,26,True
+c928749e-62bc39dd.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c928749e-62bc39dd.jpg,residential,residential,daytime,clear,17,True
+c0bbcd5e-e207560d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0bbcd5e-e207560d.jpg,city street,city street,night,clear,21,True
+c7955e20-a156a983.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7955e20-a156a983.jpg,residential,residential,daytime,clear,10,True
+b855a117-5b67fec3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b855a117-5b67fec3.jpg,city street,city street,dawn/dusk,partly cloudy,24,True
+b851c0af-7345afd1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b851c0af-7345afd1.jpg,city street,city street,night,clear,5,True
+b6b9069a-5417277d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6b9069a-5417277d.jpg,residential,residential,night,clear,21,True
+b6769965-61689289.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6769965-61689289.jpg,city street,city street,night,clear,19,True
+c4160d08-c506293d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4160d08-c506293d.jpg,residential,residential,daytime,overcast,10,True
+b98bd627-8593fa24.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b98bd627-8593fa24.jpg,highway,highway,night,clear,12,True
+c0924681-14dd2682.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0924681-14dd2682.jpg,city street,city street,daytime,partly cloudy,17,True
+c8ef6dea-eea7d4cd.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8ef6dea-eea7d4cd.jpg,highway,highway,daytime,undefined,11,True
+bb198c24-c5d65870.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb198c24-c5d65870.jpg,residential,residential,night,clear,18,True
+bb9071ac-eb6e330c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb9071ac-eb6e330c.jpg,city street,city street,daytime,clear,36,True
+b93e2268-2106a029.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b93e2268-2106a029.jpg,residential,residential,daytime,undefined,8,True
+b23fe89b-c704fe97.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b23fe89b-c704fe97.jpg,highway,highway,night,clear,10,True
+c7894612-eab9f189.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7894612-eab9f189.jpg,highway,highway,night,clear,18,True
+c1dc5cd2-0fd8be03.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1dc5cd2-0fd8be03.jpg,city street,city street,night,clear,28,True
+b29f09ea-911177ce.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b29f09ea-911177ce.jpg,city street,city street,night,clear,24,True
+b42acb4c-ac2e0180.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b42acb4c-ac2e0180.jpg,city street,city street,night,clear,6,True
+c5dee1e2-e17da4f5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5dee1e2-e17da4f5.jpg,city street,city street,daytime,rainy,11,True
+c2841851-644a8cfe.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2841851-644a8cfe.jpg,highway,highway,daytime,overcast,8,True
+bf3ce441-1f58c6c7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf3ce441-1f58c6c7.jpg,highway,highway,daytime,partly cloudy,17,True
+c0625a26-cd00b6b6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0625a26-cd00b6b6.jpg,city street,city street,night,clear,14,True
+c07ceafc-6060ff3e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c07ceafc-6060ff3e.jpg,city street,city street,daytime,undefined,45,True
+c122b0dd-6aea2ae9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c122b0dd-6aea2ae9.jpg,city street,city street,night,clear,6,True
+c878b7e1-a736922b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c878b7e1-a736922b.jpg,city street,city street,daytime,rainy,17,True
+c5cbe746-95cc81dc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5cbe746-95cc81dc.jpg,residential,residential,daytime,overcast,7,True
+b266429a-ac0c4ed3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b266429a-ac0c4ed3.jpg,city street,city street,night,undefined,16,True
+ca3736db-cd087585.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca3736db-cd087585.jpg,city street,city street,daytime,clear,29,True
+b9bafa5a-758fc13c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9bafa5a-758fc13c.jpg,city street,city street,night,clear,12,True
+b56c225e-83596ac0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b56c225e-83596ac0.jpg,highway,highway,daytime,partly cloudy,16,True
+bf972758-b963f153.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf972758-b963f153.jpg,city street,city street,daytime,snowy,10,True
+be10fa73-da2fa32f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be10fa73-da2fa32f.jpg,city street,city street,night,clear,14,True
+c0c9ec9a-d3638a82.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0c9ec9a-d3638a82.jpg,city street,city street,daytime,clear,19,True
+c98c1005-1a53d7d2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c98c1005-1a53d7d2.jpg,city street,city street,daytime,partly cloudy,34,True
+b48eb8a9-6e9beea8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b48eb8a9-6e9beea8.jpg,city street,city street,daytime,partly cloudy,23,True
+c1f917f7-49fe8032.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f917f7-49fe8032.jpg,residential,residential,night,clear,20,True
+c1f8d9b3-438f46c3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f8d9b3-438f46c3.jpg,city street,city street,night,clear,6,True
+ba5516aa-14ba6efa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba5516aa-14ba6efa.jpg,highway,highway,daytime,undefined,10,True
+c21d47dc-fd0bdc45.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c21d47dc-fd0bdc45.jpg,city street,city street,daytime,undefined,20,True
+c3ce46d8-9ca61ff7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3ce46d8-9ca61ff7.jpg,city street,city street,night,clear,10,True
+bcfdd6af-698c03e3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcfdd6af-698c03e3.jpg,parking lot,other,daytime,snowy,24,True
+ca1a92b5-4677f24c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca1a92b5-4677f24c.jpg,city street,city street,night,snowy,8,True
+c030d423-f82b1a39.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c030d423-f82b1a39.jpg,city street,city street,night,rainy,9,True
+bab52aba-0b87a64b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bab52aba-0b87a64b.jpg,city street,city street,night,clear,33,True
+b27688b6-1af27060.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b27688b6-1af27060.jpg,highway,highway,daytime,undefined,6,True
+b6c6e6fe-f325bc62.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6c6e6fe-f325bc62.jpg,city street,city street,night,clear,28,True
+bfb23820-94babfba.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfb23820-94babfba.jpg,city street,city street,daytime,overcast,29,True
+b39572b6-aa95db3d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b39572b6-aa95db3d.jpg,city street,city street,daytime,undefined,15,True
+c72762cc-135927f8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c72762cc-135927f8.jpg,city street,city street,night,clear,15,True
+bfaa6e54-07a6b37f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfaa6e54-07a6b37f.jpg,city street,city street,daytime,undefined,20,True
+c1a99e5b-fc88d6a2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1a99e5b-fc88d6a2.jpg,city street,city street,daytime,undefined,22,True
+c80451c9-1a7b2854.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c80451c9-1a7b2854.jpg,city street,city street,daytime,undefined,28,True
+b4860efe-127bd880.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4860efe-127bd880.jpg,city street,city street,daytime,overcast,9,True
+c43a3013-05a252d3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c43a3013-05a252d3.jpg,highway,highway,daytime,partly cloudy,9,True
+c439e607-c03383c7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c439e607-c03383c7.jpg,highway,highway,daytime,clear,9,True
+b64e7cbc-d7dba7f9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b64e7cbc-d7dba7f9.jpg,residential,residential,dawn/dusk,rainy,13,True
+c1c8b782-bd19a1f1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1c8b782-bd19a1f1.jpg,city street,city street,night,clear,20,True
+c7a350a0-cbbae3f7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7a350a0-cbbae3f7.jpg,residential,residential,daytime,rainy,19,True
+ca1b1f3e-64dd9b2a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca1b1f3e-64dd9b2a.jpg,city street,city street,daytime,snowy,37,True
+bc715fc7-41291987.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc715fc7-41291987.jpg,city street,city street,night,clear,31,True
+bd239c09-07398e07.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd239c09-07398e07.jpg,city street,city street,night,clear,26,True
+c9d6a839-f66aaace.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9d6a839-f66aaace.jpg,city street,city street,daytime,undefined,28,True
+bec7b5c0-43e0242a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bec7b5c0-43e0242a.jpg,city street,city street,daytime,undefined,10,True
+b803d91d-ff86709c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b803d91d-ff86709c.jpg,city street,city street,daytime,snowy,26,True
+bb0dced8-7c117b8e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb0dced8-7c117b8e.jpg,city street,city street,night,rainy,19,True
+c1a5825c-b8528fc1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1a5825c-b8528fc1.jpg,city street,city street,night,snowy,26,True
+b2bdb7b6-137acb11.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2bdb7b6-137acb11.jpg,city street,city street,dawn/dusk,clear,42,True
+c239ab3d-61c3912f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c239ab3d-61c3912f.jpg,city street,city street,dawn/dusk,overcast,19,True
+bafcc992-dcddfe75.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bafcc992-dcddfe75.jpg,city street,city street,dawn/dusk,rainy,11,True
+b7a8e795-779e8c02.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7a8e795-779e8c02.jpg,city street,city street,daytime,partly cloudy,27,True
+c8ed27d0-7debfc0f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8ed27d0-7debfc0f.jpg,city street,city street,daytime,undefined,19,True
+c8c34ebe-07e082be.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8c34ebe-07e082be.jpg,residential,residential,night,clear,26,True
+c5a0ad25-ce65688e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5a0ad25-ce65688e.jpg,city street,city street,daytime,undefined,30,True
+ca0de85e-53bdd171.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca0de85e-53bdd171.jpg,city street,city street,night,clear,10,True
+b6658d33-e6bc8c60.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6658d33-e6bc8c60.jpg,city street,city street,night,clear,26,True
+bdbd6b9f-c0f31952.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bdbd6b9f-c0f31952.jpg,city street,city street,night,clear,13,True
+be52b29f-3c297726.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be52b29f-3c297726.jpg,highway,highway,night,clear,16,True
+c4327604-039da856.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4327604-039da856.jpg,city street,city street,night,clear,16,True
+b3339cd5-06f84bb3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3339cd5-06f84bb3.jpg,residential,residential,daytime,clear,20,True
+bd46953e-3f51d76e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd46953e-3f51d76e.jpg,city street,city street,daytime,overcast,23,True
+b52949cd-2439cac6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b52949cd-2439cac6.jpg,highway,highway,night,clear,5,True
+be52b29f-aa3b290b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be52b29f-aa3b290b.jpg,city street,city street,night,clear,17,True
+c9c4d608-be7ef06b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9c4d608-be7ef06b.jpg,city street,city street,daytime,undefined,43,True
+b6f40904-693d5d3d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6f40904-693d5d3d.jpg,residential,residential,daytime,overcast,17,True
+bcb441fc-a88da923.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcb441fc-a88da923.jpg,city street,city street,night,rainy,7,True
+b91dd730-8e0a1a8f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b91dd730-8e0a1a8f.jpg,highway,highway,night,clear,7,True
+b26ba07a-38f78442.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b26ba07a-38f78442.jpg,highway,highway,night,rainy,14,True
+c7648772-e661b276.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7648772-e661b276.jpg,highway,highway,night,clear,7,True
+bb99dc60-942f3785.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb99dc60-942f3785.jpg,city street,city street,daytime,partly cloudy,20,True
+bde0caa6-d7d428b5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bde0caa6-d7d428b5.jpg,residential,residential,daytime,clear,15,True
+b9d34460-40ed613e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9d34460-40ed613e.jpg,residential,residential,daytime,rainy,16,True
+bdd3c8b3-ff26c094.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bdd3c8b3-ff26c094.jpg,city street,city street,night,clear,17,True
+b245e52e-0a0e4e69.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b245e52e-0a0e4e69.jpg,highway,highway,daytime,clear,9,True
+c8111dda-1a7dded7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8111dda-1a7dded7.jpg,city street,city street,daytime,partly cloudy,9,True
+c503f2e8-55cc08bf.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c503f2e8-55cc08bf.jpg,city street,city street,daytime,clear,21,True
+c4e96efa-94aad2be.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4e96efa-94aad2be.jpg,highway,highway,daytime,rainy,11,True
+c1d4499d-c5dd6747.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1d4499d-c5dd6747.jpg,city street,city street,daytime,undefined,18,True
+b8a135c9-3cbeb1c8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8a135c9-3cbeb1c8.jpg,residential,residential,night,snowy,21,True
+b3899bec-df46f67b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3899bec-df46f67b.jpg,highway,highway,daytime,clear,8,True
+ba5df354-db132aac.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba5df354-db132aac.jpg,residential,residential,daytime,clear,8,True
+bd5bb58b-7087c7f3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd5bb58b-7087c7f3.jpg,city street,city street,night,clear,17,True
+c147e8f1-d78d168a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c147e8f1-d78d168a.jpg,city street,city street,night,rainy,9,True
+c308561a-0b199e0a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c308561a-0b199e0a.jpg,city street,city street,daytime,overcast,31,True
+ba64e51b-f88ab62e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba64e51b-f88ab62e.jpg,city street,city street,daytime,undefined,20,True
+be731030-c29affd6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be731030-c29affd6.jpg,highway,highway,daytime,partly cloudy,21,True
+b40476bc-1397121a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b40476bc-1397121a.jpg,city street,city street,daytime,snowy,13,True
+c41b6f56-ac54b332.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c41b6f56-ac54b332.jpg,residential,residential,night,clear,10,True
+b35c8e3d-439b1b23.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b35c8e3d-439b1b23.jpg,highway,highway,night,clear,15,True
+c47d8d11-30ed3058.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c47d8d11-30ed3058.jpg,residential,residential,daytime,overcast,19,True
+b87ca2c5-c3c6e7ce.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b87ca2c5-c3c6e7ce.jpg,residential,residential,daytime,overcast,23,True
+bbc9db98-4a7fb607.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbc9db98-4a7fb607.jpg,residential,residential,daytime,clear,23,True
+b78cb53c-14d14771.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b78cb53c-14d14771.jpg,residential,residential,daytime,undefined,27,True
+b2bceb54-0b1f3332.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2bceb54-0b1f3332.jpg,city street,city street,daytime,rainy,10,True
+ba7279cd-c80768c3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba7279cd-c80768c3.jpg,city street,city street,night,clear,7,True
+b1f4491b-09593e90.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b1f4491b-09593e90.jpg,city street,city street,undefined,undefined,4,True
+bc4fb79c-561bbfc5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc4fb79c-561bbfc5.jpg,city street,city street,daytime,undefined,27,True
+c7ad303b-6381dac9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7ad303b-6381dac9.jpg,city street,city street,daytime,partly cloudy,33,True
+c7aa5575-09247466.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7aa5575-09247466.jpg,city street,city street,night,clear,10,True
+ca08d93c-c406e9aa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca08d93c-c406e9aa.jpg,highway,highway,night,clear,15,True
+b46009c2-72be5f8b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b46009c2-72be5f8b.jpg,highway,highway,night,clear,16,True
+b44f7365-beb4d3e7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b44f7365-beb4d3e7.jpg,highway,highway,daytime,partly cloudy,20,True
+c4742900-c0e2297d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4742900-c0e2297d.jpg,residential,residential,night,clear,4,True
+c13b9590-492e626a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c13b9590-492e626a.jpg,city street,city street,night,clear,20,True
+bc5fadac-96776d48.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc5fadac-96776d48.jpg,highway,highway,daytime,clear,14,True
+b9c11ffc-8c6c2eb0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9c11ffc-8c6c2eb0.jpg,city street,city street,night,clear,21,True
+b7ada391-dd104c12.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7ada391-dd104c12.jpg,highway,highway,night,clear,7,True
+c96299f2-8e89da2c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c96299f2-8e89da2c.jpg,city street,city street,night,rainy,15,True
+c9c9235f-c15e8390.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9c9235f-c15e8390.jpg,highway,highway,night,clear,6,True
+b535fb0a-845db498.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b535fb0a-845db498.jpg,city street,city street,daytime,undefined,39,True
+c06d23aa-c38fa368.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c06d23aa-c38fa368.jpg,city street,city street,night,snowy,22,True
+bcef3e08-9d61dcb5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcef3e08-9d61dcb5.jpg,city street,city street,night,clear,16,True
+bca3720a-93049dc4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bca3720a-93049dc4.jpg,city street,city street,night,clear,6,True
+c5c1956a-f18fba95.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5c1956a-f18fba95.jpg,residential,residential,daytime,undefined,21,True
+ba01e424-d3effc2d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba01e424-d3effc2d.jpg,city street,city street,daytime,undefined,56,True
+b7d34a28-7404150e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7d34a28-7404150e.jpg,city street,city street,night,clear,14,True
+c1b16eee-d45c1777.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1b16eee-d45c1777.jpg,city street,city street,daytime,rainy,8,True
+b8b3e840-06f018d3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8b3e840-06f018d3.jpg,city street,city street,daytime,overcast,23,True
+c92aeef7-9bdd3e46.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c92aeef7-9bdd3e46.jpg,highway,highway,dawn/dusk,clear,28,True
+beeaded5-ab8d8f4b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/beeaded5-ab8d8f4b.jpg,city street,city street,night,clear,22,True
+ba31ed47-117c074b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba31ed47-117c074b.jpg,city street,city street,daytime,clear,32,True
+bbf3d83d-1a478458.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbf3d83d-1a478458.jpg,city street,city street,night,clear,9,True
+b5478d5c-290f5e15.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5478d5c-290f5e15.jpg,city street,city street,daytime,partly cloudy,22,True
+c29976d5-c811d4fc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c29976d5-c811d4fc.jpg,residential,residential,night,clear,8,True
+c963d910-fa6c706d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c963d910-fa6c706d.jpg,highway,highway,daytime,partly cloudy,7,True
+b24380ab-63272e5a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b24380ab-63272e5a.jpg,city street,city street,night,clear,12,True
+b55c17aa-b31ce64a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b55c17aa-b31ce64a.jpg,highway,highway,night,clear,15,True
+b75ed92c-c9116263.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b75ed92c-c9116263.jpg,highway,highway,night,clear,9,True
+b577827c-006a84cc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b577827c-006a84cc.jpg,residential,residential,daytime,undefined,24,True
+c2fd4d4f-220a401d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2fd4d4f-220a401d.jpg,city street,city street,daytime,snowy,5,True
+bedd1376-60cdb96b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bedd1376-60cdb96b.jpg,highway,highway,daytime,snowy,30,True
+c3e067a4-535a9b93.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3e067a4-535a9b93.jpg,city street,city street,night,clear,14,True
+be307493-2750cf96.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be307493-2750cf96.jpg,highway,highway,night,clear,11,True
+b77dc345-d1f9b91c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b77dc345-d1f9b91c.jpg,city street,city street,daytime,overcast,24,True
+bf9e3b67-2d5736bc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf9e3b67-2d5736bc.jpg,city street,city street,daytime,undefined,18,True
+c65f7702-979ab570.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c65f7702-979ab570.jpg,city street,city street,dawn/dusk,overcast,23,True
+c5b2506d-a03619f7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5b2506d-a03619f7.jpg,city street,city street,daytime,rainy,12,True
+c1a479d9-e8ee7bae.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1a479d9-e8ee7bae.jpg,city street,city street,night,clear,14,True
+b2bee3e1-915eb541.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2bee3e1-915eb541.jpg,residential,residential,daytime,overcast,8,True
+c464c963-fbf300ba.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c464c963-fbf300ba.jpg,residential,residential,daytime,snowy,21,True
+c91d0862-eb747701.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c91d0862-eb747701.jpg,city street,city street,daytime,undefined,37,True
+bff7091d-346e6f58.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bff7091d-346e6f58.jpg,city street,city street,daytime,clear,3,True
+b7719f1d-e6e580dd.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7719f1d-e6e580dd.jpg,highway,highway,daytime,partly cloudy,21,True
+c155d65b-01ae7aac.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c155d65b-01ae7aac.jpg,city street,city street,daytime,undefined,36,True
+c7c2a783-260d7aad.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7c2a783-260d7aad.jpg,highway,highway,daytime,partly cloudy,33,True
+c1a479d9-0f8f9f4f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1a479d9-0f8f9f4f.jpg,highway,highway,night,clear,12,True
+c1947e09-4ec75b70.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1947e09-4ec75b70.jpg,highway,highway,night,rainy,15,True
+c44a5b51-6bfcec78.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c44a5b51-6bfcec78.jpg,highway,highway,night,clear,15,True
+b57c8f5a-b427a4b7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b57c8f5a-b427a4b7.jpg,city street,city street,night,clear,20,True
+ca25cf74-7cb42159.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca25cf74-7cb42159.jpg,city street,city street,daytime,rainy,17,True
+bcaf73c1-48814a50.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcaf73c1-48814a50.jpg,city street,city street,night,clear,12,True
+c6ad7737-9c7f7e4e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6ad7737-9c7f7e4e.jpg,residential,residential,night,clear,6,True
+b74111eb-d21a119b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b74111eb-d21a119b.jpg,city street,city street,daytime,clear,50,True
+b7f452e4-1e8b6f3a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7f452e4-1e8b6f3a.jpg,highway,highway,daytime,clear,7,True
+bebd2415-30a87543.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bebd2415-30a87543.jpg,highway,highway,night,clear,22,True
+c096103a-665e307e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c096103a-665e307e.jpg,residential,residential,daytime,overcast,15,True
+bea82122-66fc59a4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bea82122-66fc59a4.jpg,city street,city street,daytime,clear,54,True
+c9ca4c6c-4c9db372.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9ca4c6c-4c9db372.jpg,highway,highway,daytime,partly cloudy,18,True
+bb46a3b5-6fb47078.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb46a3b5-6fb47078.jpg,city street,city street,daytime,rainy,29,True
+bfa5fc6e-e4c87cf7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfa5fc6e-e4c87cf7.jpg,parking lot,other,daytime,overcast,17,True
+c9312bb0-95b57597.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9312bb0-95b57597.jpg,city street,city street,night,clear,10,True
+bd51fb57-fee52768.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd51fb57-fee52768.jpg,city street,city street,night,clear,31,True
+c1617c3b-c295ec43.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1617c3b-c295ec43.jpg,highway,highway,daytime,rainy,6,True
+c10838df-720662b5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c10838df-720662b5.jpg,city street,city street,daytime,clear,14,True
+b2eed8fa-2694b15d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2eed8fa-2694b15d.jpg,highway,highway,night,clear,12,True
+b5dd8a5f-ef468c83.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5dd8a5f-ef468c83.jpg,city street,city street,night,clear,4,True
+c0677163-b0154931.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0677163-b0154931.jpg,city street,city street,daytime,overcast,11,True
+b4475526-2f0bca11.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4475526-2f0bca11.jpg,residential,residential,daytime,undefined,12,True
+bb7792f1-83be8b82.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb7792f1-83be8b82.jpg,city street,city street,dawn/dusk,clear,60,True
+c25d979a-8467d479.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c25d979a-8467d479.jpg,city street,city street,night,clear,8,True
+b7fc87bf-8ac3359e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7fc87bf-8ac3359e.jpg,highway,highway,dawn/dusk,partly cloudy,4,True
+b79c1f8d-f34cbff5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b79c1f8d-f34cbff5.jpg,highway,highway,dawn/dusk,clear,10,True
+ba3f4265-d8adfa71.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba3f4265-d8adfa71.jpg,highway,highway,night,clear,8,True
+c6338e17-c0df8fbe.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6338e17-c0df8fbe.jpg,city street,city street,night,clear,17,True
+c94d86ee-e18fa7ec.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c94d86ee-e18fa7ec.jpg,city street,city street,night,rainy,9,True
+b4253085-85838593.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4253085-85838593.jpg,city street,city street,night,clear,15,True
+c561cb9a-aafc0bad.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c561cb9a-aafc0bad.jpg,city street,city street,daytime,overcast,33,True
+c00cc83c-a6a9ce44.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c00cc83c-a6a9ce44.jpg,city street,city street,dawn/dusk,overcast,30,True
+c179d309-59d431e7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c179d309-59d431e7.jpg,city street,city street,daytime,rainy,35,True
+c845b617-f7e6bd96.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c845b617-f7e6bd96.jpg,city street,city street,daytime,rainy,19,True
+b1ceb32e-a106591d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b1ceb32e-a106591d.jpg,city street,city street,daytime,overcast,21,True
+b4235ab3-a1c929ae.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4235ab3-a1c929ae.jpg,highway,highway,night,clear,12,True
+b62bef56-29a2dde5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b62bef56-29a2dde5.jpg,city street,city street,night,clear,23,True
+b7789d1a-92fe7627.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7789d1a-92fe7627.jpg,city street,city street,daytime,undefined,27,True
+baa9acbe-f3af19f6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/baa9acbe-f3af19f6.jpg,city street,city street,night,clear,16,True
+c1392188-10227871.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1392188-10227871.jpg,city street,city street,night,clear,16,True
+c776d10b-6732b55c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c776d10b-6732b55c.jpg,city street,city street,daytime,clear,22,True
+c1f39934-077f75ad.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f39934-077f75ad.jpg,city street,city street,daytime,undefined,14,True
+c5fd03fa-70ea30f9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5fd03fa-70ea30f9.jpg,city street,city street,night,clear,22,True
+b4ca8154-8453f431.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4ca8154-8453f431.jpg,city street,city street,daytime,partly cloudy,15,True
+c9a2b46c-e2f795a7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9a2b46c-e2f795a7.jpg,highway,highway,night,clear,15,True
+b20b69d2-ffc1d6af.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b20b69d2-ffc1d6af.jpg,residential,residential,daytime,clear,10,True
+bbc06e30-134b08d2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbc06e30-134b08d2.jpg,city street,city street,night,clear,17,True
+c094413f-30199e1f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c094413f-30199e1f.jpg,city street,city street,daytime,partly cloudy,29,True
+b7bcc17a-8838a45e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7bcc17a-8838a45e.jpg,highway,highway,night,clear,17,True
+c86c1d47-6c425e8f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c86c1d47-6c425e8f.jpg,highway,highway,dawn/dusk,clear,16,True
+c177a543-86fc2f32.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c177a543-86fc2f32.jpg,city street,city street,night,clear,12,True
+ba8b1e05-8ec0219a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba8b1e05-8ec0219a.jpg,city street,city street,night,clear,33,True
+b71d7574-2af6ba2d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b71d7574-2af6ba2d.jpg,highway,highway,daytime,overcast,8,True
+c1797ffb-50a40199.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1797ffb-50a40199.jpg,city street,city street,night,clear,26,True
+c9d7eba9-57de0925.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9d7eba9-57de0925.jpg,city street,city street,daytime,partly cloudy,36,True
+c38a5b1a-67951cd4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c38a5b1a-67951cd4.jpg,highway,highway,daytime,overcast,8,True
+ba70dfe3-69c229dd.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba70dfe3-69c229dd.jpg,highway,highway,night,clear,6,True
+b9fb5382-990e8173.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9fb5382-990e8173.jpg,city street,city street,night,clear,21,True
+bc375490-55d90369.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc375490-55d90369.jpg,highway,highway,dawn/dusk,clear,16,True
+bcc4efaf-023c2a93.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcc4efaf-023c2a93.jpg,city street,city street,daytime,partly cloudy,27,True
+bed001a8-2339fb95.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bed001a8-2339fb95.jpg,highway,highway,daytime,clear,21,True
+bcaa771b-5ace3b37.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcaa771b-5ace3b37.jpg,city street,city street,daytime,snowy,46,True
+c67075c0-452a5634.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c67075c0-452a5634.jpg,highway,highway,night,clear,10,True
+bbf7e280-5abb97f2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbf7e280-5abb97f2.jpg,tunnel,other,undefined,undefined,7,True
+bbb1289a-b49fe5de.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbb1289a-b49fe5de.jpg,highway,highway,daytime,clear,19,True
+b9429f07-e59c4a8c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9429f07-e59c4a8c.jpg,city street,city street,daytime,clear,10,True
+c6e430f3-b658f65a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6e430f3-b658f65a.jpg,city street,city street,night,clear,22,True
+b3c672a8-b7b886ae.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3c672a8-b7b886ae.jpg,residential,residential,night,clear,9,True
+c0e7271a-a3c8d55f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0e7271a-a3c8d55f.jpg,highway,highway,daytime,clear,10,True
+b7a16331-0c817de1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7a16331-0c817de1.jpg,highway,highway,daytime,clear,7,True
+c7acf715-2c8a1413.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7acf715-2c8a1413.jpg,city street,city street,dawn/dusk,clear,28,True
+ca068cb6-59709029.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca068cb6-59709029.jpg,city street,city street,dawn/dusk,undefined,30,True
+b533db8e-4abfcb54.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b533db8e-4abfcb54.jpg,city street,city street,dawn/dusk,clear,13,True
+ba8a41c9-fabd0516.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba8a41c9-fabd0516.jpg,city street,city street,daytime,overcast,14,True
+c343e9dc-ce6e03ef.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c343e9dc-ce6e03ef.jpg,residential,residential,daytime,undefined,15,True
+bd989210-ecdee00d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd989210-ecdee00d.jpg,city street,city street,daytime,undefined,9,True
+b9742173-21a140e8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9742173-21a140e8.jpg,city street,city street,daytime,clear,25,True
+b93942f9-65eda0a3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b93942f9-65eda0a3.jpg,city street,city street,night,rainy,29,True
+ca2d1df6-76d59c0c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca2d1df6-76d59c0c.jpg,city street,city street,night,rainy,5,True
+c5bc3aa9-8be77f9c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5bc3aa9-8be77f9c.jpg,highway,highway,daytime,partly cloudy,22,True
+c0a7a9dc-7762bc0e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0a7a9dc-7762bc0e.jpg,city street,city street,daytime,undefined,49,True
+c68f8fd2-61681484.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c68f8fd2-61681484.jpg,highway,highway,daytime,overcast,26,True
+bd1e4e5b-694e62a6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd1e4e5b-694e62a6.jpg,city street,city street,night,clear,22,True
+c82cf5fc-43ee94c6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c82cf5fc-43ee94c6.jpg,city street,city street,night,clear,15,True
+b757ae91-c4ae9ab1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b757ae91-c4ae9ab1.jpg,highway,highway,daytime,clear,25,True
+c1a026fd-9f4909aa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1a026fd-9f4909aa.jpg,city street,city street,night,clear,20,True
+c44c7f5c-9bef0aea.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c44c7f5c-9bef0aea.jpg,city street,city street,daytime,clear,23,True
+beced1e4-8d82da4e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/beced1e4-8d82da4e.jpg,highway,highway,daytime,clear,8,True
+b2d49c0c-e888f874.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2d49c0c-e888f874.jpg,city street,city street,daytime,undefined,19,True
+ba2e8260-5b48768d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba2e8260-5b48768d.jpg,city street,city street,daytime,clear,7,True
+c95c7aac-1ede8bc6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c95c7aac-1ede8bc6.jpg,highway,highway,night,clear,36,True
+b3e72283-584093dc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3e72283-584093dc.jpg,city street,city street,daytime,overcast,22,True
+b266db29-403143cc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b266db29-403143cc.jpg,city street,city street,daytime,rainy,16,True
+b37c86c4-53f2f54c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b37c86c4-53f2f54c.jpg,city street,city street,daytime,overcast,22,True
+c69bb841-f9ad4a40.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c69bb841-f9ad4a40.jpg,city street,city street,night,clear,27,True
+ca1a41b3-38240d1e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca1a41b3-38240d1e.jpg,city street,city street,night,clear,24,True
+b7301a4a-b25a846a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7301a4a-b25a846a.jpg,city street,city street,night,clear,18,True
+beb53c44-1aa54ed7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/beb53c44-1aa54ed7.jpg,city street,city street,night,clear,36,True
+c94d8213-847662eb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c94d8213-847662eb.jpg,city street,city street,daytime,partly cloudy,12,True
+b77e197d-572d6c7b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b77e197d-572d6c7b.jpg,city street,city street,night,clear,17,True
+bfd64d5f-ec05de8b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfd64d5f-ec05de8b.jpg,highway,highway,daytime,overcast,21,True
+b93e2268-394c7031.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b93e2268-394c7031.jpg,highway,highway,daytime,partly cloudy,19,True
+b3a969fe-5181b89f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3a969fe-5181b89f.jpg,city street,city street,daytime,undefined,37,True
+bb1b7e42-48b281a3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb1b7e42-48b281a3.jpg,city street,city street,daytime,overcast,21,True
+c1e52d50-200c259b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1e52d50-200c259b.jpg,highway,highway,night,clear,10,True
+bd57e60e-d36607eb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd57e60e-d36607eb.jpg,residential,residential,night,clear,12,True
+c13b26a2-95a8d142.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c13b26a2-95a8d142.jpg,highway,highway,night,clear,20,True
+c12378e1-e9b8f175.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c12378e1-e9b8f175.jpg,city street,city street,night,clear,17,True
+b9a6cd2a-0cea14f6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9a6cd2a-0cea14f6.jpg,highway,highway,daytime,partly cloudy,21,True
+c7c39101-837064cb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7c39101-837064cb.jpg,city street,city street,night,snowy,17,True
+b6d0b46a-ec482777.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6d0b46a-ec482777.jpg,city street,city street,daytime,overcast,28,True
+c56cdb77-b69228d3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c56cdb77-b69228d3.jpg,highway,highway,night,clear,25,True
+bf474631-7bf7833c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf474631-7bf7833c.jpg,highway,highway,daytime,overcast,5,True
+c3364b6e-cb703061.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3364b6e-cb703061.jpg,city street,city street,daytime,overcast,34,True
+c44f673a-b4b48b84.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c44f673a-b4b48b84.jpg,residential,residential,night,clear,33,True
+bbb7bb8e-85124fbf.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbb7bb8e-85124fbf.jpg,city street,city street,daytime,clear,31,True
+b3969458-13fa5e0e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3969458-13fa5e0e.jpg,highway,highway,night,clear,6,True
+bc140c47-28089dad.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc140c47-28089dad.jpg,city street,city street,daytime,rainy,9,True
+b87b8bce-987990d0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b87b8bce-987990d0.jpg,highway,highway,night,clear,32,True
+c2a9ed1d-3468f926.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2a9ed1d-3468f926.jpg,city street,city street,daytime,undefined,29,True
+bfea6630-64c40790.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfea6630-64c40790.jpg,highway,highway,dawn/dusk,snowy,16,True
+bd92c756-0eee51cd.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd92c756-0eee51cd.jpg,city street,city street,dawn/dusk,rainy,28,True
+c74c11fc-f93447f7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c74c11fc-f93447f7.jpg,highway,highway,night,clear,16,True
+b4581cf1-fa4a5f32.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4581cf1-fa4a5f32.jpg,city street,city street,daytime,overcast,57,True
+c838d26c-769b5f1b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c838d26c-769b5f1b.jpg,city street,city street,night,clear,14,True
+b7ad4512-5b2510d8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7ad4512-5b2510d8.jpg,residential,residential,daytime,rainy,13,True
+bd138b54-7e85623f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd138b54-7e85623f.jpg,city street,city street,daytime,clear,20,True
+b90f7487-17bb6cb9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b90f7487-17bb6cb9.jpg,residential,residential,daytime,overcast,25,True
+c38e77f6-edc3c34b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c38e77f6-edc3c34b.jpg,city street,city street,daytime,rainy,11,True
+ba508231-1b6ab5b0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba508231-1b6ab5b0.jpg,highway,highway,daytime,clear,33,True
+c3287e28-f6bcc9ef.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3287e28-f6bcc9ef.jpg,residential,residential,daytime,clear,12,True
+b51eb969-25bb6a5d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b51eb969-25bb6a5d.jpg,city street,city street,daytime,overcast,15,True
+c56ad92a-c7ecc589.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c56ad92a-c7ecc589.jpg,city street,city street,daytime,rainy,15,True
+b29f7159-219cf764.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b29f7159-219cf764.jpg,city street,city street,daytime,undefined,21,True
+ca1a87ef-4f83ae99.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca1a87ef-4f83ae99.jpg,city street,city street,night,clear,42,True
+b6c22033-a2105050.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6c22033-a2105050.jpg,city street,city street,daytime,snowy,30,True
+b398327e-08f3a1f2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b398327e-08f3a1f2.jpg,highway,highway,daytime,clear,12,True
+c153a7d6-902f591d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c153a7d6-902f591d.jpg,residential,residential,daytime,clear,18,True
+bd64fd99-8e69563f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd64fd99-8e69563f.jpg,city street,city street,night,clear,8,True
+b9c34a53-f1f42d75.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9c34a53-f1f42d75.jpg,highway,highway,night,clear,9,True
+c90ecab0-68dc9839.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c90ecab0-68dc9839.jpg,city street,city street,daytime,rainy,14,True
+b5a407d5-c2abd312.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5a407d5-c2abd312.jpg,city street,city street,dawn/dusk,clear,18,True
+be64f818-053b36ba.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be64f818-053b36ba.jpg,residential,residential,daytime,snowy,4,True
+c56ad92a-6707dbb4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c56ad92a-6707dbb4.jpg,city street,city street,night,rainy,19,True
+bb46f3cd-b72d2152.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb46f3cd-b72d2152.jpg,city street,city street,daytime,overcast,14,True
+b7b32a5f-87311a3a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7b32a5f-87311a3a.jpg,highway,highway,night,clear,24,True
+c51ee110-ea464eff.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c51ee110-ea464eff.jpg,highway,highway,daytime,undefined,16,True
+c1fdd182-28e0d6aa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1fdd182-28e0d6aa.jpg,city street,city street,daytime,clear,16,True
+b62279e2-0a5adb4c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b62279e2-0a5adb4c.jpg,residential,residential,daytime,partly cloudy,5,True
+ba467364-d5d97e59.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba467364-d5d97e59.jpg,highway,highway,daytime,overcast,15,True
+c4c62e31-64421eb6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4c62e31-64421eb6.jpg,residential,residential,daytime,overcast,10,True
+bf7355b8-f5de162f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf7355b8-f5de162f.jpg,residential,residential,night,clear,13,True
+b6018b92-f949cae0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6018b92-f949cae0.jpg,parking lot,other,daytime,snowy,16,True
+b6bdb46e-2c60ecc3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6bdb46e-2c60ecc3.jpg,city street,city street,night,clear,19,True
+c4fb6443-babb6e4c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4fb6443-babb6e4c.jpg,highway,highway,dawn/dusk,overcast,9,True
+b832508c-8f2be0ee.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b832508c-8f2be0ee.jpg,city street,city street,night,clear,46,True
+c8e8cd4a-2f894188.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8e8cd4a-2f894188.jpg,city street,city street,daytime,undefined,13,True
+bc79227e-0a58fb1d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc79227e-0a58fb1d.jpg,city street,city street,night,snowy,20,True
+c6da617f-f5c8afd5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6da617f-f5c8afd5.jpg,city street,city street,daytime,overcast,25,True
+b69fc2ae-156d58aa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b69fc2ae-156d58aa.jpg,city street,city street,daytime,overcast,28,True
+b6d0b9d1-a2c6c924.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6d0b9d1-a2c6c924.jpg,city street,city street,night,clear,14,True
+bc8e038e-dc636bde.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc8e038e-dc636bde.jpg,residential,residential,daytime,clear,17,True
+c08eacf9-8054501c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c08eacf9-8054501c.jpg,highway,highway,night,clear,6,True
+b332df78-970364e2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b332df78-970364e2.jpg,city street,city street,night,clear,23,True
+c5882339-dff241de.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5882339-dff241de.jpg,residential,residential,daytime,rainy,5,True
+bb69d2b0-fc67c3d9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb69d2b0-fc67c3d9.jpg,city street,city street,daytime,snowy,32,True
+c5430bf3-07e67721.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5430bf3-07e67721.jpg,city street,city street,night,clear,25,True
+c8bd76fd-77472fba.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8bd76fd-77472fba.jpg,city street,city street,daytime,snowy,17,True
+b44ee0ec-a0786e4c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b44ee0ec-a0786e4c.jpg,city street,city street,daytime,clear,9,True
+bcec9d23-4e8e0704.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcec9d23-4e8e0704.jpg,city street,city street,daytime,undefined,16,True
+bc07bbae-a3783fe4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc07bbae-a3783fe4.jpg,city street,city street,daytime,undefined,18,True
+b979217b-32f86fea.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b979217b-32f86fea.jpg,highway,highway,night,snowy,9,True
+bedb6dc2-777e4568.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bedb6dc2-777e4568.jpg,city street,city street,night,clear,4,True
+b8086e12-c35af994.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8086e12-c35af994.jpg,city street,city street,daytime,snowy,25,True
+c8f6f631-a1eb5133.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8f6f631-a1eb5133.jpg,city street,city street,daytime,undefined,32,True
+b433534e-ff3646aa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b433534e-ff3646aa.jpg,city street,city street,daytime,clear,24,True
+bcaf73c1-f32b1d31.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcaf73c1-f32b1d31.jpg,city street,city street,night,clear,13,True
+c0aa83ea-5e7cbb16.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0aa83ea-5e7cbb16.jpg,city street,city street,daytime,clear,20,True
+b761cf92-05ed0ba2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b761cf92-05ed0ba2.jpg,residential,residential,daytime,clear,17,True
+c5c9d88b-71b49b27.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5c9d88b-71b49b27.jpg,highway,highway,daytime,clear,5,True
+c9197398-2fea0795.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9197398-2fea0795.jpg,city street,city street,daytime,partly cloudy,20,True
+c36d561d-157eefbb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c36d561d-157eefbb.jpg,residential,residential,daytime,undefined,33,True
+b1f20aa0-50213047.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b1f20aa0-50213047.jpg,city street,city street,night,clear,17,True
+c74ac556-60f29765.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c74ac556-60f29765.jpg,city street,city street,night,clear,24,True
+b2331b83-a28e6b57.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2331b83-a28e6b57.jpg,city street,city street,daytime,clear,25,True
+c6959e96-dd05fa7a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6959e96-dd05fa7a.jpg,city street,city street,daytime,clear,22,True
+beaae4eb-f6975a4f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/beaae4eb-f6975a4f.jpg,tunnel,other,undefined,undefined,6,True
+bab26b8d-deaa5510.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bab26b8d-deaa5510.jpg,highway,highway,daytime,partly cloudy,17,True
+bb890202-d9d48310.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb890202-d9d48310.jpg,highway,highway,daytime,partly cloudy,19,True
+c0dc5a95-26ea2d7d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0dc5a95-26ea2d7d.jpg,highway,highway,daytime,partly cloudy,14,True
+c48593bf-ca97d93d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c48593bf-ca97d93d.jpg,city street,city street,dawn/dusk,overcast,15,True
+c4eb5462-657f5921.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4eb5462-657f5921.jpg,city street,city street,daytime,clear,34,True
+c8b3b695-3dd9102a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8b3b695-3dd9102a.jpg,city street,city street,daytime,undefined,27,True
+bdbdc4df-2f7a140d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bdbdc4df-2f7a140d.jpg,city street,city street,daytime,snowy,10,True
+c6cde742-d52d93a3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6cde742-d52d93a3.jpg,city street,city street,night,clear,19,True
+b69d5b1d-99133316.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b69d5b1d-99133316.jpg,city street,city street,night,clear,9,True
+c5179971-6c0bbf66.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5179971-6c0bbf66.jpg,city street,city street,daytime,undefined,15,True
+c7790bd2-299c163c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7790bd2-299c163c.jpg,highway,highway,night,clear,14,True
+bbb08020-5a72fc33.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbb08020-5a72fc33.jpg,city street,city street,night,clear,24,True
+c31aa969-dd64b3b7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c31aa969-dd64b3b7.jpg,city street,city street,night,clear,10,True
+b4b2f8e1-99a5df57.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4b2f8e1-99a5df57.jpg,city street,city street,night,clear,22,True
+c007dc97-377cfd8a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c007dc97-377cfd8a.jpg,residential,residential,daytime,undefined,8,True
+b4fe9ed3-7e469f87.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4fe9ed3-7e469f87.jpg,highway,highway,daytime,overcast,4,True
+c45d3e0a-93a52b80.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c45d3e0a-93a52b80.jpg,city street,city street,daytime,overcast,22,True
+c889c950-e75d6454.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c889c950-e75d6454.jpg,highway,highway,night,rainy,13,True
+c1d28a8a-6ce21619.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1d28a8a-6ce21619.jpg,city street,city street,daytime,overcast,10,True
+c1fb9b6e-39387962.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1fb9b6e-39387962.jpg,highway,highway,night,clear,22,True
+c9736046-d8b9fd11.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9736046-d8b9fd11.jpg,residential,residential,daytime,rainy,11,True
+c2186a76-86491ba7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2186a76-86491ba7.jpg,city street,city street,daytime,undefined,13,True
+c3c2748d-b3291d20.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3c2748d-b3291d20.jpg,city street,city street,dawn/dusk,clear,9,True
+c17a1579-afd4745a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c17a1579-afd4745a.jpg,city street,city street,night,clear,20,True
+b7bb37d8-da8a74d7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7bb37d8-da8a74d7.jpg,highway,highway,daytime,clear,6,True
+c1243d2d-1a754959.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1243d2d-1a754959.jpg,highway,highway,night,clear,6,True
+b3d46fca-a69e8189.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3d46fca-a69e8189.jpg,city street,city street,night,clear,15,True
+b44fd543-87f493ee.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b44fd543-87f493ee.jpg,city street,city street,night,clear,25,True
+c1f35f18-b529c043.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f35f18-b529c043.jpg,city street,city street,dawn/dusk,clear,24,True
+c2bc5a4c-714081e9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2bc5a4c-714081e9.jpg,city street,city street,night,clear,21,True
+bade898f-11350592.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bade898f-11350592.jpg,city street,city street,daytime,clear,27,True
+b7fd2c7d-1c250dfc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7fd2c7d-1c250dfc.jpg,city street,city street,daytime,rainy,12,True
+c48e9b2e-0edd0832.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c48e9b2e-0edd0832.jpg,city street,city street,night,clear,17,True
+c8390b6b-52f1f1b2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8390b6b-52f1f1b2.jpg,highway,highway,daytime,clear,19,True
+ca077fe9-d2cf4446.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca077fe9-d2cf4446.jpg,highway,highway,daytime,clear,11,True
+c4223cc0-7053ae09.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4223cc0-7053ae09.jpg,city street,city street,daytime,undefined,24,True
+c86f5924-83259ed3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c86f5924-83259ed3.jpg,residential,residential,night,undefined,15,True
+b4860efe-c78e84fa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4860efe-c78e84fa.jpg,city street,city street,dawn/dusk,overcast,30,True
+c4d25f00-3b1d8669.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4d25f00-3b1d8669.jpg,city street,city street,night,clear,29,True
+c0f1a2f9-1476c2ee.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0f1a2f9-1476c2ee.jpg,highway,highway,daytime,snowy,7,True
+b81d060a-fddedd4f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b81d060a-fddedd4f.jpg,city street,city street,daytime,clear,13,True
+c4e97226-7be7eef5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4e97226-7be7eef5.jpg,highway,highway,daytime,overcast,18,True
+bbd5b9b2-5d171163.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbd5b9b2-5d171163.jpg,residential,residential,daytime,clear,13,True
+bcd8fde8-51118aa7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcd8fde8-51118aa7.jpg,highway,highway,night,clear,5,True
+c0458999-18bb1ce3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0458999-18bb1ce3.jpg,residential,residential,daytime,clear,9,True
+b7b7c088-13945e4c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7b7c088-13945e4c.jpg,city street,city street,daytime,overcast,5,True
+b63b1c14-f01a2f6b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b63b1c14-f01a2f6b.jpg,residential,residential,daytime,overcast,6,True
+b1d7b3ac-afa57f22.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b1d7b3ac-afa57f22.jpg,residential,residential,dawn/dusk,clear,4,True
+c4353b9c-f8f56adc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4353b9c-f8f56adc.jpg,city street,city street,daytime,overcast,30,True
+c39dc2ff-6976d19d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c39dc2ff-6976d19d.jpg,city street,city street,night,clear,25,True
+be651ed5-bc7ce2fe.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be651ed5-bc7ce2fe.jpg,highway,highway,night,clear,22,True
+b2638d82-062aa1de.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2638d82-062aa1de.jpg,highway,highway,night,undefined,13,True
+bfb97ec2-23a5c362.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfb97ec2-23a5c362.jpg,residential,residential,daytime,overcast,18,True
+b3823cab-48611ba2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3823cab-48611ba2.jpg,highway,highway,night,clear,16,True
+c24e5f86-035733db.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c24e5f86-035733db.jpg,parking lot,other,night,partly cloudy,4,True
+b9ca94a2-f35ce63b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9ca94a2-f35ce63b.jpg,city street,city street,night,clear,33,True
+b204a5c1-064b0040.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b204a5c1-064b0040.jpg,city street,city street,daytime,snowy,28,True
+c279d4e7-97fb3340.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c279d4e7-97fb3340.jpg,city street,city street,night,rainy,16,True
+b9cabddd-e49dded9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9cabddd-e49dded9.jpg,city street,city street,night,clear,27,True
+b931fe93-614568d3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b931fe93-614568d3.jpg,city street,city street,night,snowy,33,True
+c1fa7950-56a78519.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1fa7950-56a78519.jpg,highway,highway,daytime,overcast,4,True
+bd2fd996-9d659d30.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd2fd996-9d659d30.jpg,residential,residential,night,clear,14,True
+c70f6d09-3bcec902.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c70f6d09-3bcec902.jpg,city street,city street,night,clear,18,True
+c3c4afe7-b9a0a895.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3c4afe7-b9a0a895.jpg,city street,city street,night,clear,17,True
+c0775b6f-d6afcd0e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0775b6f-d6afcd0e.jpg,city street,city street,night,clear,23,True
+be6b4502-b150e016.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be6b4502-b150e016.jpg,residential,residential,night,clear,5,True
+b9597719-09a2458c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9597719-09a2458c.jpg,residential,residential,daytime,clear,14,True
+b5eaada1-27688041.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5eaada1-27688041.jpg,highway,highway,night,clear,11,True
+ba2e8260-2f6c9b36.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba2e8260-2f6c9b36.jpg,city street,city street,daytime,undefined,31,True
+c84417f6-ca6fd5ac.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c84417f6-ca6fd5ac.jpg,city street,city street,night,clear,23,True
+b49d2384-af5fd985.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b49d2384-af5fd985.jpg,highway,highway,dawn/dusk,clear,7,True
+c836d9b9-16a414cd.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c836d9b9-16a414cd.jpg,highway,highway,night,clear,20,True
+c330c787-3952d9a9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c330c787-3952d9a9.jpg,city street,city street,daytime,clear,11,True
+c1f35f18-cc6a82e9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f35f18-cc6a82e9.jpg,highway,highway,night,clear,12,True
+bbcf6d54-cccd1867.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbcf6d54-cccd1867.jpg,city street,city street,night,clear,32,True
+bf0eda09-d1773b85.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf0eda09-d1773b85.jpg,city street,city street,night,rainy,21,True
+b7bb64a4-885f7346.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7bb64a4-885f7346.jpg,residential,residential,daytime,snowy,30,True
+c100db13-8af08790.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c100db13-8af08790.jpg,residential,residential,night,overcast,9,True
+b3f3c908-baffb699.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3f3c908-baffb699.jpg,highway,highway,daytime,clear,15,True
+bfdb9d69-9beabbd2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfdb9d69-9beabbd2.jpg,city street,city street,daytime,clear,11,True
+bc7bc1e5-b3223500.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc7bc1e5-b3223500.jpg,city street,city street,daytime,partly cloudy,36,True
+c19aa2da-25679033.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c19aa2da-25679033.jpg,city street,city street,night,snowy,13,True
+bd1b8b79-6a41406e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd1b8b79-6a41406e.jpg,city street,city street,night,rainy,14,True
+bc24f222-4fdb5e23.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc24f222-4fdb5e23.jpg,city street,city street,daytime,clear,10,True
+b82f91d7-7c84fdc5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b82f91d7-7c84fdc5.jpg,residential,residential,daytime,snowy,4,True
+c6a23c7a-6e9d3e9e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6a23c7a-6e9d3e9e.jpg,city street,city street,night,clear,31,True
+b56a8196-9b3b361b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b56a8196-9b3b361b.jpg,highway,highway,daytime,rainy,9,True
+c9a4c2a2-e2ef482c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9a4c2a2-e2ef482c.jpg,highway,highway,night,snowy,24,True
+c3acc6a5-00d3dc8d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3acc6a5-00d3dc8d.jpg,highway,highway,night,clear,22,True
+c68d9027-9707e4ed.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c68d9027-9707e4ed.jpg,residential,residential,daytime,clear,21,True
+ba402b44-b17beb78.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba402b44-b17beb78.jpg,city street,city street,daytime,clear,10,True
+bd1b8b79-829e787f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd1b8b79-829e787f.jpg,city street,city street,night,rainy,8,True
+c8478dfd-872b0509.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8478dfd-872b0509.jpg,city street,city street,night,clear,7,True
+b5a09604-33ffdc75.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5a09604-33ffdc75.jpg,city street,city street,dawn/dusk,partly cloudy,23,True
+c91a84db-f40ee6d0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c91a84db-f40ee6d0.jpg,city street,city street,daytime,undefined,5,True
+c492bb89-abf09ef4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c492bb89-abf09ef4.jpg,highway,highway,daytime,overcast,30,True
+b5dd8a5f-431c4fc2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5dd8a5f-431c4fc2.jpg,city street,city street,night,clear,16,True
+c927d51b-fa863734.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c927d51b-fa863734.jpg,highway,highway,night,clear,11,True
+c4b90e82-0a023704.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4b90e82-0a023704.jpg,city street,city street,daytime,overcast,14,True
+c464c963-6fa9416d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c464c963-6fa9416d.jpg,city street,city street,daytime,undefined,16,True
+c7fd8df0-429644e7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7fd8df0-429644e7.jpg,highway,highway,daytime,snowy,7,True
+b4aabd48-612afbae.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4aabd48-612afbae.jpg,city street,city street,daytime,overcast,30,True
+b7d8cd90-a01c6422.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7d8cd90-a01c6422.jpg,city street,city street,daytime,clear,33,True
+b230a7b2-c881c382.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b230a7b2-c881c382.jpg,city street,city street,night,clear,20,True
+c23770f3-1b29a7b7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c23770f3-1b29a7b7.jpg,city street,city street,night,clear,19,True
+c15c29a5-184070ba.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c15c29a5-184070ba.jpg,city street,city street,daytime,undefined,31,True
+c9ee0f8e-3308c0e4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9ee0f8e-3308c0e4.jpg,city street,city street,daytime,rainy,7,True
+bbe7c7e2-ac32659a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbe7c7e2-ac32659a.jpg,city street,city street,night,clear,13,True
+b255cd6c-f2f28aff.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b255cd6c-f2f28aff.jpg,city street,city street,night,snowy,36,True
+c2e294a9-cd5c3b02.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2e294a9-cd5c3b02.jpg,residential,residential,daytime,overcast,21,True
+bfcd1873-fbd35796.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfcd1873-fbd35796.jpg,city street,city street,night,clear,34,True
+b863bd5e-d1ff4b7c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b863bd5e-d1ff4b7c.jpg,city street,city street,dawn/dusk,clear,15,True
+b2a46c1e-87aac2ec.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2a46c1e-87aac2ec.jpg,highway,highway,daytime,snowy,25,True
+c75a249b-f1341238.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c75a249b-f1341238.jpg,highway,highway,dawn/dusk,partly cloudy,9,True
+b555790d-111bb9b8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b555790d-111bb9b8.jpg,highway,highway,dawn/dusk,rainy,23,True
+b5191523-cc623777.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5191523-cc623777.jpg,city street,city street,daytime,partly cloudy,28,True
+c43778b1-56af0542.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c43778b1-56af0542.jpg,city street,city street,daytime,partly cloudy,17,True
+c0aa979d-dd5c54d1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0aa979d-dd5c54d1.jpg,city street,city street,daytime,clear,19,True
+bfb6d7c1-d607f837.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfb6d7c1-d607f837.jpg,city street,city street,night,clear,13,True
+bf62df05-4bf9402e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf62df05-4bf9402e.jpg,city street,city street,night,clear,9,True
+c79687a5-a0f3794d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c79687a5-a0f3794d.jpg,city street,city street,night,clear,22,True
+b46ee89c-5d054327.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b46ee89c-5d054327.jpg,city street,city street,night,clear,26,True
+c37b8378-9c23f3b3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c37b8378-9c23f3b3.jpg,city street,city street,dawn/dusk,partly cloudy,30,True
+bd65dd37-4c3cdf2d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd65dd37-4c3cdf2d.jpg,highway,highway,daytime,clear,11,True
+b33a7e88-bc0eabcf.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b33a7e88-bc0eabcf.jpg,highway,highway,daytime,partly cloudy,15,True
+b57a2edf-71efe713.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b57a2edf-71efe713.jpg,highway,highway,daytime,clear,5,True
+c2201fab-cbe7ff17.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2201fab-cbe7ff17.jpg,city street,city street,night,clear,25,True
+bf213ac1-760849cf.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf213ac1-760849cf.jpg,city street,city street,night,clear,15,True
+c56ad92a-6a32ee17.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c56ad92a-6a32ee17.jpg,highway,highway,daytime,rainy,22,True
+b30b460d-7a788684.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b30b460d-7a788684.jpg,city street,city street,night,clear,7,True
+b6df605f-acdccf67.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6df605f-acdccf67.jpg,city street,city street,daytime,undefined,17,True
+beb3d6ea-3b5b9e2e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/beb3d6ea-3b5b9e2e.jpg,highway,highway,daytime,overcast,8,True
+b6decb24-82234e11.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6decb24-82234e11.jpg,city street,city street,daytime,clear,25,True
+c6cd3ccb-b775a5a3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6cd3ccb-b775a5a3.jpg,city street,city street,daytime,overcast,19,True
+b319b67e-b43ffc33.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b319b67e-b43ffc33.jpg,residential,residential,daytime,clear,10,True
+c5588233-76a1ecf3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5588233-76a1ecf3.jpg,highway,highway,daytime,partly cloudy,16,True
+c65d48bf-2d317fb3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c65d48bf-2d317fb3.jpg,city street,city street,night,clear,15,True
+bb6575eb-90478df6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb6575eb-90478df6.jpg,highway,highway,dawn/dusk,rainy,6,True
+b8a158fd-1e9c1bd7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8a158fd-1e9c1bd7.jpg,highway,highway,daytime,clear,18,True
+b750dfba-288937b9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b750dfba-288937b9.jpg,city street,city street,night,clear,24,True
+c60db1dc-73c1e986.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c60db1dc-73c1e986.jpg,city street,city street,daytime,snowy,22,True
+beb53c44-f3619124.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/beb53c44-f3619124.jpg,city street,city street,night,clear,22,True
+b3a102ed-6ef54f5e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3a102ed-6ef54f5e.jpg,city street,city street,night,clear,20,True
+c96ab7ea-f3e268c8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c96ab7ea-f3e268c8.jpg,residential,residential,night,clear,26,True
+b588c233-8a21f0be.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b588c233-8a21f0be.jpg,city street,city street,daytime,partly cloudy,18,True
+b4253988-26b49c14.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4253988-26b49c14.jpg,city street,city street,night,clear,37,True
+b7b554e4-753c2c08.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7b554e4-753c2c08.jpg,city street,city street,daytime,clear,27,True
+b66f7339-b14741dc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b66f7339-b14741dc.jpg,city street,city street,night,clear,28,True
+bbb25499-f602899d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbb25499-f602899d.jpg,city street,city street,daytime,clear,5,True
+ba087e53-ef362be0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba087e53-ef362be0.jpg,city street,city street,night,clear,11,True
+c2d5a01a-e636934d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2d5a01a-e636934d.jpg,highway,highway,night,clear,9,True
+b2b70230-c43553a9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2b70230-c43553a9.jpg,city street,city street,daytime,clear,28,True
+b4c86653-08648e05.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4c86653-08648e05.jpg,city street,city street,night,clear,15,True
+bf5ea8d2-108ab9c6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf5ea8d2-108ab9c6.jpg,highway,highway,daytime,clear,13,True
+beb53c44-6af8d3b4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/beb53c44-6af8d3b4.jpg,residential,residential,night,clear,25,True
+c968f598-7b3b4c6d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c968f598-7b3b4c6d.jpg,city street,city street,night,clear,15,True
+bb9071ac-8e2bc8fe.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb9071ac-8e2bc8fe.jpg,highway,highway,daytime,clear,16,True
+c684b9be-e666905f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c684b9be-e666905f.jpg,city street,city street,daytime,clear,7,True
+bc0e1045-7a8d0c04.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc0e1045-7a8d0c04.jpg,city street,city street,night,clear,21,True
+b769f2fa-867bf3b3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b769f2fa-867bf3b3.jpg,city street,city street,daytime,undefined,12,True
+b4888487-83bb5db4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4888487-83bb5db4.jpg,city street,city street,night,clear,13,True
+b9d34460-eb5b8d34.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9d34460-eb5b8d34.jpg,city street,city street,daytime,rainy,24,True
+c45fbe22-61885df3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c45fbe22-61885df3.jpg,residential,residential,daytime,overcast,23,True
+c58bb853-c9421648.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c58bb853-c9421648.jpg,city street,city street,night,clear,20,True
+b721f994-43356f34.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b721f994-43356f34.jpg,city street,city street,night,clear,20,True
+bc7caf3c-da14eed9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc7caf3c-da14eed9.jpg,residential,residential,daytime,clear,14,True
+c124e51c-31bb804d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c124e51c-31bb804d.jpg,city street,city street,daytime,rainy,25,True
+be5ec90e-8f48d12d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be5ec90e-8f48d12d.jpg,highway,highway,night,clear,23,True
+b9ecc316-529acd3c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9ecc316-529acd3c.jpg,city street,city street,daytime,rainy,23,True
+b7f43f41-b1354d92.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7f43f41-b1354d92.jpg,city street,city street,daytime,undefined,28,True
+c754ce77-a105a975.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c754ce77-a105a975.jpg,city street,city street,daytime,clear,14,True
+b7a175e0-ea597801.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7a175e0-ea597801.jpg,highway,highway,night,clear,8,True
+bf9e2172-8feb4817.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf9e2172-8feb4817.jpg,highway,highway,daytime,overcast,15,True
+c0f5b0d0-17e0110c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0f5b0d0-17e0110c.jpg,highway,highway,night,clear,15,True
+c524ecb5-74c5e510.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c524ecb5-74c5e510.jpg,city street,city street,night,clear,16,True
+b6673f98-662b331b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6673f98-662b331b.jpg,highway,highway,daytime,partly cloudy,26,True
+c9d61a6d-92609e9c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9d61a6d-92609e9c.jpg,city street,city street,daytime,clear,34,True
+c586b898-4247945c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c586b898-4247945c.jpg,city street,city street,night,clear,4,True
+bc208c84-18481db5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc208c84-18481db5.jpg,residential,residential,night,snowy,24,True
+b6b7800d-bdecc6bc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6b7800d-bdecc6bc.jpg,city street,city street,night,clear,26,True
+b8c7c957-84df8251.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8c7c957-84df8251.jpg,highway,highway,daytime,clear,9,True
+b70b64da-396bfbd3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b70b64da-396bfbd3.jpg,residential,residential,daytime,clear,18,True
+ba54b6fd-896b735c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba54b6fd-896b735c.jpg,city street,city street,daytime,overcast,20,True
+c0217f91-3ec314e4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0217f91-3ec314e4.jpg,city street,city street,daytime,rainy,36,True
+c7f8589f-a2c6b9a4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7f8589f-a2c6b9a4.jpg,highway,highway,daytime,clear,12,True
+c31c9630-58e757e5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c31c9630-58e757e5.jpg,city street,city street,dawn/dusk,snowy,31,True
+b3d6c39a-0a14df0d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3d6c39a-0a14df0d.jpg,city street,city street,daytime,overcast,25,True
+bd026bc5-1d80043b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd026bc5-1d80043b.jpg,city street,city street,daytime,overcast,34,True
+b4e3816e-2319f39e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4e3816e-2319f39e.jpg,city street,city street,night,clear,23,True
+be177534-4a736a9b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be177534-4a736a9b.jpg,city street,city street,daytime,snowy,26,True
+bbbf73f0-bd9c9571.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbbf73f0-bd9c9571.jpg,city street,city street,night,clear,23,True
+b37dfad0-708bd5bb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b37dfad0-708bd5bb.jpg,residential,residential,daytime,clear,5,True
+c5623327-f089f3ee.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5623327-f089f3ee.jpg,city street,city street,daytime,undefined,13,True
+b83ec6be-c9cddfb2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b83ec6be-c9cddfb2.jpg,highway,highway,night,clear,16,True
+bdeec3db-4796d5a6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bdeec3db-4796d5a6.jpg,city street,city street,night,clear,28,True
+b6bb7bc8-795f455a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6bb7bc8-795f455a.jpg,city street,city street,night,clear,15,True
+ba619544-5fd6de8f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba619544-5fd6de8f.jpg,highway,highway,daytime,partly cloudy,15,True
+ba4bcdc5-fe7847d3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba4bcdc5-fe7847d3.jpg,city street,city street,daytime,snowy,30,True
+b953efc6-455bdde1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b953efc6-455bdde1.jpg,highway,highway,daytime,overcast,19,True
+ba112f29-5452cd9f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba112f29-5452cd9f.jpg,city street,city street,daytime,clear,26,True
+c57a44ff-1a53cea4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c57a44ff-1a53cea4.jpg,city street,city street,night,clear,37,True
+bc7325ea-2146b9aa.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc7325ea-2146b9aa.jpg,highway,highway,dawn/dusk,overcast,22,True
+ba908c74-f486f96e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba908c74-f486f96e.jpg,highway,highway,night,clear,9,True
+baf29436-f6375fa4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/baf29436-f6375fa4.jpg,city street,city street,daytime,overcast,23,True
+ca3bbb0a-b711f4e3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca3bbb0a-b711f4e3.jpg,city street,city street,daytime,overcast,22,True
+b683c5c9-94747d74.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b683c5c9-94747d74.jpg,city street,city street,night,clear,29,True
+b398a52e-5d44ea66.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b398a52e-5d44ea66.jpg,highway,highway,night,clear,9,True
+c1583ab8-1c0feef0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1583ab8-1c0feef0.jpg,city street,city street,daytime,rainy,15,True
+bba94727-03cd03e0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bba94727-03cd03e0.jpg,city street,city street,night,clear,21,True
+c8573105-a4addeb6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8573105-a4addeb6.jpg,residential,residential,daytime,undefined,3,True
+bb799f71-b76b80fc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb799f71-b76b80fc.jpg,highway,highway,night,snowy,10,True
+bf261d80-f339c048.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf261d80-f339c048.jpg,city street,city street,daytime,clear,16,True
+b58aff80-bea21173.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b58aff80-bea21173.jpg,city street,city street,night,clear,6,True
+c24e5f86-317d18d5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c24e5f86-317d18d5.jpg,highway,highway,night,clear,7,True
+bdfc0f1d-375eba4a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bdfc0f1d-375eba4a.jpg,highway,highway,daytime,clear,19,True
+c4dbd719-1d98586e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4dbd719-1d98586e.jpg,highway,highway,night,undefined,18,True
+bb48c235-d9aae9be.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb48c235-d9aae9be.jpg,city street,city street,daytime,clear,30,True
+bdb3c90f-ad6c3d26.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bdb3c90f-ad6c3d26.jpg,city street,city street,dawn/dusk,clear,24,True
+b7bcc17a-c3da43c8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7bcc17a-c3da43c8.jpg,highway,highway,night,clear,12,True
+b60011a3-fff85077.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b60011a3-fff85077.jpg,city street,city street,night,clear,12,True
+ca4269e1-0f1e4f92.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca4269e1-0f1e4f92.jpg,highway,highway,night,rainy,23,True
+bac52b21-a8316888.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bac52b21-a8316888.jpg,city street,city street,daytime,undefined,26,True
+c5ea1566-561af343.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5ea1566-561af343.jpg,city street,city street,daytime,clear,25,True
+b35dac08-a80be8c5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b35dac08-a80be8c5.jpg,city street,city street,daytime,clear,14,True
+bf601884-af1b43e3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf601884-af1b43e3.jpg,residential,residential,night,clear,17,True
+bae18530-9d734d71.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bae18530-9d734d71.jpg,highway,highway,daytime,snowy,24,True
+b4201bd2-75c1998d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4201bd2-75c1998d.jpg,residential,residential,daytime,rainy,7,True
+b621872c-51db2c14.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b621872c-51db2c14.jpg,city street,city street,daytime,overcast,12,True
+ca479701-2ab57f9a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca479701-2ab57f9a.jpg,city street,city street,dawn/dusk,clear,23,True
+c8b4e0ea-9581068d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8b4e0ea-9581068d.jpg,city street,city street,daytime,undefined,21,True
+bf6e127b-cc8a310b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf6e127b-cc8a310b.jpg,city street,city street,night,clear,19,True
+c4ef83b2-696779d1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4ef83b2-696779d1.jpg,city street,city street,daytime,clear,26,True
+c4d25f00-b6658057.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4d25f00-b6658057.jpg,city street,city street,night,clear,24,True
+b58436bb-213f1b3d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b58436bb-213f1b3d.jpg,city street,city street,dawn/dusk,overcast,18,True
+be273f87-7aca9df7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be273f87-7aca9df7.jpg,undefined,other,night,clear,8,True
+c7b49761-fc7ed898.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7b49761-fc7ed898.jpg,highway,highway,daytime,clear,15,True
+c97fc7da-ed179cad.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c97fc7da-ed179cad.jpg,city street,city street,night,clear,21,True
+c6758a15-21120f89.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6758a15-21120f89.jpg,city street,city street,daytime,partly cloudy,28,True
+c6dbe91f-4551ad42.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6dbe91f-4551ad42.jpg,city street,city street,night,clear,10,True
+c3ee4b9b-1929ab81.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3ee4b9b-1929ab81.jpg,tunnel,other,undefined,undefined,5,True
+c4b8d344-dcbbc041.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4b8d344-dcbbc041.jpg,highway,highway,daytime,partly cloudy,4,True
+b6aa41ba-768fdf21.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6aa41ba-768fdf21.jpg,highway,highway,night,clear,9,True
+bbe207fc-bee772a7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbe207fc-bee772a7.jpg,city street,city street,daytime,clear,38,True
+b924005d-3e1ae14d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b924005d-3e1ae14d.jpg,city street,city street,daytime,undefined,14,True
+c02d414a-44e52614.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c02d414a-44e52614.jpg,city street,city street,dawn/dusk,clear,17,True
+b39fe3cd-553d15a3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b39fe3cd-553d15a3.jpg,city street,city street,night,clear,19,True
+b92c4dd3-3a659a03.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b92c4dd3-3a659a03.jpg,city street,city street,dawn/dusk,clear,23,True
+b26cfcdc-7b00747d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b26cfcdc-7b00747d.jpg,city street,city street,daytime,rainy,25,True
+c242b4b8-0dab228f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c242b4b8-0dab228f.jpg,highway,highway,daytime,clear,15,True
+c32dbcaf-4947ca34.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c32dbcaf-4947ca34.jpg,highway,highway,night,clear,5,True
+b4a8ec73-0c39599d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4a8ec73-0c39599d.jpg,city street,city street,daytime,undefined,15,True
+bc101f0f-7607f480.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc101f0f-7607f480.jpg,highway,highway,daytime,overcast,17,True
+c90a2111-04776fd3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c90a2111-04776fd3.jpg,highway,highway,daytime,overcast,25,True
+c0e6d0ec-ec23e2d2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0e6d0ec-ec23e2d2.jpg,city street,city street,daytime,clear,18,True
+b2d22b2f-91d0af18.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2d22b2f-91d0af18.jpg,highway,highway,daytime,clear,17,True
+bf96f64f-283c7376.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf96f64f-283c7376.jpg,undefined,other,night,undefined,7,True
+b7b132fc-ba819254.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7b132fc-ba819254.jpg,city street,city street,daytime,undefined,22,True
+c49c8353-85ca8693.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c49c8353-85ca8693.jpg,highway,highway,night,clear,8,True
+b9fb5382-de164886.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9fb5382-de164886.jpg,city street,city street,night,clear,4,True
+c569c251-13855f70.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c569c251-13855f70.jpg,residential,residential,daytime,clear,18,True
+c8ed2212-b60fa314.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8ed2212-b60fa314.jpg,city street,city street,daytime,clear,23,True
+c69e5864-06a7595c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c69e5864-06a7595c.jpg,city street,city street,night,clear,4,True
+bc915645-a19e009d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc915645-a19e009d.jpg,city street,city street,night,clear,11,True
+c55ab634-34faa48e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c55ab634-34faa48e.jpg,city street,city street,daytime,clear,7,True
+bb6fb6cd-6f571799.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb6fb6cd-6f571799.jpg,city street,city street,daytime,clear,34,True
+ca2bcf0e-69e964d2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ca2bcf0e-69e964d2.jpg,highway,highway,daytime,clear,19,True
+c9a3a466-84e613da.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9a3a466-84e613da.jpg,city street,city street,daytime,undefined,21,True
+c4ad8036-ee20aaf7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4ad8036-ee20aaf7.jpg,highway,highway,daytime,clear,22,True
+c517c182-db33a55a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c517c182-db33a55a.jpg,highway,highway,night,clear,7,True
+b99c5931-834bb88c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b99c5931-834bb88c.jpg,highway,highway,night,clear,5,True
+b4607812-48ed5dcb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4607812-48ed5dcb.jpg,city street,city street,daytime,undefined,44,True
+c3eae174-c44b69cb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3eae174-c44b69cb.jpg,city street,city street,night,clear,10,True
+b291cfd6-a6275049.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b291cfd6-a6275049.jpg,city street,city street,dawn/dusk,clear,29,True
+bbf86f8f-87b564dc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbf86f8f-87b564dc.jpg,city street,city street,daytime,clear,30,True
+c4af195c-45288c26.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4af195c-45288c26.jpg,highway,highway,night,clear,7,True
+c1f65250-4bf4a042.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f65250-4bf4a042.jpg,city street,city street,daytime,clear,18,True
+b8ef1613-c936238e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8ef1613-c936238e.jpg,city street,city street,daytime,overcast,17,True
+b2e2126b-0512426c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2e2126b-0512426c.jpg,city street,city street,daytime,overcast,31,True
+c0f1a2f9-d0b67ce6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0f1a2f9-d0b67ce6.jpg,residential,residential,daytime,snowy,6,True
+b54578dc-5a2c0b63.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b54578dc-5a2c0b63.jpg,city street,city street,night,snowy,13,True
+be099a06-28b7d23f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be099a06-28b7d23f.jpg,city street,city street,dawn/dusk,overcast,13,True
+c100db13-6de74f3b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c100db13-6de74f3b.jpg,city street,city street,daytime,partly cloudy,22,True
+c5eebbf5-1450247a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5eebbf5-1450247a.jpg,highway,highway,night,clear,12,True
+c6459d6c-e50530d0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6459d6c-e50530d0.jpg,residential,residential,daytime,clear,16,True
+b4ca8154-1d0ea164.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4ca8154-1d0ea164.jpg,city street,city street,daytime,clear,22,True
+c5f4b6d4-92bcf575.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5f4b6d4-92bcf575.jpg,city street,city street,daytime,snowy,46,True
+c59500f0-d3272eb4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c59500f0-d3272eb4.jpg,city street,city street,daytime,undefined,35,True
+c6d586ad-8f0af0ac.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6d586ad-8f0af0ac.jpg,residential,residential,daytime,clear,20,True
+c0de5178-547765fc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0de5178-547765fc.jpg,city street,city street,dawn/dusk,overcast,24,True
+bb2f678a-9364842a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb2f678a-9364842a.jpg,city street,city street,daytime,snowy,24,True
+b1d3907b-2278601b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b1d3907b-2278601b.jpg,city street,city street,night,clear,13,True
+c4accb9c-58311122.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4accb9c-58311122.jpg,city street,city street,daytime,partly cloudy,18,True
+c6e4273a-c3e46891.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6e4273a-c3e46891.jpg,highway,highway,night,clear,9,True
+bf1af616-188d7e2a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf1af616-188d7e2a.jpg,highway,highway,night,clear,17,True
+bf9aa573-01b4b4f8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf9aa573-01b4b4f8.jpg,highway,highway,dawn/dusk,overcast,4,True
+c43eaa20-61c1ec04.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c43eaa20-61c1ec04.jpg,highway,highway,night,clear,14,True
+bffe8c14-48544350.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bffe8c14-48544350.jpg,city street,city street,daytime,undefined,54,True
+c5aa59aa-4ce7e750.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5aa59aa-4ce7e750.jpg,residential,residential,night,clear,23,True
+c975761f-42dd555b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c975761f-42dd555b.jpg,city street,city street,night,clear,19,True
+c81af731-fe2bd777.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c81af731-fe2bd777.jpg,city street,city street,daytime,partly cloudy,57,True
+bbb5073b-401c9a78.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbb5073b-401c9a78.jpg,city street,city street,night,clear,22,True
+b7c8c7f6-54290bbc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7c8c7f6-54290bbc.jpg,highway,highway,night,clear,13,True
+c665137e-c5ba935a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c665137e-c5ba935a.jpg,city street,city street,daytime,clear,20,True
+bc48608f-1d8fb508.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc48608f-1d8fb508.jpg,city street,city street,night,clear,16,True
+c3719317-5605c5af.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3719317-5605c5af.jpg,city street,city street,night,clear,19,True
+c178a6d6-0f03f247.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c178a6d6-0f03f247.jpg,city street,city street,night,clear,17,True
+b953ef60-6c2cb9a1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b953ef60-6c2cb9a1.jpg,highway,highway,night,rainy,9,True
+b5afd0ea-222fae7e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5afd0ea-222fae7e.jpg,city street,city street,night,rainy,14,True
+b2715214-13e3dd85.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2715214-13e3dd85.jpg,city street,city street,daytime,clear,23,True
+c107ca7b-e60766f2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c107ca7b-e60766f2.jpg,city street,city street,daytime,clear,18,True
+c7eab2ff-d02c0a19.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7eab2ff-d02c0a19.jpg,city street,city street,night,clear,38,True
+c24aece5-9554f636.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c24aece5-9554f636.jpg,city street,city street,night,clear,22,True
+c3127fc5-0411259f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3127fc5-0411259f.jpg,city street,city street,daytime,clear,14,True
+c146d100-4ee36f35.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c146d100-4ee36f35.jpg,city street,city street,daytime,partly cloudy,25,True
+b3875c8d-cc4081eb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3875c8d-cc4081eb.jpg,city street,city street,daytime,clear,16,True
+bda9da90-68225671.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bda9da90-68225671.jpg,city street,city street,daytime,overcast,19,True
+ba0a9afb-ba786259.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba0a9afb-ba786259.jpg,city street,city street,daytime,clear,20,True
+b36fcdfe-fd6585e0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b36fcdfe-fd6585e0.jpg,residential,residential,daytime,undefined,7,True
+c95fecc3-4a1dd709.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c95fecc3-4a1dd709.jpg,residential,residential,daytime,partly cloudy,29,True
+c39a2422-2c66916b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c39a2422-2c66916b.jpg,city street,city street,night,clear,25,True
+b888e048-8018b284.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b888e048-8018b284.jpg,highway,highway,daytime,overcast,30,True
+b2a4738f-1c4a1373.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2a4738f-1c4a1373.jpg,highway,highway,daytime,partly cloudy,26,True
+b3810b68-42b78db3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3810b68-42b78db3.jpg,highway,highway,night,clear,8,True
+bcbf4834-88a0b878.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcbf4834-88a0b878.jpg,residential,residential,dawn/dusk,clear,9,True
+b9782b2a-681c4b4d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9782b2a-681c4b4d.jpg,residential,residential,dawn/dusk,clear,18,True
+c321c219-54340460.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c321c219-54340460.jpg,city street,city street,daytime,clear,28,True
+bbefae56-1d886e4e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbefae56-1d886e4e.jpg,highway,highway,daytime,clear,7,True
+b5e387a7-6a010e5e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5e387a7-6a010e5e.jpg,city street,city street,night,clear,25,True
+bc24f222-27a9e3d1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc24f222-27a9e3d1.jpg,city street,city street,night,clear,8,True
+b82f7901-62715883.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b82f7901-62715883.jpg,residential,residential,dawn/dusk,snowy,4,True
+c4e2eba0-1f3761a9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4e2eba0-1f3761a9.jpg,highway,highway,dawn/dusk,undefined,12,True
+b60da546-ee383124.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b60da546-ee383124.jpg,highway,highway,night,clear,16,True
+c5c7c186-2f98e734.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5c7c186-2f98e734.jpg,residential,residential,night,rainy,21,True
+bb5a3238-ab2ba223.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb5a3238-ab2ba223.jpg,city street,city street,daytime,snowy,23,True
+c4160d08-d9c52d7b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4160d08-d9c52d7b.jpg,residential,residential,dawn/dusk,overcast,21,True
+c4e926af-43c5f8d3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c4e926af-43c5f8d3.jpg,city street,city street,daytime,partly cloudy,29,True
+c051bcee-e5c6ad9f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c051bcee-e5c6ad9f.jpg,city street,city street,daytime,clear,10,True
+c422771c-ecd74810.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c422771c-ecd74810.jpg,city street,city street,daytime,undefined,20,True
+bf9ba5a3-22398dcc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bf9ba5a3-22398dcc.jpg,city street,city street,daytime,clear,13,True
+bc308aee-b3a48c42.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc308aee-b3a48c42.jpg,city street,city street,night,clear,21,True
+bdc7ed93-75e5f442.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bdc7ed93-75e5f442.jpg,highway,highway,daytime,snowy,13,True
+b2932832-a2c8f6ef.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b2932832-a2c8f6ef.jpg,city street,city street,daytime,clear,31,True
+b6accff3-eb28ad4f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6accff3-eb28ad4f.jpg,residential,residential,daytime,clear,9,True
+b477c2e7-6590a089.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b477c2e7-6590a089.jpg,city street,city street,daytime,clear,12,True
+b965ce1b-ad83b0ff.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b965ce1b-ad83b0ff.jpg,city street,city street,daytime,undefined,21,True
+c5a84acc-baf6323a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5a84acc-baf6323a.jpg,city street,city street,dawn/dusk,clear,28,True
+b79d2bd8-b3eb6fa9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b79d2bd8-b3eb6fa9.jpg,highway,highway,night,clear,14,True
+c323201c-cf5e33b5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c323201c-cf5e33b5.jpg,parking lot,other,daytime,overcast,23,True
+b87b8504-1e1d6dcd.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b87b8504-1e1d6dcd.jpg,highway,highway,daytime,partly cloudy,19,True
+b7226661-aff64877.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7226661-aff64877.jpg,residential,residential,daytime,overcast,10,True
+c5673b5f-6c5e63bc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5673b5f-6c5e63bc.jpg,city street,city street,night,clear,17,True
+bba45236-0fffd225.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bba45236-0fffd225.jpg,city street,city street,night,clear,6,True
+c776d10b-15486206.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c776d10b-15486206.jpg,highway,highway,daytime,clear,14,True
+c23551ce-6007b75e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c23551ce-6007b75e.jpg,highway,highway,daytime,partly cloudy,9,True
+b5548481-6ffc0c74.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5548481-6ffc0c74.jpg,residential,residential,dawn/dusk,snowy,9,True
+c9cbf127-148245d2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9cbf127-148245d2.jpg,city street,city street,daytime,undefined,31,True
+c08ac802-a61149ad.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c08ac802-a61149ad.jpg,city street,city street,night,rainy,35,True
+bbce5b2c-df2c682b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbce5b2c-df2c682b.jpg,city street,city street,dawn/dusk,overcast,29,True
+b386d34e-a6a9ea07.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b386d34e-a6a9ea07.jpg,residential,residential,dawn/dusk,rainy,11,True
+bda2a452-8a54fc2c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bda2a452-8a54fc2c.jpg,highway,highway,daytime,overcast,14,True
+c1d9edc8-8986da55.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1d9edc8-8986da55.jpg,city street,city street,daytime,partly cloudy,19,True
+b9fde896-2829683e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9fde896-2829683e.jpg,city street,city street,daytime,snowy,18,True
+be769e9f-ed37df2b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be769e9f-ed37df2b.jpg,city street,city street,daytime,partly cloudy,24,True
+c837fdf5-0362e336.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c837fdf5-0362e336.jpg,city street,city street,daytime,overcast,29,True
+bd0380e5-bc2886de.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd0380e5-bc2886de.jpg,highway,highway,daytime,clear,7,True
+c096103a-23e302b8.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c096103a-23e302b8.jpg,city street,city street,daytime,overcast,24,True
+c49d39a3-738d6240.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c49d39a3-738d6240.jpg,highway,highway,night,clear,9,True
+bec5aa0b-fdc30a1e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bec5aa0b-fdc30a1e.jpg,city street,city street,night,clear,7,True
+b242f6b2-99d2f2c1.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b242f6b2-99d2f2c1.jpg,city street,city street,night,clear,27,True
+bb8dba97-9f4540b7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb8dba97-9f4540b7.jpg,highway,highway,daytime,overcast,13,True
+bc05c126-3c1f8300.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc05c126-3c1f8300.jpg,residential,residential,daytime,undefined,27,True
+c1d49e85-c8f5e1a5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1d49e85-c8f5e1a5.jpg,highway,highway,night,clear,4,True
+c759b6f8-e906aa6a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c759b6f8-e906aa6a.jpg,highway,highway,daytime,clear,25,True
+bb269a85-eba0cd5a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb269a85-eba0cd5a.jpg,city street,city street,night,snowy,14,True
+c39ad1d8-0993aef9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c39ad1d8-0993aef9.jpg,city street,city street,night,clear,5,True
+c6e6f87c-6b32379a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c6e6f87c-6b32379a.jpg,city street,city street,night,clear,17,True
+b3f2fee7-1482dee6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3f2fee7-1482dee6.jpg,city street,city street,daytime,clear,32,True
+c5ffb92c-772cfc9c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5ffb92c-772cfc9c.jpg,city street,city street,night,clear,10,True
+b8e675b0-b18c870f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b8e675b0-b18c870f.jpg,city street,city street,daytime,clear,19,True
+b306fb3f-178fca4e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b306fb3f-178fca4e.jpg,city street,city street,daytime,clear,13,True
+c721de81-d9e0ad96.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c721de81-d9e0ad96.jpg,highway,highway,night,clear,13,True
+bb5cc516-3ac130c2.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb5cc516-3ac130c2.jpg,city street,city street,daytime,rainy,6,True
+c155d65b-ae8038a6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c155d65b-ae8038a6.jpg,city street,city street,daytime,undefined,9,True
+b4542860-e818b412.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4542860-e818b412.jpg,city street,city street,daytime,clear,40,True
+b51fc067-22ddb158.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b51fc067-22ddb158.jpg,city street,city street,night,clear,21,True
+c0fb59eb-895d806d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0fb59eb-895d806d.jpg,city street,city street,daytime,clear,31,True
+c9557697-e1fc666a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9557697-e1fc666a.jpg,city street,city street,night,clear,13,True
+c889c950-865ca5b6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c889c950-865ca5b6.jpg,highway,highway,night,clear,8,True
+c56ad92a-fca9c961.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c56ad92a-fca9c961.jpg,city street,city street,daytime,undefined,9,True
+b5cd5f72-32232751.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5cd5f72-32232751.jpg,city street,city street,daytime,overcast,24,True
+b760329b-611024b4.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b760329b-611024b4.jpg,residential,residential,daytime,partly cloudy,16,True
+c909551e-fb24caeb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c909551e-fb24caeb.jpg,city street,city street,daytime,partly cloudy,33,True
+c5c9ead6-dab2dae6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c5c9ead6-dab2dae6.jpg,city street,city street,daytime,clear,4,True
+b355880f-9131b077.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b355880f-9131b077.jpg,city street,city street,daytime,overcast,13,True
+b4e3816e-6cd8a1fe.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4e3816e-6cd8a1fe.jpg,city street,city street,night,clear,8,True
+c18c0928-a28a4f94.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c18c0928-a28a4f94.jpg,city street,city street,daytime,partly cloudy,40,True
+b9d47fe7-858753e0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b9d47fe7-858753e0.jpg,city street,city street,dawn/dusk,undefined,42,True
+c06fd7ca-420dd696.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c06fd7ca-420dd696.jpg,city street,city street,daytime,partly cloudy,29,True
+c86ee6aa-a2ef00fe.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c86ee6aa-a2ef00fe.jpg,city street,city street,night,clear,28,True
+c2b665b0-204f2f52.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2b665b0-204f2f52.jpg,city street,city street,daytime,partly cloudy,12,True
+bd51fb57-1ac69b0a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd51fb57-1ac69b0a.jpg,highway,highway,night,clear,9,True
+b6658d33-adfea9cf.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6658d33-adfea9cf.jpg,highway,highway,night,clear,5,True
+c31a04de-1c417568.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c31a04de-1c417568.jpg,highway,highway,night,clear,4,True
+bcd02ab4-27b39461.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcd02ab4-27b39461.jpg,city street,city street,daytime,undefined,36,True
+c1627cd8-d8c10968.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1627cd8-d8c10968.jpg,city street,city street,night,clear,31,True
+ba1f97fc-214aaccb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba1f97fc-214aaccb.jpg,residential,residential,daytime,clear,17,True
+c2313d3a-69748e1a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c2313d3a-69748e1a.jpg,city street,city street,night,rainy,25,True
+bac9c292-e91eed49.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bac9c292-e91eed49.jpg,city street,city street,dawn/dusk,clear,28,True
+b7edcfdc-f018989f.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b7edcfdc-f018989f.jpg,highway,highway,daytime,clear,6,True
+bb6264e8-e8dfd14d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb6264e8-e8dfd14d.jpg,city street,city street,daytime,clear,23,True
+b1da9c53-0f3d4c5d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b1da9c53-0f3d4c5d.jpg,residential,residential,daytime,snowy,6,True
+bc3c9f73-86d9b80c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bc3c9f73-86d9b80c.jpg,city street,city street,daytime,undefined,4,True
+c330c787-1e2b9b50.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c330c787-1e2b9b50.jpg,highway,highway,daytime,clear,7,True
+ba9aff77-5e161292.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba9aff77-5e161292.jpg,city street,city street,daytime,partly cloudy,11,True
+c1fa81f4-f26197b3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1fa81f4-f26197b3.jpg,highway,highway,dawn/dusk,undefined,6,True
+bbcf6d54-4923f0f0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bbcf6d54-4923f0f0.jpg,highway,highway,night,clear,15,True
+bd338426-4b27de63.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd338426-4b27de63.jpg,highway,highway,daytime,clear,9,True
+c174b1bd-62c7b473.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c174b1bd-62c7b473.jpg,residential,residential,daytime,undefined,10,True
+c3c10c0c-45eec8a3.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c3c10c0c-45eec8a3.jpg,city street,city street,daytime,clear,34,True
+bcd900a7-02adf687.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcd900a7-02adf687.jpg,city street,city street,daytime,overcast,27,True
+c7706d20-5f4987db.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c7706d20-5f4987db.jpg,city street,city street,daytime,clear,15,True
+b78032b6-f85e30bb.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b78032b6-f85e30bb.jpg,highway,highway,night,clear,11,True
+c9f5283d-7b81eb6b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c9f5283d-7b81eb6b.jpg,city street,city street,night,clear,13,True
+c0892575-b842e6c9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0892575-b842e6c9.jpg,highway,highway,night,clear,14,True
+c0a6cfd6-fe9a5c77.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c0a6cfd6-fe9a5c77.jpg,city street,city street,daytime,overcast,15,True
+b6afe56b-ec85d002.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b6afe56b-ec85d002.jpg,city street,city street,daytime,partly cloudy,23,True
+c1f8d9b3-c550f84e.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f8d9b3-c550f84e.jpg,city street,city street,night,clear,6,True
+bd8f4dfa-52cf9375.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd8f4dfa-52cf9375.jpg,highway,highway,dawn/dusk,rainy,9,True
+c834d656-8f9f6538.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c834d656-8f9f6538.jpg,highway,highway,night,rainy,12,True
+bd656105-ed6f8161.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd656105-ed6f8161.jpg,city street,city street,daytime,overcast,24,True
+bfd64d5f-172c9bb5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfd64d5f-172c9bb5.jpg,city street,city street,daytime,overcast,7,True
+ba2905e2-145d9cfc.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/ba2905e2-145d9cfc.jpg,city street,city street,night,clear,19,True
+b4253085-ce679d21.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4253085-ce679d21.jpg,city street,city street,night,clear,14,True
+b486e8ba-a96e55e5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b486e8ba-a96e55e5.jpg,city street,city street,daytime,overcast,34,True
+b3a1e72b-f9a8ed50.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b3a1e72b-f9a8ed50.jpg,city street,city street,night,clear,33,True
+c927d51b-5c078571.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c927d51b-5c078571.jpg,residential,residential,daytime,clear,14,True
+be731030-7593da2a.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/be731030-7593da2a.jpg,city street,city street,daytime,undefined,10,True
+bb9071ac-6b111ce9.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bb9071ac-6b111ce9.jpg,city street,city street,daytime,snowy,28,True
+bece8f9e-2c905717.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bece8f9e-2c905717.jpg,city street,city street,dawn/dusk,clear,16,True
+b4aa7fc1-2c1fdd4c.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b4aa7fc1-2c1fdd4c.jpg,residential,residential,daytime,overcast,12,True
+c1f8d9b3-c6dae792.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1f8d9b3-c6dae792.jpg,city street,city street,night,clear,8,True
+bfcd4491-8f55e55d.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bfcd4491-8f55e55d.jpg,city street,city street,night,clear,5,True
+b5b8e198-9f61fa4b.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/b5b8e198-9f61fa4b.jpg,city street,city street,night,clear,20,True
+c1dcd827-e36b0fd0.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c1dcd827-e36b0fd0.jpg,city street,city street,night,rainy,10,True
+c569c251-8a583641.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c569c251-8a583641.jpg,city street,city street,daytime,clear,17,True
+c8afab60-93f92fc5.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c8afab60-93f92fc5.jpg,city street,city street,night,rainy,28,True
+bcd9f474-7f12bf92.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bcd9f474-7f12bf92.jpg,highway,highway,night,clear,15,True
+c57ec379-3d606dec.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c57ec379-3d606dec.jpg,highway,highway,night,clear,2,True
+bd354e59-e5a9e8c6.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/bd354e59-e5a9e8c6.jpg,city street,city street,daytime,overcast,41,True
+c676514a-8b4d18b7.jpg,/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/images/val/c676514a-8b4d18b7.jpg,city street,city street,night,undefined,30,True
