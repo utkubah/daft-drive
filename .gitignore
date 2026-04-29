@@ -35,3 +35,7 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+
+/medsam-raw
+/medsam-data
