@@ -35,3 +35,7 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# generated detection/driving datasets
+DAFT-SegFormer-BDD100K/data/hf_bdd100k_od/
+DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/
