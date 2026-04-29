@@ -1,0 +1,42 @@
+{
+  "train": {
+    "images_total": 7000,
+    "masks_total": 7000,
+    "matched_pairs": 7000,
+    "missing_mask": 0,
+    "mismatched_shape": 0,
+    "top_shapes": [
+      {
+        "shape": "720x1280",
+        "count": 7000
+      }
+    ],
+    "first_mask_names": [
+      "0004a4c0-d4dff0ad_train_id.png",
+      "00054602-3bf57337_train_id.png",
+      "00067cfb-e535423e_train_id.png",
+      "00091078-59817bb0_train_id.png",
+      "0010bf16-a457685b_train_id.png"
+    ]
+  },
+  "val": {
+    "images_total": 1000,
+    "masks_total": 1000,
+    "matched_pairs": 1000,
+    "missing_mask": 0,
+    "mismatched_shape": 0,
+    "top_shapes": [
+      {
+        "shape": "720x1280",
+        "count": 1000
+      }
+    ],
+    "first_mask_names": [
+      "7d06fefd-f7be05a6_train_id.png",
+      "7d128593-0ccfea4c_train_id.png",
+      "7d15b18b-1e0d6e3f_train_id.png",
+      "7d209219-ccdc1a09_train_id.png",
+      "7d22891c-224788c0_train_id.png"
+    ]
+  }
+}
