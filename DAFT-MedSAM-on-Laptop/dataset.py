@@ -108,10 +108,10 @@ class MedSegDataset(Dataset):
         # Build tensors
         # img:  (3, 256, 256)
         # mask: (1, 256, 256)
-        # bbox: (1, 1, 4)   — two extra dims match EfficientViT-SAM prompt encoder input
+        # bbox: (1, 4)   — standard SAM format: (num_boxes, 4)
         img_t  = torch.from_numpy(img.transpose(2, 0, 1)).float()
         mask_t = torch.from_numpy(binary_mask[None]).long()
-        bbox_t = torch.from_numpy(bbox[None, None]).float()
+        bbox_t = torch.from_numpy(bbox[None]).float()
 
         return {"image": img_t, "mask": mask_t, "bbox": bbox_t}
 

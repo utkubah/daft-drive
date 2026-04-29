@@ -199,7 +199,7 @@ def main():
         lr=args.lr, betas=(0.9, 0.999), weight_decay=args.weight_decay,
     )
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode="min", factor=0.9, patience=5
+        optimizer, mode="min", factor=0.9, patience=5, cooldown=5
     )
     seg_loss = monai.losses.DiceLoss(sigmoid=True, squared_pred=True, reduction="mean")
     ce_loss  = nn.BCEWithLogitsLoss(reduction="mean")
@@ -281,18 +281,17 @@ def main():
             f"best {best_val_loss:.4f}  ({time()-t0:.1f}s)"
         )
 
-        # Save checkpoint
-        ckpt = {
-            "model":             model.state_dict(),
-            "optimizer":         optimizer.state_dict(),
-            "epoch":             epoch,
-            "best_val_loss":     best_val_loss,
-            "epochs_no_improve": epochs_no_improve,
-            "train_losses":      train_losses,
-            "rng":               save_rng(),
-        }
-        torch.save(ckpt, join(ckpt_dir, "latest.pth"))
+        # Save best checkpoint only (skip latest.pth to conserve disk space)
         if improved:
+            ckpt = {
+                "model":             model.state_dict(),
+                "optimizer":         optimizer.state_dict(),
+                "epoch":             epoch,
+                "best_val_loss":     best_val_loss,
+                "epochs_no_improve": epochs_no_improve,
+                "train_losses":      train_losses,
+                "rng":               save_rng(),
+            }
             torch.save(ckpt, join(ckpt_dir, "best.pth"))
             print(f"    -> New best saved: {join(ckpt_dir, 'best.pth')}")
 

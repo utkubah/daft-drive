@@ -188,7 +188,7 @@ def infer_slice(model, img_tensor, box_256, new_h, new_w, orig_H, orig_W, device
     box_256    : (4,)  float32  [x0, y0, x1, y1] in 256-padded space
     Returns    : (orig_H, orig_W)  uint8
     """
-    box_t = torch.from_numpy(box_256).float().reshape(1, 1, 1, 4).to(device)
+    box_t = torch.from_numpy(box_256).float().reshape(1, 1, 4).to(device)
 
     with torch.no_grad():
         logits, _ = model(img_tensor.to(device), box_t)   # (1, 1, 256, 256)

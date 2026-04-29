@@ -10,8 +10,9 @@
 # Usage:  sbatch hpc/train_daft.sh
 #
 # Array index -> modality:
-#   0 Dermoscopy  1 Endoscopy  2 Fundus  3 Mammography  4 Microscopy
-#   5 OCT         6 US         7 XRay    8 3D (CT+MR+PET)
+#   0 Endoscopy  1 Fundus  2 Mammography  3 Microscopy
+#   4 OCT        5 US      6 XRay         7 3D (MR+PET)
+# Note: CT and Dermoscopy not available in training data.
 
 #SBATCH --job-name=medsam-daft
 #SBATCH --partition=stud
@@ -20,14 +21,14 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
 #SBATCH --time=23:00:00
-#SBATCH --array=0-8
-#SBATCH --output=logs/train_%A_%a.out
-#SBATCH --error=logs/train_%A_%a.err
+#SBATCH --array=0-7
+#SBATCH --output=/home/3223837/daft-drive/DAFT-MedSAM-on-Laptop/logs/train_%A_%a.out
+#SBATCH --error=/home/3223837/daft-drive/DAFT-MedSAM-on-Laptop/logs/train_%A_%a.err
 
 set -e
 mkdir -p logs
 
-MODALITIES=(Dermoscopy Endoscopy Fundus Mammography Microscopy OCT US XRay 3D)
+MODALITIES=(Endoscopy Fundus Mammography Microscopy OCT US XRay 3D)
 MOD=${MODALITIES[$SLURM_ARRAY_TASK_ID]}
 
 source /software/miniconda3/etc/profile.d/conda.sh

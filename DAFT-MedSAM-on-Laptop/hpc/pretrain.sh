@@ -17,13 +17,14 @@
 # Usage:  sbatch hpc/pretrain.sh
 
 #SBATCH --job-name=medsam-pretrain
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:GA100:1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=64G
+#SBATCH --partition=stud
+#SBATCH --qos=stud
+#SBATCH --gres=gpu:4g.40gb:1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
 #SBATCH --time=23:00:00
-#SBATCH --output=logs/pretrain_%j.out
-#SBATCH --error=logs/pretrain_%j.err
+#SBATCH --output=/home/3223837/daft-drive/DAFT-MedSAM-on-Laptop/logs/pretrain_%j.out
+#SBATCH --error=/home/3223837/daft-drive/DAFT-MedSAM-on-Laptop/logs/pretrain_%j.err
 
 set -e
 mkdir -p logs
@@ -46,7 +47,7 @@ python distill.py \
     --train_csv data/datasplit/train.csv \
     --val_csv   data/datasplit/val.csv   \
     --lite_medsam lite_medsam.pth        \
-    --epochs    20  --batch_size 16  --num_workers 4
+    --epochs    24  --batch_size 8  --num_workers 4
 
 # Step 2: Merge distilled encoder + LiteMedSAM decoder
 echo "===== Step 2/3: Merge weights ====="
@@ -62,7 +63,7 @@ python train.py \
     --val_csv   data/datasplit/val.csv   \
     --weights   checkpoints/merged.pth   \
     --name      global                   \
-    --epochs    20  --batch_size 8  --num_workers 4
+    --epochs    24  --batch_size 8  --num_workers 4
 
 echo ""
 echo "Pretrain pipeline complete.  Next:"

@@ -149,7 +149,7 @@ def get_args():
     p.add_argument("--epochs",      type=int,   default=10)
     p.add_argument("--batch_size",  type=int,   default=8)
     p.add_argument("--num_workers", type=int,   default=4)
-    p.add_argument("--lr",          type=float, default=1e-4)
+    p.add_argument("--lr",          type=float, default=5e-5)
     p.add_argument("--device",
                    default="cuda" if torch.cuda.is_available() else "cpu")
     p.add_argument("--out", default="checkpoints/distilled_encoder.pth",

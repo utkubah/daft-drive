@@ -83,29 +83,37 @@ class MedSAM(nn.Module):
         """
         Args:
             images  (B, 3, 256, 256)  normalized to [0, 1]
-            bboxes  (B, 1, 1, 4)      [x_min, y_min, x_max, y_max] in 256-space
+            bboxes  (B, 1, 4)         [x_min, y_min, x_max, y_max] in 256-space
 
         Returns:
             logits  (B, 1, 256, 256)  raw segmentation logits
             iou     (B, 1)            predicted IoU quality score
+
+        Note: the mask_decoder's repeat_interleave is designed for (1 image,
+        N prompts) at a time, so we loop per image.  The image encoder still
+        runs on the full batch for efficiency.
         """
-        # Step 1: encode the image
-        features = self.image_encoder(images)                 # (B, 256, 64, 64)
+        # Step 1: encode all images at once (efficient)
+        features = self.image_encoder(images)    # (B, 256, 64, 64)
 
-        # Step 2: encode the bounding box prompt (no gradients — encoder is frozen)
-        with torch.no_grad():
-            sparse_emb, dense_emb = self.prompt_encoder(
-                points=None,
-                boxes=bboxes,        # (B, 1, 1, 4)
-                masks=None,
+        # Steps 2+3: prompt-encode + decode one image at a time
+        all_logits, all_iou = [], []
+        for feat, bbox in zip(features, bboxes):
+            # feat: (256, 64, 64)   bbox: (1, 4)
+            with torch.no_grad():
+                sparse_emb, dense_emb = self.prompt_encoder(
+                    points=None,
+                    boxes=bbox.unsqueeze(0),   # (1, 1, 4)
+                    masks=None,
+                )
+            logit, pred_iou = self.mask_decoder(
+                image_embeddings=feat.unsqueeze(0),   # (1, 256, 64, 64)
+                image_pe=self.prompt_encoder.get_dense_pe(),
+                sparse_prompt_embeddings=sparse_emb,
+                dense_prompt_embeddings=dense_emb,
+                multimask_output=False,
             )
+            all_logits.append(logit)
+            all_iou.append(pred_iou)
 
-        # Step 3: decode into mask + IoU
-        logits, iou = self.mask_decoder(
-            image_embeddings=features,
-            image_pe=self.prompt_encoder.get_dense_pe(),
-            sparse_prompt_embeddings=sparse_emb,
-            dense_prompt_embeddings=dense_emb,
-            multimask_output=False,   # one mask per box
-        )
-        return logits, iou             # (B, 1, 256, 256),  (B, 1)
+        return torch.cat(all_logits, dim=0), torch.cat(all_iou, dim=0)
