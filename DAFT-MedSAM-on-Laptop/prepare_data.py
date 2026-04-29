@@ -54,7 +54,9 @@ MODALITY_PATTERNS = {
     "OCT":         r"^OCT",
     "US":          r"^US",
     "XRay":        r"^(XRay|X-Ray|CXR|XR)",
-    "3D":          r"^(CT|MR|PET)",
+    "MR":          r"^MR",
+    "PET":         r"^PET",
+    # CT has no training data — no CSV generated; CT at inference falls back to global
 }
 
 

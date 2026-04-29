@@ -23,7 +23,7 @@ module load cuda/12.4 || true
 
 cd $HOME/daft-drive/DAFT-MedSAM-on-Laptop
 
-MODALITIES=(Endoscopy Fundus Mammography Microscopy OCT US XRay 3D)
+MODALITIES=(Endoscopy Fundus Mammography Microscopy OCT US XRay MR PET)
 
 for MOD in "${MODALITIES[@]}"; do
     echo "===== Training specialist: $MOD ====="
@@ -32,7 +32,7 @@ for MOD in "${MODALITIES[@]}"; do
         --val_csv   data/datasplit/modalities/${MOD}.val.csv   \
         --weights   checkpoints/global/best.pth                \
         --name      ${MOD}                                     \
-        --epochs    24                                         \
+        --epochs    30                                         \
         --batch_size 8                                         \
         --num_workers 4
     echo "===== Done: $MOD ====="

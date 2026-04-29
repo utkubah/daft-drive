@@ -61,9 +61,9 @@ from model import MedSAM
 
 def filename_to_modelname(filename):
     """Return the specialist model name for a given .npz filename."""
-    if filename.startswith("3DBox_PET"): return "3D"
-    if filename.startswith("3DBox_MR"):  return "3D"
-    if filename.startswith("3DBox_CT"):  return "3D"
+    if filename.startswith("3DBox_PET"): return "PET"
+    if filename.startswith("3DBox_MR"):  return "MR"
+    if filename.startswith("3DBox_CT"):  return "CT"   # no CT specialist -> falls back to global
 
     if filename.startswith("2DBox_X-Ray"):    return "XRay"
     if filename.startswith("2DBox_XRay"):     return "XRay"
@@ -78,9 +78,9 @@ def filename_to_modelname(filename):
     if filename.startswith("2DBox_Dermoscopy"): return "Dermoscopy"
     if filename.startswith("2DBox_Microscope"): return "Microscopy"
     if filename.startswith("2DBox_Microscopy"): return "Microscopy"
-    if filename.startswith("2DBox_CT"):  return "3D"
-    if filename.startswith("2DBox_MR"):  return "3D"
-    if filename.startswith("2DBox_PET"): return "3D"
+    if filename.startswith("2DBox_CT"):  return "CT"   # no CT specialist -> falls back to global
+    if filename.startswith("2DBox_MR"):  return "MR"
+    if filename.startswith("2DBox_PET"): return "PET"
     if filename.startswith("2DBox_Mamm"):return "Mammography"
     if filename.startswith("2DBox_OCT"): return "OCT"
 
@@ -90,12 +90,12 @@ def filename_to_modelname(filename):
     if "Endoscopy"   in filename:                              return "Endoscopy"
     if "Fundus"      in filename:                              return "Fundus"
     if "X-Ray"       in filename or "XRay" in filename:        return "XRay"
-    if "PET"         in filename:                              return "3D"
+    if "PET"         in filename:                              return "PET"
     if "OCT"         in filename:                              return "OCT"
-    if "MR"          in filename:                              return "3D"
+    if "MR"          in filename:                              return "MR"
     if "Mamm"        in filename:                              return "Mammography"
     if "US"          in filename:                              return "US"
-    if "CT"          in filename:                              return "3D"
+    if "CT"          in filename:                              return "CT"
 
     print(f"  WARNING: no routing match for '{filename}', using global model")
     return "global"
@@ -117,6 +117,7 @@ def load_model(model_name, ckpt_dir, device):
     candidates = [
         os.path.join(ckpt_dir, model_name, "best.pth"),
         os.path.join(ckpt_dir, f"{model_name}.pth"),
+        os.path.join(ckpt_dir, "global", "best.pth"),
         os.path.join(ckpt_dir, "global.pth"),
     ]
     ckpt_path = next((p for p in candidates if os.path.isfile(p)), None)

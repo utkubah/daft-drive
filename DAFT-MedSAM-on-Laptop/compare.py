@@ -105,8 +105,8 @@ def evaluate(pred_dir, gt_dir, out_csv):
 
 def plot(daft_df, global_df, out_png):
     """Grouped bar chart: paper / our DAFT / our global, per file."""
-    daft_df["label"]   = daft_df["file"].apply(label_from_filename)
-    global_df["label"] = global_df["file"].apply(label_from_filename)
+    daft_df["label"]   = daft_df["case"].apply(label_from_filename)
+    global_df["label"] = global_df["case"].apply(label_from_filename)
 
     # Average DSC per label (one number per file in our case)
     daft_by   = daft_df.groupby("label")["dsc"].mean()
@@ -173,8 +173,8 @@ def main():
     plot(daft_df, global_df, os.path.join(args.out_dir, "compare.png"))
 
     # Summary table
-    daft_df["label"]   = daft_df["file"].apply(label_from_filename)
-    global_df["label"] = global_df["file"].apply(label_from_filename)
+    daft_df["label"]   = daft_df["case"].apply(label_from_filename)
+    global_df["label"] = global_df["case"].apply(label_from_filename)
     summary = pd.DataFrame({
         "label":  list(FILE_TO_LABEL.values()),
     })
