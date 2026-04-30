@@ -37,5 +37,7 @@ __pycache__/
 Thumbs.db
 
 # generated detection/driving datasets
-DAFT-SegFormer-BDD100K/data/hf_bdd100k_od/
-DAFT-SegFormer-BDD100K/data/hf_bdd100k_yolop_global/
+DAFT-BDD100K/data
+DAFT-BDD100K/analysis
+DAFT-MedSAM-on-Laptop/data/
+medsam-data/
