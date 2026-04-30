@@ -23,6 +23,9 @@ module load cuda/12.4 || true
 
 cd $HOME/daft-drive/DAFT-MedSAM-on-Laptop
 
+echo "===== Rebuilding CSV splits ====="
+python prepare_data.py --data_dir $HOME/medsam-data
+
 MODALITIES=(Endoscopy Fundus Mammography Microscopy OCT US XRay MR PET)
 
 for MOD in "${MODALITIES[@]}"; do
