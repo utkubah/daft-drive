@@ -35,6 +35,7 @@ Usage
 """
 
 import argparse
+from pathlib import Path
 from ultralytics import YOLO
 
 
@@ -68,7 +69,7 @@ def main():
         batch     = args.batch,
         imgsz     = args.imgsz,
         lr0       = args.lr,
-        project   = "checkpoints",
+        project   = str(Path("checkpoints").resolve()),
         name      = args.name,
         device    = args.device,
         patience  = args.patience,

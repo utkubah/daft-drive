@@ -47,7 +47,7 @@ import fiftyone.utils.huggingface as fouh
 
 HUB_NAME   = "dgural/bdd100k"
 HF_SPLITS  = ["train", "validation"]
-CONDITIONS = ["day", "night", "rain"]
+CONDITIONS = ["city_day", "city_night", "highway_day", "highway_night", "residential"]
 OUT_DIR    = Path("data/bdd100k")
 
 MANIFEST_FIELDS = [
@@ -61,11 +61,17 @@ def get_label(sample, field: str) -> str | None:
     return getattr(val, "label", None) if val else None
 
 
-def map_condition(timeofday: str | None, weather: str | None) -> str | None:
-    if weather == "rainy":     return "rain"
-    if timeofday == "night":   return "night"
-    if timeofday == "daytime": return "day"
-    return None
+def map_condition(scene: str | None, timeofday: str | None) -> str | None:
+    scene     = (scene     or "").lower().strip()
+    timeofday = (timeofday or "").lower().strip()
+
+    if "city" in scene:
+        return "city_night" if timeofday == "night" else "city_day"
+    if "highway" in scene:
+        return "highway_night" if timeofday == "night" else "highway_day"
+    if "residential" in scene:
+        return "residential"
+    return None   # tunnel, parking lot, gas station, undefined
 
 
 def build_class_index(dataset) -> dict[str, int]:
@@ -117,14 +123,15 @@ def process_split(dataset, split: str, yolo_dir: Path, class_to_idx: dict) -> li
 
         timeofday = get_label(sample, "timeofday")
         weather   = get_label(sample, "weather")
+        scene     = get_label(sample, "scene")
         rows.append({
             "image_name": img_path.name,
             "image_path": str(dst),
             "yolo_label":  str(lbl_path),
             "timeofday":  timeofday,
             "weather":    weather,
-            "scene":      get_label(sample, "scene"),
-            "condition":  map_condition(timeofday, weather),
+            "scene":      scene,
+            "condition":  map_condition(scene, timeofday),
             "num_boxes":  len(lines),
         })
 

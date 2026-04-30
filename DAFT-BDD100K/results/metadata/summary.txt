@@ -1,0 +1,84 @@
+BDD100K Metadata Analysis — 2,000 total samples
+
+Scene (total=2,000)
+---------------------------------------------
+  city street                 1,224  ( 61.2%)
+  highway                       494  ( 24.7%)
+  residential                   254  ( 12.7%)
+  undefined                      14  (  0.7%)
+  parking lot                     6  (  0.3%)
+  tunnel                          4  (  0.2%)
+  gas stations                    4  (  0.2%)
+
+Timeofday (total=2,000)
+---------------------------------------------
+  daytime                     1,060  ( 53.0%)
+  night                         734  ( 36.7%)
+  dawn/dusk                     200  ( 10.0%)
+  undefined                       6  (  0.3%)
+
+Weather (total=2,000)
+---------------------------------------------
+  clear                       1,056  ( 52.8%)
+  overcast                      244  ( 12.2%)
+  undefined                     230  ( 11.5%)
+  snowy                         196  (  9.8%)
+  rainy                         166  (  8.3%)
+  partly cloudy                 106  (  5.3%)
+  foggy                           2  (  0.1%)
+
+Current condition (day/night/rain) (total=2,000)
+---------------------------------------------
+  day                           964  ( 48.2%)
+  night                         680  ( 34.0%)
+  undefined                     190  (  9.5%)
+  rain                          166  (  8.3%)
+
+
+Scene × Timeofday
+============================================================
+  scene                       dawn/dusk     daytime       night   undefined
+  city street                       118         608         496           2
+  gas stations                        0           4           0           0
+  highway                            44         272         178           0
+  parking lot                         0           6           0           0
+  residential                        38         166          50           0
+  tunnel                              0           0           2           2
+  undefined                           0           4           8           2
+
+
+Scene × Weather
+============================================================
+  scene                           clear       foggy    overcastpartly cloudy       rainy       snowy   undefined
+  city street                       636           2         140          58         102         118         168
+  gas stations                        0           0           2           0           2           0           0
+  highway                           302           0          70          36          36          28          22
+  parking lot                         0           0           0           2           2           2           0
+  residential                       114           0          32          10          22          48          28
+  tunnel                              0           0           0           0           0           0           4
+  undefined                           4           0           0           0           2           0           8
+
+
+Avg objects per image per scene
+---------------------------------------------
+  city street                 21.0 avg  (1,224 images)
+  highway                     14.3 avg  (494 images)
+  residential                 15.0 avg  (254 images)
+  parking lot                 30.7 avg  (6 images)
+  undefined                    8.1 avg  (14 images)
+  gas stations                18.5 avg  (4 images)
+  tunnel                       4.0 avg  (4 images)
+
+
+============================================================
+ROUTING RECOMMENDATION
+============================================================
+
+Scenes with >= 200 images: ['city street', 'highway', 'residential']
+
+Current conditions coverage:
+  day: 964 (48.2%)
+  night: 680 (34.0%)
+  undefined: 190 (9.5%)
+  rain: 166 (8.3%)
+  unmapped (dawn/dusk, overcast, etc): 0 (0.0%)

@@ -3,23 +3,21 @@ inference.py
 ============
 DAFT routing for BDD100K object detection.
 
-For each image, loads the specialist model for its condition
-(day / night / rain). Falls back to the global model if no
-specialist checkpoint exists for that condition.
+For each image, loads the specialist model for its condition.
+Conditions: city_day / city_night / highway_day / highway_night / residential
+Falls back to the global model if no specialist checkpoint exists.
 
-Condition can be:
-  - forced via --condition (e.g. when you know it's a night scene)
-  - read per-image from a manifest CSV produced by prepare_data.py
-  - defaulted to "global" if unknown
+Condition is read per-image from the manifest CSV (scene + timeofday columns)
+produced by prepare_data.py, or forced via --condition.
 
 Usage
 -----
-  # Force a single condition for all images:
-  python inference.py --source data/test_imgs/ --condition night
-
   # Route per-image using manifest metadata:
-  python inference.py --source data/test_imgs/ \\
+  python inference.py --source data/bdd100k/yolo/images/val/ \\
                       --manifest data/bdd100k/manifests/val.csv
+
+  # Force a single condition for all images:
+  python inference.py --source data/test_imgs/ --condition city_night
 
   # Force global (no DAFT routing):
   python inference.py --source data/test_imgs/ --condition global
@@ -30,11 +28,13 @@ import csv
 from pathlib import Path
 
 from ultralytics import YOLO
+from router import MetadataRouter, CONDITIONS
 
-CONDITIONS = ["day", "night", "rain"]
-CKPT_DIR   = Path("checkpoints")
+CKPT_DIR         = Path("checkpoints")
+ALT_CKPT_DIR     = Path("runs/detect/checkpoints")
 
 _MODEL_CACHE: dict[str, YOLO] = {}
+_router = MetadataRouter()
 
 
 def load_model(condition: str) -> YOLO:
@@ -43,9 +43,10 @@ def load_model(condition: str) -> YOLO:
         return _MODEL_CACHE[condition]
 
     candidates = [
-        CKPT_DIR / condition / "weights" / "best.pt",
-        CKPT_DIR / "global"  / "weights" / "best.pt",
-        CKPT_DIR / "global.pt",
+        CKPT_DIR     / condition / "weights" / "best.pt",
+        ALT_CKPT_DIR / condition / "weights" / "best.pt",
+        CKPT_DIR     / "global"  / "weights" / "best.pt",
+        ALT_CKPT_DIR / "global"  / "weights" / "best.pt",
     ]
     path = next((p for p in candidates if p.exists()), None)
     if path is None:
@@ -61,13 +62,16 @@ def load_model(condition: str) -> YOLO:
     return model
 
 
-def build_manifest_index(manifest_csv: str) -> dict[str, str]:
-    """Return {image_name: condition} from a manifest CSV."""
-    index: dict[str, str] = {}
+def build_manifest_index(manifest_csv: str) -> dict[str, dict]:
+    """Return {image_name: {scene, timeofday, condition}} from manifest CSV."""
+    index: dict[str, dict] = {}
     with open(manifest_csv, newline="") as f:
         for row in csv.DictReader(f):
-            cond = row.get("condition") or "global"
-            index[row["image_name"]] = cond
+            index[row["image_name"]] = {
+                "scene":     row.get("scene", ""),
+                "timeofday": row.get("timeofday", ""),
+                "condition": row.get("condition", ""),
+            }
     return index
 
 
@@ -76,9 +80,9 @@ def get_args():
     p.add_argument("--source",    required=True,
                    help="Image file or directory of .jpg files")
     p.add_argument("--condition", default=None,
-                   help="Force condition: day | night | rain | global")
+                   help="Force condition for all images (skips routing)")
     p.add_argument("--manifest",  default=None,
-                   help="Manifest CSV for per-image condition routing")
+                   help="Manifest CSV for per-image metadata routing")
     p.add_argument("--pred_dir",  default="data/predictions")
     p.add_argument("--conf",      type=float, default=0.25)
     p.add_argument("--device",    default="")
@@ -96,9 +100,26 @@ def main():
 
     print(f"Found {len(imgs)} images.")
     for img_path in imgs:
-        condition = args.condition or manifest.get(img_path.name, "global")
-        model     = load_model(condition)
+        # ── Routing ──────────────────────────────────────────────────────
+        if args.condition:
+            # Hard override: user forced a single condition
+            condition = args.condition
+            label     = condition
+        elif img_path.name in manifest:
+            meta = manifest[img_path.name]
+            # Use stored condition if clean; otherwise re-derive via router
+            if meta["condition"] and meta["condition"] in CONDITIONS:
+                condition = meta["condition"]
+            else:
+                weights   = _router.weights(meta["scene"], meta["timeofday"])
+                selected  = _router.select(weights)
+                condition = selected[0][0]   # hard routing: top-1
+            label = condition
+        else:
+            condition = "global"
+            label     = "global (no metadata)"
 
+        model   = load_model(condition)
         results = model.predict(
             source  = str(img_path),
             conf    = args.conf,
@@ -111,7 +132,7 @@ def main():
             r.save(filename=str(pred_dir / img_path.name))
 
         n = len(results[0].boxes) if results[0].boxes else 0
-        print(f"  {img_path.name}  [{condition}]  -> {n} detections")
+        print(f"  {img_path.name}  [{label}]  -> {n} detections")
 
     print("\nDone.")
 

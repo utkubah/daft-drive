@@ -69,14 +69,17 @@ def get_args():
     p.add_argument("--epochs",   type=int,   default=20)
     p.add_argument("--batch",    type=int,   default=16)
     p.add_argument("--lr",       type=float, default=1e-4)
-    p.add_argument("--workers",  type=int,   default=4)
+    p.add_argument("--workers",  type=int,   default=2)
     p.add_argument("--device",   default="cuda" if torch.cuda.is_available() else "cpu")
     return p.parse_args()
 
 
 def main():
-    args    = get_args()
-    device  = torch.device(args.device)
+    args = get_args()
+    dev  = args.device
+    if dev.isdigit():
+        dev = f"cuda:{dev}"
+    device  = torch.device(dev)
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -103,8 +106,8 @@ def main():
             store[0] = output
         return hook
 
-    teacher_nn.model[sppf_idx].register_forward_hook(make_hook(teacher_feat))
-    student_nn.model[sppf_idx].register_forward_hook(make_hook(student_feat))
+    t_handle = teacher_nn.model[sppf_idx].register_forward_hook(make_hook(teacher_feat))
+    s_handle = student_nn.model[sppf_idx].register_forward_hook(make_hook(student_feat))
 
     # --- projection: student channels -> teacher channels ---
     t_ch = teacher_nn.model[sppf_idx].cv2.conv.out_channels
@@ -123,7 +126,8 @@ def main():
     # --- data ---
     dataset = ImageFolder(args.img_dir)
     loader  = DataLoader(dataset, batch_size=args.batch, shuffle=True,
-                         num_workers=args.workers, pin_memory=True)
+                         num_workers=args.workers,
+                         pin_memory=device.type == "cuda")
     print(f"  {len(dataset)} images | device={args.device}")
 
     # --- distillation loop ---
@@ -146,7 +150,9 @@ def main():
         print(f"  Epoch {epoch:3d}/{args.epochs}  distill_loss={total/len(loader):.5f}")
 
     # --- save distilled student ---
-    # Saved in ultralytics-compatible format (load with YOLO(path))
+    # Remove hooks before saving — hooks can't be pickled
+    t_handle.remove()
+    s_handle.remove()
     out_path = out_dir / "distilled.pt"
     torch.save({"model": deepcopy(student_nn).half()}, str(out_path))
     print(f"\nSaved distilled student -> {out_path}")
