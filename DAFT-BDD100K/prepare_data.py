@@ -1,8 +1,11 @@
 """
 prepare_data.py
 ===============
-Load BDD100K via FiftyOne, export to YOLO format, and build
-per-condition splits for DAFT specialist training.
+Load BDD100K via FiftyOne (HuggingFace), export to YOLO format, and
+build per-condition splits for DAFT specialist training.
+
+Data source: FiftyOne loads dgural/bdd100k from HuggingFace.
+Set --hf_token (or HF_TOKEN env var) to avoid anonymous rate limits.
 
 Conditions (from BDD100K metadata):
   day   -- timeofday == "daytime"
@@ -14,26 +17,28 @@ Outputs
   data/bdd100k/
     classes.txt
     yolo/
-      images/{train,val}/     symlinked images
-      labels/{train,val}/     YOLO .txt label files
-      dataset.yaml            full dataset (all conditions)
-      {condition}.train.txt   image-list files for specialist training
+      images/{train,val}/       symlinked images
+      labels/{train,val}/       YOLO .txt label files
+      dataset.yaml              full dataset (all conditions)
+      {condition}.train.txt     image-list files for specialist training
       {condition}.val.txt
-      {condition}.yaml        per-condition dataset configs
+      {condition}.yaml          per-condition dataset configs
     manifests/
-      {split}.csv             all usable samples per split
-      {condition}.{split}.csv per-condition subsets
+      {split}.csv               all usable samples per split
+      {condition}.{split}.csv   per-condition subsets
 
 Usage
 -----
   python prepare_data.py
-  python prepare_data.py --max_samples 5000   # limit per split for testing
+  python prepare_data.py --max_samples 5000        # limit per split for testing
+  python prepare_data.py --hf_token hf_xxx...      # avoid HF rate limits
 """
 from __future__ import annotations
 
 import argparse
 import csv
 import json
+import os
 import shutil
 from pathlib import Path
 
@@ -57,9 +62,9 @@ def get_label(sample, field: str) -> str | None:
 
 
 def map_condition(timeofday: str | None, weather: str | None) -> str | None:
-    if weather == "rainy":      return "rain"
-    if timeofday == "night":    return "night"
-    if timeofday == "daytime":  return "day"
+    if weather == "rainy":     return "rain"
+    if timeofday == "night":   return "night"
+    if timeofday == "daytime": return "day"
     return None
 
 
@@ -100,7 +105,6 @@ def process_split(dataset, split: str, yolo_dir: Path, class_to_idx: dict) -> li
         if not lines:
             continue
 
-        # symlink image into yolo structure
         dst = img_out / img_path.name
         if not dst.exists():
             try:
@@ -144,7 +148,13 @@ def main():
     ap.add_argument("--max_samples", type=int, default=10000,
                     help="Max samples per split (0 = all)")
     ap.add_argument("--out_dir", default=str(OUT_DIR))
+    ap.add_argument("--hf_token", default=os.environ.get("HF_TOKEN"),
+                    help="HuggingFace token to avoid rate limits (or set HF_TOKEN env var)")
     args = ap.parse_args()
+
+    if not args.hf_token:
+        print("WARNING: no --hf_token set. Anonymous HF downloads may hit rate limits.")
+        print("  Get a free token at https://huggingface.co/settings/tokens")
 
     yolo_dir = Path(args.out_dir) / "yolo"
     man_dir  = Path(args.out_dir) / "manifests"
@@ -155,13 +165,19 @@ def main():
     class_to_idx: dict[str, int] | None = None
     all_rows: dict[str, list[dict]] = {}
 
+    load_kwargs = {}
+    if args.hf_token:
+        load_kwargs["token"] = args.hf_token
+
     for split in HF_SPLITS:
-        print(f"\nLoading {split}...")
+        print(f"\nLoading {split} from FiftyOne / HuggingFace...")
         dataset = fouh.load_from_hub(
-            HUB_NAME, split=split,
+            HUB_NAME,
+            split=split,
             max_samples=max_s,
             name=f"bdd100k_{split}",
             overwrite=True,
+            **load_kwargs,
         )
 
         if class_to_idx is None:
@@ -177,24 +193,24 @@ def main():
 
     classes = sorted(class_to_idx, key=class_to_idx.get)
 
-    # full dataset.yaml
+    # full dataset.yaml (all conditions)
     write_yaml(yolo_dir / "dataset.yaml", "images/train", "images/val", yolo_dir, classes)
 
-    # per-condition txt lists + yamls
+    # per-condition: image-list .txt files + condition-specific yamls
     for cond in CONDITIONS:
         for split in HF_SPLITS:
             yolo_split = "val" if split == "validation" else split
             sub = [r for r in all_rows[split] if r["condition"] == cond]
             txt = yolo_dir / f"{cond}.{yolo_split}.txt"
             txt.write_text("\n".join(r["image_path"] for r in sub) + "\n")
-            print(f"  {cond}.{yolo_split}: {len(sub)}")
+            print(f"  {cond}.{yolo_split}: {len(sub)} samples")
         write_yaml(
             yolo_dir / f"{cond}.yaml",
             f"{cond}.train.txt", f"{cond}.val.txt",
             yolo_dir, classes,
         )
 
-    # manifests (all + per-condition)
+    # manifests (all + per-condition CSVs)
     for split, rows in all_rows.items():
         yolo_split = "val" if split == "validation" else split
         for cond in [None] + CONDITIONS:
@@ -206,7 +222,9 @@ def main():
                 w.writerows(sub)
 
     print(f"\nDataset ready in {Path(args.out_dir).resolve()}")
-    print("Next: python distill.py  (or skip to)  python train.py --data data/bdd100k/yolo/dataset.yaml")
+    print("Next steps:")
+    print("  python distill.py --img_dir data/bdd100k/yolo/images/train")
+    print("  python train.py --data data/bdd100k/yolo/dataset.yaml --name global")
 
 
 if __name__ == "__main__":

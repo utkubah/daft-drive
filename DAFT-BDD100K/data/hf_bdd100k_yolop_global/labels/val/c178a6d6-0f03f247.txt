@@ -1,1 +1,0 @@
-/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_od/yolo/labels/val/c178a6d6-0f03f247.txt

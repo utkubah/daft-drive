@@ -1,1 +1,0 @@
-/Users/berkay/projects/daft-drive/DAFT-SegFormer-BDD100K/data/hf_bdd100k_od/yolo/labels/train/b93e0d1b-5e1e35f8.txt
