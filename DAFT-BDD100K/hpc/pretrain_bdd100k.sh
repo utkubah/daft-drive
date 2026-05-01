@@ -1,6 +1,6 @@
 #!/bin/bash
-# BDD100K Stage 1: distillation + global fine-tune
-# Run this first, then sbatch hpc/train_daft_bdd100k.sh
+# BDD100K Stage 1: distillation + global fine-tune.
+# Requires data to be prepared first via sbatch hpc/prepare_data.sh
 #
 # Usage: sbatch hpc/pretrain_bdd100k.sh
 
@@ -23,10 +23,13 @@ module load cuda/12.4 || true
 
 cd $HOME/DAFT-BDD100K
 
-echo "===== Step 1/3: Prepare data ====="
-python prepare_data.py --hf_token "$HF_TOKEN"
+test -f data/bdd100k/yolo/dataset.yaml || {
+    echo "ERROR: data/bdd100k/yolo/dataset.yaml not found."
+    echo "Run sbatch hpc/prepare_data.sh first."
+    exit 1
+}
 
-echo "===== Step 2/3: Distillation (YOLOv8m -> YOLOv8n) ====="
+echo "===== Step 1/2: Distillation (YOLOv8m -> YOLOv8n) ====="
 python distill.py \
     --img_dir data/bdd100k/yolo/images/train \
     --out_dir checkpoints/distilled \
@@ -37,7 +40,7 @@ python distill.py \
     --workers 2 \
     --device  cuda
 
-echo "===== Step 3/3: Global fine-tune ====="
+echo "===== Step 2/2: Global fine-tune ====="
 python train.py \
     --data     data/bdd100k/yolo/dataset.yaml \
     --weights  checkpoints/distilled/distilled.pt \
