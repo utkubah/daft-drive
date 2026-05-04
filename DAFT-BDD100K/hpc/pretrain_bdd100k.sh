@@ -29,13 +29,13 @@ test -f data/bdd100k/yolo/dataset.yaml || {
     exit 1
 }
 
-echo "===== Step 1/2: Distillation (YOLOv8m -> YOLOv8n) ====="
+echo "===== Step 1/2: Distillation (YOLOv8m -> YOLOv8s) ====="
 python distill.py \
     --img_dir data/bdd100k/yolo/images/train \
     --out_dir checkpoints/distilled \
-    --teacher yolov8m.pt \
-    --student yolov8n.pt \
-    --epochs  20 \
+    --teacher yolov8m.pt \ 
+    --student yolov8s.pt \
+    --epochs  15 \
     --batch   16 \
     --workers 2 \
     --device  cuda
@@ -49,7 +49,7 @@ python train.py \
     --batch    8 \
     --imgsz    640 \
     --lr       5e-5 \
-    --patience 10 \
+    --patience 15 \
     --device   cuda
 
 echo ""

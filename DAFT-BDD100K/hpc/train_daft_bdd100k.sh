@@ -44,12 +44,12 @@ for COND in "${CONDITIONS[@]}"; do
         --data     "data/bdd100k/yolo/${COND}.yaml" \
         --weights  runs/detect/checkpoints/global/weights/best.pt \
         --name     "${COND}" \
-        --epochs   30 \
+        --epochs   40 \
         --batch    8 \
         --imgsz    640 \
         --lr       5e-5 \
         --patience 10 \
-        --device   cuda
+        --device   cuda 
 
     echo "===== Done: $COND ====="
 done
