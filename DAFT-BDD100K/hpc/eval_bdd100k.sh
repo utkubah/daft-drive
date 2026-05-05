@@ -27,7 +27,6 @@ conda activate daft
 
 cd $HOME/DAFT-BDD100K
 
-# Verify at least one specialist exists before starting
 ls checkpoints/city_day/weights/best.pt 2>/dev/null || \
 ls checkpoints/highway_day/weights/best.pt 2>/dev/null || {
     echo "ERROR: No specialist checkpoints found."
@@ -36,7 +35,11 @@ ls checkpoints/highway_day/weights/best.pt 2>/dev/null || {
 }
 
 echo "===== Step 1/2: Compare global vs specialists ====="
-python compare.py --device cpu --batch 4
+python compare.py \
+    --device cpu \
+    --batch 4 \
+    --n_bench 20 \
+    --router_ckpt checkpoints/router/best.pt
 
 echo ""
 echo "===== Step 2/2: Visualize GT | Global | Specialist ====="
@@ -44,6 +47,6 @@ python visualize.py --device cpu --n_samples 5
 
 echo ""
 echo "Results saved to results/"
-echo "  results/compare.csv"
-echo "  results/compare.png"
+echo "  results/compare.csv   results/compare.png"
+echo "  results/speed.csv     results/speed.png"
 echo "  results/viz/{city_day,city_night,highway_day,highway_night,residential}/"
