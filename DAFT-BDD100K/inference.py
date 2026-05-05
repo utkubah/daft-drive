@@ -21,13 +21,14 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-from router import MetadataRouter, CONDITIONS, blend_detections, select_top_k
+from router import MetadataRouter, ImageRouter, CONDITIONS, blend_detections, select_top_k
 
 CKPT_DIR = Path("checkpoints")
 ALT_CKPT_DIR = Path("runs/detect/checkpoints")
 
 _MODEL_CACHE: dict[str, YOLO] = {}
 _router = MetadataRouter()
+_image_router: "ImageRouter | None" = None
 
 
 def resolve_checkpoint(condition: str) -> tuple[Path, str]:
@@ -79,20 +80,28 @@ def one_hot_condition(condition: str) -> dict[str, float]:
     return w
 
 
-def choose_routes(img_name: str, args, manifest: dict[str, dict]) -> tuple[dict[str, float], list[tuple[str, float]], dict]:
+def choose_routes(img_path: str, args, manifest: dict[str, dict]) -> tuple[dict[str, float], list[tuple[str, float]], dict]:
+    img_name = Path(img_path).name
+
+    # 1. Hard override
     if args.condition:
         if args.condition == "global":
             weights = {"global": 1.0}
-            selected = [("global", 1.0)]
         else:
             weights = {args.condition: 1.0}
-            selected = [(args.condition, 1.0)]
-        info = {"mode": "forced", "scene": None, "timeofday": None}
-        return weights, selected, info
+        selected = list(weights.items())
+        return weights, selected, {"mode": "forced"}
 
+    # 2. Image-based router (no metadata needed)
+    if _image_router is not None:
+        weights  = _image_router.weights(img_path)
+        selected = select_top_k(weights, top_k=args.top_k)
+        return weights, selected, {"mode": "image-router"}
+
+    # 3. Metadata router (scene + timeofday from manifest)
     if img_name in manifest:
-        meta = manifest[img_name]
-        scene = meta.get("scene", "")
+        meta      = manifest[img_name]
+        scene     = meta.get("scene", "")
         timeofday = meta.get("timeofday", "")
         condition = meta.get("condition", "")
 
@@ -104,18 +113,12 @@ def choose_routes(img_name: str, args, manifest: dict[str, dict]) -> tuple[dict[
             weights = {c: 1.0 / len(CONDITIONS) for c in CONDITIONS}
 
         selected = select_top_k(weights, top_k=args.top_k)
-        info = {
-            "mode": "metadata",
-            "scene": scene,
-            "timeofday": timeofday,
-            "condition_hint": condition,
-        }
-        return weights, selected, info
+        return weights, selected, {"mode": "metadata", "scene": scene, "timeofday": timeofday}
 
-    weights = {"global": 1.0}
+    # 4. Fallback: global
+    weights  = {"global": 1.0}
     selected = [("global", 1.0)]
-    info = {"mode": "fallback-global", "scene": None, "timeofday": None}
-    return weights, selected, info
+    return weights, selected, {"mode": "fallback-global"}
 
 
 def collapse_selected_to_runs(selected: list[tuple[str, float]]) -> list[dict]:
@@ -204,29 +207,40 @@ def save_outputs(img_path: Path, pred_dir: Path, boxes: np.ndarray, route_payloa
 
 def get_args():
     p = argparse.ArgumentParser()
-    p.add_argument("--source", required=True, help="Image file or directory of .jpg files")
-    p.add_argument("--condition", default=None, help="Force a single route: global or one specialist")
-    p.add_argument("--manifest", default=None, help="Manifest CSV for metadata routing")
-    p.add_argument("--pred_dir", default="data/predictions")
-    p.add_argument("--conf", type=float, default=0.25)
-    p.add_argument("--iou_nms", type=float, default=0.50, help="IoU threshold for weighted NMS blending")
-    p.add_argument("--top_k", default="auto", choices=["auto", "1", "2", "5"])
-    p.add_argument("--device", default="")
+    p.add_argument("--source",      required=True, help="Image file or directory of .jpg files")
+    p.add_argument("--condition",   default=None,  help="Force a single route: global or one specialist")
+    p.add_argument("--manifest",    default=None,  help="Manifest CSV for metadata routing")
+    p.add_argument("--router_ckpt", default=None,
+                   help="MobileNetV3-small checkpoint for image-based routing "
+                        "(checkpoints/router/best.pt). No metadata needed when set.")
+    p.add_argument("--pred_dir",    default="data/predictions")
+    p.add_argument("--conf",        type=float, default=0.25)
+    p.add_argument("--iou_nms",     type=float, default=0.50)
+    p.add_argument("--top_k",       default="auto", choices=["auto", "1", "2", "5"])
+    p.add_argument("--device",      default="")
     return p.parse_args()
 
 
 def main():
+    global _image_router
+
     args = get_args()
     source = Path(args.source)
     pred_dir = Path(args.pred_dir)
     pred_dir.mkdir(parents=True, exist_ok=True)
+
+    # Load image router if requested
+    if args.router_ckpt:
+        print(f"Loading image router from {args.router_ckpt}")
+        _image_router = ImageRouter(ckpt_path=args.router_ckpt, device=args.device)
+        print("  Image router ready — no metadata needed.")
 
     imgs = sorted(source.rglob("*.jpg")) if source.is_dir() else [source]
     manifest = build_manifest_index(args.manifest) if args.manifest else {}
 
     print(f"Found {len(imgs)} images.")
     for img_path in imgs:
-        weights, selected, info = choose_routes(img_path.name, args, manifest)
+        weights, selected, info = choose_routes(str(img_path), args, manifest)
         effective_runs = collapse_selected_to_runs(selected)
 
         results_and_weights = []
