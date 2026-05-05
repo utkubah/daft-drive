@@ -113,10 +113,7 @@ def process_split(dataset, split: str, yolo_dir: Path, class_to_idx: dict) -> li
 
         dst = img_out / img_path.name
         if not dst.exists():
-            try:
-                dst.symlink_to(img_path.resolve())
-            except OSError:
-                shutil.copy2(img_path, dst)
+            shutil.copy2(img_path, dst)
 
         lbl_path = lbl_out / f"{img_path.stem}.txt"
         lbl_path.write_text("\n".join(lines))
