@@ -1,7 +1,7 @@
 """
 distill.py
 ==========
-Backbone feature distillation: YOLOv8m (teacher) -> YOLOv8n (student).
+Backbone feature distillation: YOLOv8m (teacher) -> YOLOv8s (student).
 
 The SPPF layer at the end of the backbone is hooked in both models.
 A learned 1x1 projection aligns the student's channel dimension to
@@ -16,7 +16,7 @@ Saved weights can be loaded in train.py via --weights.
 Usage
 -----
   python distill.py --img_dir data/bdd100k/yolo/images/train
-  python distill.py --teacher yolov8m.pt --student yolov8n.pt --epochs 20
+  python distill.py --teacher yolov8m.pt --student yolov8s.pt --epochs 20
 """
 from __future__ import annotations
 
@@ -62,7 +62,7 @@ def get_args():
     p = argparse.ArgumentParser()
     p.add_argument("--teacher",  default="yolov8m.pt",
                    help="Teacher weights (larger model)")
-    p.add_argument("--student",  default="yolov8n.pt",
+    p.add_argument("--student",  default="yolov8s.pt",
                    help="Student weights (smaller model)")
     p.add_argument("--img_dir",  default="data/bdd100k/yolo/images/train")
     p.add_argument("--out_dir",  default="checkpoints/distilled")

@@ -1,4 +1,12 @@
 #!/bin/bash
+# BDD100K large baseline: fine-tune YOLOv8m on all conditions.
+# This produces the "Global Large" reference point in eval_full.py.
+# Runs independently of the DAFT pipeline — no distillation step needed.
+#
+# Usage: sbatch hpc/pretrain_bdd100k_large.sh
+# Checkpoint: checkpoints/large/weights/best.pt
+# Pass to eval:  python eval_full.py --large_ckpt checkpoints/large/weights/best.pt
+
 #SBATCH --job-name=bdd100k-large
 #SBATCH --partition=stud
 #SBATCH --qos=stud
@@ -24,16 +32,21 @@ test -f data/bdd100k/yolo/dataset.yaml || {
     exit 1
 }
 
+echo "===== Fine-tuning YOLOv8m (large baseline) ====="
 python train.py \
     --data     data/bdd100k/yolo/dataset.yaml \
     --weights  yolov8m.pt \
-    --name     global_yolov8m \
+    --name     large \
     --epochs   50 \
     --batch    8 \
     --imgsz    640 \
     --lr       5e-5 \
-    --patience 10 \
+    --patience 20 \
+    --cos_lr \
+    --workers  2 \
     --device   cuda
 
 echo ""
-echo "Large global model saved to: checkpoints/global_yolov8m/weights/best.pt"
+echo "Large global model saved to: checkpoints/large/weights/best.pt"
+echo "Pass to evaluation with:"
+echo "  python eval_full.py --large_ckpt checkpoints/large/weights/best.pt"

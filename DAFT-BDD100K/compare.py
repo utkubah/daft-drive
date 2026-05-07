@@ -10,7 +10,7 @@ Three-part evaluation:
 Strategies benchmarked
 ----------------------
   large         YOLOv8m  (upper-bound accuracy baseline)
-  global        YOLOv8n global fine-tune
+  global        YOLOv8s global fine-tune
   hard          metadata → top-1 specialist  (no blending)
   adaptive-1    ImageRouter → top-1 specialist  (auto confident path)
   adaptive-2    ImageRouter → top-2 blend       (forced blend)
@@ -40,6 +40,30 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from ultralytics import YOLO
+
+
+def _set_pub_rc() -> None:
+    plt.rcParams.update({
+        "font.family":       "DejaVu Sans",
+        "font.size":         10,
+        "axes.titlesize":    12,
+        "axes.titleweight":  "bold",
+        "axes.labelsize":    10,
+        "xtick.labelsize":   9,
+        "ytick.labelsize":   9,
+        "axes.linewidth":    0.8,
+        "grid.linewidth":    0.4,
+        "grid.color":        "#CCCCCC",
+        "grid.alpha":        1.0,
+        "legend.fontsize":   9,
+        "legend.framealpha": 0.93,
+        "legend.edgecolor":  "#CCCCCC",
+        "figure.facecolor":  "white",
+        "axes.facecolor":    "white",
+        "savefig.dpi":       300,
+        "savefig.bbox":      "tight",
+        "savefig.facecolor": "white",
+    })
 
 from router import CONDITIONS, MetadataRouter, ImageRouter, blend_detections, select_top_k
 
@@ -73,9 +97,17 @@ def find_specialist_ckpt(cond: str) -> Path | None:
 def evaluate(weights: Path, data: Path, device: str, batch: int) -> dict:
     model   = YOLO(str(weights))
     metrics = model.val(data=str(data), device=device, batch=batch, verbose=False)
+    # per-class AP50: list aligned with metrics.box.ap_class_index
+    per_class_ap50 = {}
+    if hasattr(metrics.box, "ap_class_index") and hasattr(metrics.box, "ap50"):
+        for idx, ap in zip(metrics.box.ap_class_index, metrics.box.ap50):
+            per_class_ap50[int(idx)] = round(float(ap), 4)
     return {
-        "map50":    round(metrics.box.map50, 4),
-        "map50_95": round(metrics.box.map,   4),
+        "map50":         round(float(metrics.box.map50), 4),
+        "map50_95":      round(float(metrics.box.map),   4),
+        "precision":     round(float(metrics.box.mp),    4),
+        "recall":        round(float(metrics.box.mr),    4),
+        "per_class_ap50": per_class_ap50,
     }
 
 
@@ -123,13 +155,13 @@ def run_speed_benchmark(imgs: list[str], device: str, global_ckpt: Path,
     )
     results.append({"strategy": "large (YOLOv8m)", "mean_ms": round(mean, 2), "std_ms": round(std, 2)})
 
-    # 2. YOLOv8n global
-    print("  [speed] YOLOv8n global...")
+    # 2. YOLOv8s global
+    print("  [speed] YOLOv8s global...")
     global_m = YOLO(str(global_ckpt))
     mean, std = time_strategy(
         lambda p: global_m.predict(p, device=device, verbose=False, conf=0.25), imgs
     )
-    results.append({"strategy": "global (YOLOv8n)", "mean_ms": round(mean, 2), "std_ms": round(std, 2)})
+    results.append({"strategy": "global (YOLOv8s)", "mean_ms": round(mean, 2), "std_ms": round(std, 2)})
 
     # 3. Hard routing — metadata top-1 (use city_day specialist as representative)
     spec_ckpt = find_specialist_ckpt("city_day") or global_ckpt
@@ -198,6 +230,7 @@ def _result_to_boxes(result) -> np.ndarray:
 # ── Plots ─────────────────────────────────────────────────────────────────────
 
 def plot_map(rows: list[dict]):
+    _set_pub_rc()
     valid = [r for r in rows if r["specialist_map50"] is not None]
     if not valid:
         return
@@ -207,38 +240,46 @@ def plot_map(rows: list[dict]):
     x, w   = np.arange(len(labels)), 0.35
 
     fig, ax = plt.subplots(figsize=(10, 5))
-    ax.bar(x - w/2, g_vals, w, label="Global (YOLOv8n)",  color="#5577aa")
-    ax.bar(x + w/2, s_vals, w, label="Specialist (DAFT)", color="#44aa66")
+    ax.bar(x - w/2, g_vals, w, label="Global (YOLOv8s)",  color="#6C757D",
+           alpha=0.88, edgecolor="white", linewidth=1.2)
+    ax.bar(x + w/2, s_vals, w, label="Specialist (DAFT)", color="#52B788",
+           alpha=0.88, edgecolor="white", linewidth=1.2)
     ax.set_xticks(x); ax.set_xticklabels(labels, rotation=15)
     ax.set_ylim(0, 1.0); ax.set_ylabel("mAP50")
     ax.set_title("DAFT: Global vs Specialist mAP50 per Condition")
-    ax.legend(); ax.grid(axis="y", alpha=0.3)
+    ax.legend()
+    ax.grid(axis="y")
+    ax.spines[["top", "right"]].set_visible(False)
     plt.tight_layout()
     path = OUT_DIR / "compare.png"
-    plt.savefig(path, dpi=150); plt.close()
+    plt.savefig(path); plt.close()
     print(f"Saved: {path}")
 
 
 def plot_speed(speed_rows: list[dict]):
+    _set_pub_rc()
     rows = [r for r in speed_rows if r["mean_ms"] is not None]
     if not rows:
         return
     labels = [r["strategy"] for r in rows]
     means  = [r["mean_ms"]  for r in rows]
     stds   = [r["std_ms"]   for r in rows]
-    colors = ["#aa4444", "#5577aa", "#44aa66", "#aa7744", "#7744aa"]
+    colors = ["#9B2226", "#6C757D", "#005F73", "#52B788", "#F4A261"]
 
     fig, ax = plt.subplots(figsize=(10, 5))
     bars = ax.bar(labels, means, yerr=stds, capsize=4,
-                  color=colors[:len(labels)], alpha=0.85)
+                  color=colors[:len(labels)], alpha=0.88,
+                  edgecolor="white", linewidth=1.2)
     ax.bar_label(bars, fmt="%.1f ms", padding=4, fontsize=9)
+    ax.set_ylim(bottom=0)
     ax.set_ylabel("Inference time (ms/image)")
     ax.set_title("Inference Speed Comparison")
     ax.tick_params(axis="x", rotation=20)
-    ax.grid(axis="y", alpha=0.3)
+    ax.grid(axis="y")
+    ax.spines[["top", "right"]].set_visible(False)
     plt.tight_layout()
     path = OUT_DIR / "speed.png"
-    plt.savefig(path, dpi=150); plt.close()
+    plt.savefig(path); plt.close()
     print(f"Saved: {path}")
 
 
@@ -264,7 +305,8 @@ def main():
 
     # ── 1. mAP comparison ────────────────────────────────────────────────────
     print("\n===== mAP Evaluation =====")
-    map_rows = []
+    map_rows     = []
+    perclass_rows = []
     for cond in CONDITIONS:
         spec_ckpt = find_specialist_ckpt(cond)
         data_yaml = DATA_BASE / f"{cond}.yaml"
@@ -283,12 +325,33 @@ def main():
             print(f"  specialist: not found")
             s = {"map50": None, "map50_95": None}
 
-        gain = round(s["map50"] - g["map50"], 4) if s["map50"] else None
+        gain = round(s["map50"] - g["map50"], 4) if s["map50"] is not None else None
         map_rows.append({
-            "condition": cond, "global_map50": g["map50"],
-            "global_map50_95": g["map50_95"], "specialist_map50": s["map50"],
-            "specialist_map50_95": s["map50_95"], "gain_map50": gain,
+            "condition":          cond,
+            "global_map50":       g["map50"],
+            "global_map50_95":    g["map50_95"],
+            "global_precision":   g["precision"],
+            "global_recall":      g["recall"],
+            "spec_map50":         s["map50"],
+            "spec_map50_95":      s["map50_95"],
+            "gain_map50":         gain,
+            # keep old name too for backwards compatibility
+            "specialist_map50":   s["map50"],
+            "specialist_map50_95": s["map50_95"],
         })
+        # per-class rows
+        all_classes = set(g["per_class_ap50"]) | set(s["per_class_ap50"])
+        for cls_idx in sorted(all_classes):
+            g_ap = g["per_class_ap50"].get(cls_idx)
+            s_ap = s["per_class_ap50"].get(cls_idx)
+            cls_gain = round(s_ap - g_ap, 4) if (s_ap is not None and g_ap is not None) else None
+            perclass_rows.append({
+                "condition":  cond,
+                "class":      cls_idx,
+                "global_ap50": g_ap,
+                "spec_ap50":   s_ap,
+                "gain":        cls_gain,
+            })
 
     # ── 2. Speed benchmark ────────────────────────────────────────────────────
     print(f"\n===== Speed Benchmark ({args.n_bench} images) =====")
@@ -297,10 +360,23 @@ def main():
 
     # ── Save CSVs ─────────────────────────────────────────────────────────────
     if map_rows:
+        # compare.csv — original output (backwards compat)
         with open(OUT_DIR / "compare.csv", "w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=list(map_rows[0].keys()))
             w.writeheader(); w.writerows(map_rows)
         print(f"\nSaved: {OUT_DIR / 'compare.csv'}")
+
+        # map_comparison.csv — what eval_full.py expects
+        with open(OUT_DIR / "map_comparison.csv", "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(map_rows[0].keys()))
+            w.writeheader(); w.writerows(map_rows)
+        print(f"Saved: {OUT_DIR / 'map_comparison.csv'}")
+
+    if perclass_rows:
+        with open(OUT_DIR / "perclass_map.csv", "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=["condition", "class", "global_ap50", "spec_ap50", "gain"])
+            w.writeheader(); w.writerows(perclass_rows)
+        print(f"Saved: {OUT_DIR / 'perclass_map.csv'}")
 
     with open(OUT_DIR / "speed.csv", "w", newline="") as f:
         all_keys = list({k for r in speed_rows for k in r})

@@ -50,9 +50,14 @@ HF_SPLITS  = ["train", "validation"]
 CONDITIONS = ["city_day", "city_night", "highway_day", "highway_night", "residential"]
 OUT_DIR    = Path("data/bdd100k")
 
+# Dawn/dusk images are "ambiguous" — they are assigned to a condition for
+# training (city_day or highway_day) but flagged separately in the manifest
+# so we can evaluate model robustness on them.
+AMBIGUOUS_CONDITIONS = ["city_dawn_dusk", "highway_dawn_dusk"]
+
 MANIFEST_FIELDS = [
     "image_name", "image_path", "yolo_label",
-    "timeofday", "weather", "scene", "condition", "num_boxes",
+    "timeofday", "weather", "scene", "condition", "is_ambiguous", "num_boxes",
 ]
 
 
@@ -61,17 +66,38 @@ def get_label(sample, field: str) -> str | None:
     return getattr(val, "label", None) if val else None
 
 
-def map_condition(scene: str | None, timeofday: str | None) -> str | None:
+def map_condition(scene: str | None, timeofday: str | None) -> tuple[str | None, bool]:
+    """
+    Returns (condition, is_ambiguous).
+
+    Training condition assignment:
+      city + night        → city_night
+      city + daytime      → city_day
+      city + dawn/dusk    → city_day  (assigned to day for training, flagged ambiguous)
+      highway + night     → highway_night
+      highway + daytime   → highway_day
+      highway + dawn/dusk → highway_day (assigned to day, flagged ambiguous)
+      residential + any   → residential
+      other               → None (excluded: tunnel, parking lot, gas station)
+
+    Dawn/dusk images are included in training but flagged via is_ambiguous=True
+    so that evaluation can separately assess performance on ambiguous scenes.
+    The MetadataRouter already handles them correctly by assigning 50/50 weights
+    between the day and night specialists.
+    """
     scene     = (scene     or "").lower().strip()
     timeofday = (timeofday or "").lower().strip()
+    is_ambiguous = timeofday == "dawn/dusk"
 
     if "city" in scene:
-        return "city_night" if timeofday == "night" else "city_day"
+        cond = "city_night" if timeofday == "night" else "city_day"
+        return cond, is_ambiguous
     if "highway" in scene:
-        return "highway_night" if timeofday == "night" else "highway_day"
+        cond = "highway_night" if timeofday == "night" else "highway_day"
+        return cond, is_ambiguous
     if "residential" in scene:
-        return "residential"
-    return None   # tunnel, parking lot, gas station, undefined
+        return "residential", False
+    return None, False   # tunnel, parking lot, gas station, undefined
 
 
 def build_class_index(dataset) -> dict[str, int]:
@@ -121,15 +147,17 @@ def process_split(dataset, split: str, yolo_dir: Path, class_to_idx: dict) -> li
         timeofday = get_label(sample, "timeofday")
         weather   = get_label(sample, "weather")
         scene     = get_label(sample, "scene")
+        cond, is_ambiguous = map_condition(scene, timeofday)
         rows.append({
-            "image_name": img_path.name,
-            "image_path": str(dst),
-            "yolo_label":  str(lbl_path),
-            "timeofday":  timeofday,
-            "weather":    weather,
-            "scene":      scene,
-            "condition":  map_condition(scene, timeofday),
-            "num_boxes":  len(lines),
+            "image_name":   img_path.name,
+            "image_path":   str(dst),
+            "yolo_label":   str(lbl_path),
+            "timeofday":    timeofday,
+            "weather":      weather,
+            "scene":        scene,
+            "condition":    cond,
+            "is_ambiguous": "1" if is_ambiguous else "0",
+            "num_boxes":    len(lines),
         })
 
     print(f"  {split}: {len(rows)} usable samples")
@@ -200,11 +228,30 @@ def main():
     # full dataset.yaml (all conditions)
     write_yaml(yolo_dir / "dataset.yaml", "images/train", "images/val", yolo_dir, classes)
 
+    # Night conditions also receive the dawn/dusk images from their day counterpart.
+    # Dawn/dusk has intermediate lighting that neither day nor night specialist sees
+    # well on its own. Exposing night specialists to this data improves robustness,
+    # and the MetadataRouter already blends day+night 50/50 at inference for these images.
+    NIGHT_GETS_DAWN_DUSK = {
+        "city_night":    "city_day",
+        "highway_night": "highway_day",
+    }
+
     # per-condition: image-list .txt files + condition-specific yamls
     for cond in CONDITIONS:
         for split in HF_SPLITS:
             yolo_split = "val" if split == "validation" else split
             sub = [r for r in all_rows[split] if r["condition"] == cond]
+
+            # Add dawn/dusk images to the corresponding night specialist
+            if cond in NIGHT_GETS_DAWN_DUSK:
+                day_cond = NIGHT_GETS_DAWN_DUSK[cond]
+                extra = [r for r in all_rows[split]
+                         if r["condition"] == day_cond and r.get("is_ambiguous") == "1"]
+                sub = sub + extra
+                if extra:
+                    print(f"  {cond}.{yolo_split}: +{len(extra)} dawn/dusk from {day_cond}")
+
             txt = yolo_dir / f"{cond}.{yolo_split}.txt"
             txt.write_text("\n".join(r["image_path"] for r in sub) + "\n")
             print(f"  {cond}.{yolo_split}: {len(sub)} samples")
@@ -214,7 +261,7 @@ def main():
             yolo_dir, classes,
         )
 
-    # manifests (all + per-condition CSVs)
+    # manifests (all + per-condition CSVs + ambiguous/dawn_dusk subset)
     for split, rows in all_rows.items():
         yolo_split = "val" if split == "validation" else split
         for cond in [None] + CONDITIONS:
@@ -224,6 +271,17 @@ def main():
                 w = csv.DictWriter(f, fieldnames=MANIFEST_FIELDS)
                 w.writeheader()
                 w.writerows(sub)
+
+        # Separate manifest for ambiguous (dawn/dusk) images.
+        # These are included in condition training sets above but evaluated
+        # independently to measure robustness on ambiguous lighting.
+        ambiguous_rows = [r for r in rows if r.get("is_ambiguous") == "1"]
+        amb_name = f"dawn_dusk.{yolo_split}.csv"
+        with open(man_dir / amb_name, "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=MANIFEST_FIELDS)
+            w.writeheader()
+            w.writerows(ambiguous_rows)
+        print(f"  dawn_dusk.{yolo_split}: {len(ambiguous_rows)} ambiguous samples")
 
     print(f"\nDataset ready in {Path(args.out_dir).resolve()}")
     print("Next steps:")

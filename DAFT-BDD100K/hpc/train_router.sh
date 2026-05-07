@@ -38,12 +38,9 @@ test -f data/bdd100k/manifests/train.csv || {
 
 echo "===== Training RouterHead classifier ====="
 python train_router.py \
-    --backbone checkpoints/global/weights/best.pt \
     --out_dir  checkpoints/router \
     --epochs   20 \
-    --batch    32 \
-    --imgsz    320 \
-    --lr       1e-3 \
+    --batch    64 \
     --workers  2 \
     --device   cuda
 

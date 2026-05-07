@@ -1,0 +1,4 @@
+strategy,map50,n_images,subset
+Hard Routing,0.5394,300,dawn_dusk
+Adaptive k=2 (meta),0.5603,300,dawn_dusk
+Adaptive k=1 (img),0.5377,300,dawn_dusk

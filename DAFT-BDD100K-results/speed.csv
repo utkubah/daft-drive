@@ -1,0 +1,7 @@
+mean_ms,std_ms,dist_highway_night,dist_residential,dist_city_day,dist_highway_day,dist_city_night,strategy
+30.22,1.05,,,,,,large (YOLOv8m)
+29.4,1.21,,,,,,global (YOLOv8s)
+29.73,1.58,,,,,,hard routing (top-1)
+62.05,15.47,,,,,,adaptive top-1 (auto)
+88.43,2.56,,,,,,adaptive top-2 (blend)
+,,1,6,4,4,5,--- routing distribution ---

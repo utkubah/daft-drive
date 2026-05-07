@@ -23,8 +23,8 @@ module load cuda/12.4 || true
 
 cd $HOME/DAFT-BDD100K
 
-test -f runs/detect/checkpoints/global/weights/best.pt || {
-    echo "ERROR: runs/detect/checkpoints/global/weights/best.pt not found."
+test -f checkpoints/global/weights/best.pt || {
+    echo "ERROR: checkpoints/global/weights/best.pt not found."
     echo "Run sbatch hpc/pretrain_bdd100k.sh first."
     exit 1
 }
@@ -42,14 +42,17 @@ for COND in "${CONDITIONS[@]}"; do
 
     python train.py \
         --data     "data/bdd100k/yolo/${COND}.yaml" \
-        --weights  runs/detect/checkpoints/global/weights/best.pt \
+        --weights  checkpoints/global/weights/best.pt \
         --name     "${COND}" \
         --epochs   40 \
-        --batch    8 \
+        --batch    16 \
         --imgsz    640 \
         --lr       5e-5 \
-        --patience 10 \
-        --device   cuda 
+        --patience 15 \
+        --mosaic   0 \
+        --cos_lr \
+        --workers  2 \
+        --device   cuda
 
     echo "===== Done: $COND ====="
 done

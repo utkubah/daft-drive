@@ -1,0 +1,6 @@
+strategy,t_imgload_ms,t_route_ms,t_infer_ms,t_nms_ms,t_total_ms,fps,n_images
+Global Large,20.3,0.0,29.88,0.0,50.34,19.9,200
+Global Distilled,20.95,0.0,29.17,0.0,50.28,19.9,200
+Hard Routing,21.64,0.02,30.59,0.0,52.43,19.1,200
+Adaptive k=1,21.82,26.66,32.6,0.04,81.12,12.3,200
+Adaptive k=2,21.69,26.63,60.83,0.52,109.68,9.1,200

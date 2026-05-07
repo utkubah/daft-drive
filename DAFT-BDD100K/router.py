@@ -152,8 +152,8 @@ class ImageRouter:
         model.eval()
         self.model = model.to(self.device)
 
-    def weights(self, img_path: str) -> dict[str, float]:
-        img = cv2.imread(img_path)
+    def weights_from_img(self, img: np.ndarray) -> dict[str, float]:
+        """Accept a pre-loaded BGR numpy array — avoids double disk read."""
         img = cv2.resize(img, (self.IMG_SIZE, self.IMG_SIZE))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         tensor = torch.from_numpy(img).permute(2, 0, 1).float() / 255.0
@@ -163,6 +163,12 @@ class ImageRouter:
         with torch.no_grad():
             probs = F.softmax(self.model(tensor), dim=-1).squeeze()
         return {c: float(probs[i]) for i, c in enumerate(CONDITIONS)}
+
+    def weights(self, img_path: str) -> dict[str, float]:
+        img = cv2.imread(img_path)
+        if img is None:
+            return {c: 1.0 / len(CONDITIONS) for c in CONDITIONS}
+        return self.weights_from_img(img)
 
     def select(self, img_path: str, top_k: str | int = "auto") -> list[tuple[str, float]]:
         return select_top_k(self.weights(img_path), top_k=top_k)
