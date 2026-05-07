@@ -1,6 +1,0 @@
-condition,Global Large,Global Distilled,Hard Routing,Adaptive k=1,Adaptive k=2,gain_vs_dist
-city_day,N/A,0.5638,0.6507,0.6507,N/A,0.0869
-city_night,N/A,0.5465,0.6891,0.6891,N/A,0.1426
-highway_day,N/A,0.4761,0.7321,0.7321,N/A,0.256
-highway_night,N/A,0.5145,0.7618,0.7618,N/A,0.2473
-residential,N/A,0.6666,0.7838,0.7838,N/A,0.1172
