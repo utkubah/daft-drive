@@ -38,4 +38,8 @@ Thumbs.db
 
 
 /medsam-raw
-/medsam-data
+medsam-data/
+
+# generated detection/driving datasets
+DAFT-BDD100K/data
+DAFT-BDD100K/analysis

@@ -1,9 +1,0 @@
-file
-data/demo_combined/2DBox_CXR_demo.npz
-data/demo_combined/2DBox_Dermoscopy_demo.npz
-data/demo_combined/2DBox_Endoscopy_demo.npz
-data/demo_combined/2DBox_Fundus_demo.npz
-data/demo_combined/2DBox_Mammography_demo.npz
-data/demo_combined/2DBox_Microscope_demo.npz
-data/demo_combined/2DBox_OCT_demo.npz
-data/demo_combined/2DBox_US_demo.npz

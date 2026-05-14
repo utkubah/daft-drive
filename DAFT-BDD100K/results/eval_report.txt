@@ -1,0 +1,94 @@
+==============================================================================
+DAFT-BDD100K  Full Evaluation Report
+==============================================================================
+
+Methodology notes
+------------------------------------------------------------------------------
+  mAP50 for Global Distilled and routing strategies (k=1,2): torchmetrics on
+  full val set (eval_topk.py).  Per-condition mAP50 and mAP50-95: ultralytics
+  model.val() on per-condition val splits (eval_full.py / map_comparison.csv).
+  These two methods may give slightly different absolute numbers; always compare
+  strategies measured with the same method.
+
+  Global Distilled = YOLOv8s (distilled from YOLOv8m teacher) fine-tuned on BDD100K.
+  Global Large = YOLOv8m fine-tuned on BDD100K (pass --large_ckpt) or COCO-only if
+  no checkpoint provided.  All DAFT specialists are YOLOv8s fine-tuned from global.
+
+  Hard Routing = MetadataRouter, scene+timeofday → deterministic top-1
+  specialist.  No neural-network router overhead.  mAP ≈ Adaptive k=1 because
+  ImageRouter classification accuracy on BDD100K is ~100%.
+
+Consolidated Results
+------------------------------------------------------------------------------
+Strategy                   mAP50  mAP50-95       P       R   ms/img    FPS  x vs Large  x vs Dist.  ΔmAP vs L  ΔmAP vs D
+------------------------------------------------------------------------------
+Global Large                 N/A       N/A     N/A     N/A  50.3400 19.9000      1.0000      1.0000        N/A        N/A
+Global Distilled          0.4699    0.3456  0.7308  0.4687  50.2800 19.9000      1.0000      1.0000        N/A    +0.0000
+Hard Routing              0.6766       N/A     N/A     N/A  52.4300 19.1000      0.9600      0.9600        N/A    +0.2067
+Adaptive k=1              0.6766       N/A     N/A     N/A  81.1200 12.3000      0.6200      0.6200        N/A    +0.2067
+Adaptive k=2              0.6837       N/A     N/A     N/A 109.6800 9.1000      0.4600      0.4600        N/A    +0.2138
+
+Per-Condition mAP50
+------------------------------------------------------------------------------
+Condition             Global Distilled  Hard Routing  Adaptive k=1  Gain vs Dist
+------------------------------------------------------------------------------
+city_day                      0.5638        0.6507        0.6507        0.0869
+city_night                    0.5465        0.6891        0.6891        0.1426
+highway_day                   0.4761        0.7321        0.7321         0.256
+highway_night                 0.5145        0.7618        0.7618        0.2473
+residential                   0.6666        0.7838        0.7838        0.1172
+
+Per-Class AP50 (top 10 by mean gain, averaged across conditions)
+------------------------------------------------------------------------------
+Class                    Global Distilled  Best Specialist   Mean Gain
+------------------------------------------------------------------------------
+10                                 0.4975            0.995      0.4975
+11                                 0.1758           0.6715      0.4957
+5                                  0.3836           0.7805      0.3969
+1                                  0.7079           0.8455      0.1376
+12                                 0.7318           0.8632      0.1314
+3                                  0.4928           0.6223      0.1295
+0                                  0.5743           0.7018      0.1276
+7                                  0.4478           0.5713      0.1235
+6                                  0.5539           0.6758      0.1219
+9                                   0.683           0.7488      0.0658
+
+Timing Breakdown  (ms / image,  all models pre-loaded, CPU)
+------------------------------------------------------------------------------
+Strategy                   ImgLoad    Router   Detector  Blend/NMS    Total    FPS     N
+------------------------------------------------------------------------------
+Global Large                  20.3       0.0       29.9        0.0     50.3   19.9   200
+Global Distilled              20.9       0.0       29.2        0.0     50.3   19.9   200
+Hard Routing                  21.6       0.0       30.6        0.0     52.4   19.1   200
+Adaptive k=1                  21.8      26.7       32.6        0.0     81.1   12.3   200
+Adaptive k=2                  21.7      26.6       60.8        0.5    109.7    9.1   200
+
+Router Analysis
+------------------------------------------------------------------------------
+  ImageRouter (MobileNetV3-small) achieves ~100% top-1 accuracy on BDD100K.
+  This is expected: city / highway / residential scenes are visually distinct
+  enough for a pretrained classifier to separate perfectly.
+  Implication: hard routing (metadata) ≈ adaptive routing (image) in accuracy.
+  The router adds ~5-15 ms overhead but gains metadata-independence.
+
+  Adaptive routing contribution beyond hard routing:
+    • Works without metadata (deployable on any camera stream).
+    • k=2 blend improves mAP by ~+0.01 at ~2× latency cost.
+    • For latency-critical deployment: hard routing or adaptive k=1 is optimal.
+
+Robustness on Ambiguous Scenes  (dawn/dusk subset)
+------------------------------------------------------------------------------
+  Dawn/dusk images are 'ambiguous': BDD100K metadata assigns them to city/highway,
+  but the lighting is between day and night.  MetadataRouter gives them 50/50
+  weights → always exercises the blending path (k=2 minimum for metadata routing).
+
+  Strategy                       mAP50   N images
+  ------------------------------------------------
+  Hard Routing                  0.5394        300
+  Adaptive k=2 (meta)           0.5603        300
+  Adaptive k=1 (img)            0.5377        300
+
+  Key insight: if Adaptive k=2 (meta) > Hard Routing on this subset,
+  blending provides measurable benefit on ambiguous scenes.
+
+==============================================================================

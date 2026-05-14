@@ -1,418 +1,208 @@
-# DAFT-Drive
+# DAFT-BDD100K: Condition-Aware Object Detection for Autonomous Driving
 
-Implementations of **Data-Aware Fine-Tuning (DAFT)** with adaptive specialist routing,
-applied to image segmentation across multiple domains.
+**DAFT** (Data-Aware Fine-Tuning) trains five YOLOv8s specialists — one per driving condition — and routes each frame to the right expert at inference time. On BDD100K, this improves mAP50 by **+44% over the global baseline** while staying real-time at **83 FPS**.
 
-Based on: Pfefferle et al., *DAFT: Data-Aware Fine-Tuning of Foundation Models for
-Efficient and Effective Medical Image Segmentation*, CVPR 2024 Workshop — 1st place.
+> Project for the Computer Vision course, Bocconi University (20878).
+
+---
+
+## Results
+
+| Model | mAP50 | FPS |
+|---|---|---|
+| Global Distilled (YOLOv8s) | 0.470 | 158 |
+| Global YOLOv8m | 0.549 | 135 |
+| Hard Routing (metadata) | 0.677 | 158 |
+| **DAFT Adaptive k=1** | **0.677** | **83** |
+| DAFT Adaptive k=2 | 0.684 | 53 |
+
+Per-condition gains over the global baseline (mAP50):
+
+| Condition | Global | Specialist | Gain |
+|---|---|---|---|
+| City · Day | 0.564 | 0.651 | +0.087 |
+| City · Night | 0.547 | 0.689 | +0.143 |
+| Highway · Day | 0.476 | 0.732 | +0.256 |
+| Highway · Night | 0.515 | 0.762 | +0.247 |
+| Residential | 0.667 | 0.784 | +0.117 |
+
+---
+
+## Method
+
+The pipeline has three stages:
+
+1. **Knowledge distillation** — YOLOv8m teacher → YOLOv8s student, so the compact model starts with strong feature representations.
+2. **Global fine-tuning** — the YOLOv8s student is fine-tuned on all BDD100K images.
+3. **Specialist fine-tuning** — five separate models are trained, each on one driving condition (city/highway/residential × day/night).
+
+At inference a lightweight **MobileNetV3-small router** (4.97 ms GPU) classifies the incoming frame and dispatches it to the top-K specialists. With K=1 this matches hard metadata routing; K=2 helps on ambiguous dawn/dusk scenes by blending two specialists.
+
+```
+BDD100K frames
+     │
+     ├─ ImageRouter (MobileNetV3-small, 2.5M params)
+     │        └─ top-K condition weights
+     │
+     ├─ Specialist k₁ ──┐
+     ├─ Specialist k₂ ──┤ blend_detections() + NMS
+     └─ ...             └─► final detections
+```
+
+---
+
+## Setup
+
+**Requirements:** Python 3.10+, CUDA 12.4, ~50 GB disk for BDD100K.
+
+```bash
+# Clone and create the environment
+git clone https://github.com/<your-org>/DAFT-BDD100K.git
+cd DAFT-BDD100K
+conda env create -f environment.yml
+conda activate daft
+```
+
+Key packages: `ultralytics`, `torch`, `fiftyone`, `torchmetrics`, `opencv-python`, `matplotlib`.
+
+---
+
+## Reproducing the Experiments
+
+All steps can be run locally or submitted to a SLURM cluster via the scripts in `hpc/`.
+
+### 1. Prepare the data
+
+Downloads BDD100K via FiftyOne (HuggingFace), exports YOLO-format labels, and builds per-condition splits.
+
+```bash
+# Set a HuggingFace token to avoid rate limits (~40 GB download)
+export HF_TOKEN=hf_your_token_here
+python prepare_data.py --max_samples 0   # 0 = full dataset
+```
+
+### 2. Train
+
+```bash
+# Step 1: distill YOLOv8m → YOLOv8s, then fine-tune on all BDD100K
+python distill.py --img_dir data/bdd100k/yolo/images/train --teacher yolov8m.pt --student yolov8s.pt
+python train.py --data data/bdd100k/yolo/dataset.yaml --weights checkpoints/distilled/distilled.pt --name global
+
+# Step 2: fine-tune one specialist per condition
+python train.py --data data/bdd100k/yolo/city_day.yaml     --weights checkpoints/global/weights/best.pt --name city_day
+python train.py --data data/bdd100k/yolo/city_night.yaml   --weights checkpoints/global/weights/best.pt --name city_night
+python train.py --data data/bdd100k/yolo/highway_day.yaml  --weights checkpoints/global/weights/best.pt --name highway_day
+python train.py --data data/bdd100k/yolo/highway_night.yaml --weights checkpoints/global/weights/best.pt --name highway_night
+python train.py --data data/bdd100k/yolo/residential.yaml  --weights checkpoints/global/weights/best.pt --name residential
+
+# Step 3: train the image router
+python train_router.py --out_dir checkpoints/router
+```
+
+On a SLURM cluster, submit the full chain in one go:
+
+```bash
+PREP=$(sbatch --parsable hpc/prepare_data.sh)
+PRE=$(sbatch --parsable --dependency=afterok:$PREP hpc/pretrain_bdd100k.sh)
+LRG=$(sbatch --parsable --dependency=afterok:$PREP hpc/pretrain_bdd100k_large.sh)
+DAFT=$(sbatch --parsable --dependency=afterok:$PRE hpc/train_daft_bdd100k.sh)
+RTR=$(sbatch --parsable --dependency=afterok:$PRE hpc/train_router.sh)
+sbatch --dependency=afterok:$DAFT:$RTR:$LRG hpc/eval_full.sh
+```
+
+### 3. Evaluate
+
+```bash
+# Runs all evaluation phases: per-condition mAP, k=1..5 sweep,
+# consolidated table + plots, global baselines comparison
+sbatch hpc/eval_full.sh
+
+# Or locally (no GPU required for the plots and report):
+python compare.py --device cpu
+python eval_topk.py --device cpu --n_bench 50 --n_map 500
+python eval_full.py --device cpu --n_bench 50
+python collect_missing_data.py --device cpu --n_samples 50
+```
+
+### 4. Run inference on new images
+
+```bash
+python inference.py \
+    --source path/to/images \
+    --router_ckpt checkpoints/router/best.pt \
+    --top_k auto
+```
 
 ---
 
 ## Repository Structure
 
 ```
-daft-drive/
-├── DAFT-MedSAM-on-Laptop/    ← Medical image segmentation (this paper, complete)
-│   ├── model.py
-│   ├── train.py
-│   ├── demo.py
-│   ├── data/
-│   │   ├── test_imgs/        ← 10 demo input files (included)
-│   │   ├── test_gts/         ← 10 ground-truth masks (included)
-│   │   └── test_demo_segs/   ← paper reference predictions (included)
-│   └── checkpoints/          ← model weights (not in repo, see below)
-│
-└── DAFT-BDD100K/             ← Autonomous driving on BDD100K (in progress)
+DAFT-BDD100K/
+├── prepare_data.py        # BDD100K download, YOLO export, condition splits
+├── distill.py             # knowledge distillation (YOLOv8m → YOLOv8s)
+├── train.py               # YOLOv8 fine-tuning wrapper
+├── train_router.py        # MobileNetV3-small router training
+├── router.py              # MetadataRouter, ImageRouter, blend_detections
+├── inference.py           # single-image / folder inference with routing
+├── compare.py             # per-condition mAP: global vs specialist
+├── eval_topk.py           # k=1..5 sweep: mAP50 + GPU timing
+├── eval_full.py           # consolidated table, plots, eval report
+├── collect_missing_data.py # global baselines comparison (distilled/m/x)
+├── visualize.py           # GT / Global / Specialist side-by-side panels
+├── plot_results.py        # regenerate all figures from saved CSVs
+├── environment.yml        # conda environment
+├── hpc/                   # SLURM job scripts
+│   ├── prepare_data.sh
+│   ├── pretrain_bdd100k.sh
+│   ├── pretrain_bdd100k_large.sh
+│   ├── pretrain_bdd100k_xlarge.sh
+│   ├── train_daft_bdd100k.sh
+│   ├── train_router.sh
+│   └── eval_full.sh
+├── checkpoints/           # model weights (see Checkpoints section)
+│   ├── global/            # YOLOv8s global model
+│   ├── large/             # YOLOv8m global baseline
+│   ├── xlarge/            # YOLOv8x global baseline (optional)
+│   ├── router/            # MobileNetV3 image router
+│   └── {condition}/       # five condition specialists
+├── data/bdd100k/          # prepared dataset (generated by prepare_data.py)
+│   ├── yolo/              # YOLO-format images + labels + yamls
+│   └── manifests/         # per-condition CSVs for routing and eval
+└── results/               # all outputs (CSVs, PNGs, eval_report.txt)
 ```
 
 ---
 
-## What is DAFT?
+## Checkpoints
 
-Instead of one model for everything, DAFT trains a **specialist model per data subset**
-and routes each input to the right specialist at inference time — automatically.
+Pre-trained checkpoints are available at: **[link placeholder]**
 
-```
-Input image
-    |
-    v
-[Routing / Meta-model]       reads filename or image metadata
-    |         |         |
-    v         v         v
-[Specialist A] [Specialist B] [Specialist C]
-    |
-    v
-Segmentation mask
-```
+| Checkpoint | Description | Size |
+|---|---|---|
+| `global/weights/best.pt` | YOLOv8s distilled + BDD100K global fine-tune | ~22 MB |
+| `large/weights/best.pt` | YOLOv8m BDD100K fine-tune | ~52 MB |
+| `router/best.pt` | MobileNetV3-small image router | ~10 MB |
+| `city_day/weights/best.pt` | City daytime specialist | ~22 MB |
+| `city_night/weights/best.pt` | City night specialist | ~22 MB |
+| `highway_day/weights/best.pt` | Highway daytime specialist | ~22 MB |
+| `highway_night/weights/best.pt` | Highway night specialist | ~22 MB |
+| `residential/weights/best.pt` | Residential specialist | ~22 MB |
 
 ---
 
-## How SAM Works
+## Data
 
-**SAM (Segment Anything Model)** by Meta is a prompt-based segmentation model.
-You give it a bounding box and it figures out what to segment inside it.
+BDD100K is sourced from [dgural/bdd100k](https://huggingface.co/datasets/dgural/bdd100k) on HuggingFace. `prepare_data.py` handles the full pipeline: download → YOLO export → condition splits using BDD100K's scene and timeofday metadata fields.
 
-```
-Image ──► [1. Image Encoder] ──► image features ──►
-                                                    [3. Mask Decoder] ──► mask + IoU
-Bounding Box ──► [2. Prompt Encoder] ──► prompt embeddings ──►
-```
+Condition assignment:
 
-**Image Encoder** — compresses the image into a feature map. Runs once per image.
-**Prompt Encoder** — converts the bounding box into embeddings. Always frozen.
-**Mask Decoder** — combines features + prompt → segmentation mask + confidence score.
+| Scene | Time of day | Condition |
+|---|---|---|
+| city | daytime / dawn/dusk | city_day |
+| city | night | city_night |
+| highway | daytime / dawn/dusk | highway_day |
+| highway | night | highway_night |
+| residential | any | residential |
 
-The original SAM encoder (ViT-H, 632M params) is too slow for a laptop.
-DAFT replaces it with **EfficientViT-L0** (~6x faster) via knowledge distillation.
-
----
-
-## The Three-Step DAFT Pipeline
-
-```
-Step 1  Knowledge Distillation
-        Teacher: LiteMedSAM (TinyViT)  [frozen]
-        Student: EfficientViT-L0        [trained to copy teacher feature maps]
-        Loss:    MSE between feature maps
-        Output:  distilled encoder weights
-
-Step 2  General Fine-Tuning
-        Start:   distilled encoder + LiteMedSAM decoder  (merge_weights.py)
-        Train:   on ALL modalities combined
-        Output:  checkpoints/global.pth   ← already done, we downloaded this
-
-Step 3  Data-Aware Fine-Tuning  (the DAFT step)
-        Start:   global.pth  (not distilled.pth — global already knows medicine)
-        Train:   one specialist per modality, each sees only its own data
-        Route:   filename prefix → correct specialist at inference time
-        Output:  checkpoints/US/best.pth
-                 checkpoints/XRay/best.pth  etc.
-```
-
-**Loss function** (Steps 2 and 3):
-```
-Total Loss = Dice Loss + BCE Loss + IoU Loss   (equal weights, 1:1:1)
-```
-
----
-
-## How NPZ Files Work
-
-`.npz` = a ZIP of NumPy arrays, like a dictionary saved to disk.
-
-```python
-import numpy as np
-
-data  = np.load("file.npz", allow_pickle=True)
-image = data["imgs"]    # array stored under key "imgs"
-mask  = data["gts"]
-print(data.files)       # list all keys
-```
-
-**Training files** — image + mask in one file:
-```
-imgs  →  (H, W, 3)   uint8   2D RGB image
-      →  (D, H, W)   uint8   3D volume (D slices)
-gts   →  (H, W)      uint8   label map  (0=background, 1/2/3...=structures)
-      →  (D, H, W)   uint8   same for 3D
-```
-
-**Test files** — split across two folders:
-```
-test_imgs/X.npz:  imgs + boxes  (bounding box prompts for SAM)
-test_gts/X.npz:   gts           (ground truth, used only for evaluation)
-```
-
----
-
-## Results on the 10 Demo Files
-
-| File | Our model (global.pth) | Paper specialist | Notes |
-|------|------------------------|------------------|-------|
-| CXR (chest X-ray) | 0.914 | 0.925 | Close |
-| Dermoscopy | **0.978** | 0.971 | We beat specialist |
-| Endoscopy | 0.962 | 0.987 | Small gap |
-| Fundus | 0.970 | 0.982 | Small gap |
-| Mammography | **0.778** | 0.748 | We beat specialist |
-| Microscopy | 0.912 | 0.957 | Moderate gap |
-| OCT | **0.888** | 0.875 | We beat specialist |
-| Ultrasound | **0.900** | 0.875 | We beat specialist |
-| CT (3D) | **0.836** | 0.720 | We beat specialist |
-| MR (3D) | 0.389 | **0.899** | Gap — MR needs specialist |
-
-MR is the clearest case for DAFT: the global model struggles,
-the MR specialist (trained only on MRI data) scores 0.899.
-
----
-
-## Model Weights
-
-Weights are **not stored in this repo** (too large for GitHub).
-
-| File | Size | Purpose | Where to get it |
-|------|------|---------|-----------------|
-| `checkpoints/global.pth` | 133 MB | Main inference model | See download note below |
-| `lite_medsam.pth` | ~30 MB | Teacher for distillation | See download note below |
-| `distilled.pth` | ~50 MB | Post-distillation encoder | Produced by `distill.py` |
-
-**Download note:** The weights come from the original paper's release.
-Place them in `DAFT-MedSAM-on-Laptop/` (for `lite_medsam.pth`) and
-`DAFT-MedSAM-on-Laptop/checkpoints/` (for `global.pth`).
-Ask the repo owner for the shared download link.
-
----
-
-## Environment Setup
-
-```bash
-# Create and activate conda environment
-conda create -n daft python=3.10 -y
-conda activate daft
-
-# PyTorch with CUDA
-# Check your CUDA version first: nvidia-smi (top-right corner shows CUDA Version)
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124  # CUDA 12.x
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118  # CUDA 11.x
-# CPU only (slow but works):
-pip install torch torchvision
-
-# Core dependencies
-pip install monai opencv-python pandas numpy tqdm matplotlib
-
-# Model architecture packages
-pip install git+https://github.com/mit-han-lab/efficientvit.git
-pip install git+https://github.com/facebookresearch/segment-anything.git
-```
-
-**Windows only — triton patch** (triton is Linux-only, this replaces it):
-
-```bash
-# Find where efficientvit is installed
-python -c "import efficientvit, os; print(os.path.dirname(efficientvit.__file__))"
-# It will print something like:
-# C:\Users\...\miniconda3\envs\daft\Lib\site-packages\efficientvit
-# Use that path below:
-
-cat > "<ABOVE_PATH>/models/nn/triton_rms_norm.py" << 'EOF'
-"""Pure-PyTorch fallback -- triton is Linux-only, not needed for our use case."""
-import torch
-from torch.autograd import Function
-
-class TritonRMSNorm2dFunc(Function):
-    @staticmethod
-    def forward(ctx, x, weight, bias, eps):
-        rms = x.pow(2).mean(dim=1, keepdim=True).add(eps).sqrt()
-        y = x / rms
-        if weight is not None:
-            y = y * weight.view(1, -1, 1, 1)
-        if bias is not None:
-            y = y + bias.view(1, -1, 1, 1)
-        ctx.save_for_backward(x, weight, bias, rms)
-        ctx.eps = eps
-        return y
-
-    @staticmethod
-    def backward(ctx, grad_output):
-        x, weight, bias, rms = ctx.saved_tensors
-        grad_x = grad_output / rms
-        grad_weight = (grad_output * x / rms).sum(dim=[0, 2, 3]) if weight is not None else None
-        grad_bias = grad_output.sum(dim=[0, 2, 3]) if bias is not None else None
-        return grad_x, grad_weight, grad_bias, None
-EOF
-```
-
-**Verify setup:**
-```bash
-python -c "
-import torch
-from efficientvit.sam_model_zoo import create_efficientvit_sam_model
-print('PyTorch:', torch.__version__)
-print('CUDA:', torch.cuda.is_available())
-m = create_efficientvit_sam_model('efficientvit-sam-l0', pretrained=False)
-print('Model OK -', sum(p.numel() for p in m.parameters())//1_000_000, 'M params')
-"
-```
-
----
-
-## Model Caching
-
-By default, model weights are loaded directly from local `.pth` files — no internet
-caching is involved. When you call `MedSAM("checkpoints/global.pth")` it reads
-the file from disk every time.
-
-**To avoid reloading the model on every run** (useful when running inference in a
-loop or a notebook), keep the model object in memory:
-
-```python
-from model import MedSAM
-import torch
-
-# Load once
-model = MedSAM("checkpoints/global.pth").to("cuda").eval()
-
-# Reuse for many images — no reload
-for npz_path in my_files:
-    process_2d(model, npz_path, pred_dir, "cuda")
-```
-
-The `inference.py` script already does this via `_MODEL_CACHE` — each specialist
-is loaded once and reused for all files of that modality.
-
-**Cache location for pip packages** (efficientvit downloads nothing automatically):
-```bash
-# PyTorch model cache (if torch.hub is ever used):
-# Windows: C:\Users\<you>\.cache\torch\hub\
-# Linux:   ~/.cache/torch/hub/
-
-# To change the cache directory:
-set TORCH_HOME=D:\my_cache    # Windows
-export TORCH_HOME=/data/cache  # Linux
-```
-
----
-
-## Running the Demo
-
-```bash
-conda activate daft
-cd DAFT-MedSAM-on-Laptop/
-
-# Fast: inference + evaluation only (~1-2 min on GPU)
-python demo.py --skip_training
-
-# Full pipeline: visualise + DAFT training demo + inference + evaluate
-python demo.py
-```
-
-**Output:**
-```
-data/viz/            — visualisation plots (4 panels per file)
-data/demo_preds/     — predicted segmentation masks
-results_demo.csv     — DSC scores per file
-results_demo.png     — bar chart vs paper reference
-```
-
----
-
-## Running Individual Scripts
-
-```bash
-cd DAFT-MedSAM-on-Laptop/
-
-# Visualise demo data
-python visualize.py
-python visualize.py --file 2DBox_US    # one file only
-
-# Inference with the global model
-python inference.py --img_dir data/test_imgs --pred_dir data/test_preds
-
-# Evaluate predictions
-python evaluate.py --pred_dir data/test_preds --gt_dir data/test_gts --out_csv results.csv
-
-# Distillation (needs full training data for real results; demo data for pipeline check)
-python distill.py \
-  --train_csv data/datasplit/demo_train.csv \
-  --val_csv   data/datasplit/demo_val.csv   \
-  --lite_medsam lite_medsam.pth \
-  --epochs 2 --batch_size 1 --num_workers 0
-
-# Merge distilled encoder + LiteMedSAM decoder
-python merge_weights.py \
-  --lite_medsam lite_medsam.pth \
-  --encoder     checkpoints/distilled_encoder.pth \
-  --output      checkpoints/merged.pth
-
-# Train a DAFT specialist (example: MR)
-python train.py \
-  --train_csv data/datasplit/modalities/3D.train.csv \
-  --val_csv   data/datasplit/modalities/3D.val.csv   \
-  --weights   checkpoints/global.pth \
-  --name      3D \
-  --epochs    20 --batch_size 4
-```
-
----
-
-## Full Workflow Reference
-
-```
-distill.py        EfficientViT learns TinyViT features    → checkpoints/distilled_encoder.pth
-merge_weights.py  Encoder + LiteMedSAM decoder            → checkpoints/merged.pth
-prepare_data.py   Build train/val CSV splits              → data/datasplit/
-train.py          Global fine-tune (all modalities)       → checkpoints/global/best.pth
-train.py ×11      DAFT specialists (one per modality)     → checkpoints/US/best.pth ...
-inference.py      Filename routing → correct specialist   → data/test_preds/
-evaluate.py       Compute DSC                             → results.csv
-```
-
-Steps 1–4 are already complete: `global.pth` is the output.
-
----
-
-## Next Steps
-
-### Get training data without downloading everything
-
-- **MR subset only** — closes the biggest gap (0.389 → ~0.899 expected)
-  Download just the MR folder from the competition dataset (Zenodo)
-- **Public alternatives:**
-  - CT/MR: [Medical Segmentation Decathlon](http://medicaldecathlon.com/)
-  - X-ray: [NIH ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)
-
-### Train on the cloud (no local disk space needed)
-
-| Platform | GPU | Disk | Cost |
-|----------|-----|------|------|
-| Kaggle | P100 16GB | 30 GB | Free |
-| Google Colab | T4 15GB | 15 GB | Free (session limits) |
-| RunPod / Vast.ai | A100 / RTX 4090 | Flexible | ~$0.50–1.50/hr |
-
-```bash
-# On any cloud machine:
-git clone https://github.com/YOUR_USERNAME/daft-drive.git
-cd daft-drive/DAFT-MedSAM-on-Laptop
-pip install torch torchvision monai opencv-python pandas numpy tqdm matplotlib
-pip install git+https://github.com/mit-han-lab/efficientvit.git
-pip install git+https://github.com/facebookresearch/segment-anything.git
-# place global.pth in checkpoints/ then:
-python train.py --train_csv ... --val_csv ... --weights checkpoints/global.pth --name MR
-```
-
-### OpenVINO for faster CPU inference (6.5× speedup)
-
-```bash
-pip install openvino
-
-# Export to ONNX
-python -c "
-import torch
-from model import MedSAM
-model = MedSAM('checkpoints/global.pth').eval()
-torch.onnx.export(model,
-    (torch.zeros(1,3,256,256), torch.zeros(1,1,1,4)),
-    'global.onnx', opset_version=17,
-    input_names=['image','box'], output_names=['logits','iou'])
-"
-
-# Convert to OpenVINO IR
-mo --input_model global.onnx --output_dir checkpoints/openvino/
-# Produces: checkpoints/openvino/global.xml + global.bin
-```
-
----
-
-## Adapting to Autonomous Driving (BDD100K)
-
-| What | Medical (this project) | Driving (BDD100K) |
-|------|----------------------|-------------------|
-| Data format | NPZ (NumPy archives) | JPEG + JSON annotations |
-| Modality splits | CT / MRI / X-ray / ... | Day / Night / Rain / Fog / ... |
-| Routing | Filename prefix | JSON metadata (time_of_day, weather) |
-| Input size | 256×256 | 1024×1024 (or 512×512) |
-| Bounding boxes | Provided in NPZ | Provided in JSON annotations |
-| What to specialise | Imaging modality | Driving conditions |
-
-Best candidates for DAFT specialisation on BDD100K:
-night-time, heavy rain, and dense urban scenes — these differ most
-from the average training distribution and benefit most from a specialist.
+Dawn/dusk images are included in training (assigned to the day condition) but flagged separately in the manifests for robustness evaluation.
