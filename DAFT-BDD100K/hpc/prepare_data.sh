@@ -13,20 +13,17 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
 #SBATCH --time=06:00:00
-#SBATCH --output=/home/3223837/DAFT-BDD100K/logs/prepare_%j.out
-#SBATCH --error=/home/3223837/DAFT-BDD100K/logs/prepare_%j.err
+#SBATCH --output=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/prepare_%j.out
+#SBATCH --error=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/prepare_%j.err
 
 set -e
-mkdir -p /home/3223837/DAFT-BDD100K/logs
+mkdir -p /mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs
 
 source /software/miniconda3/etc/profile.d/conda.sh
 conda activate daft
-cd $HOME/DAFT-BDD100K
+cd /mnt/beegfsstudents/home/3223837/DAFT-BDD100K
 
-if [ -z "$HF_TOKEN" ]; then
-    echo "WARNING: HF_TOKEN not set. Anonymous HF downloads may hit rate limits."
-    echo "  Set it with: export HF_TOKEN=hf_xxx && sbatch hpc/prepare_data.sh"
-fi
+export HF_TOKEN= hf_xxx 
 
 echo "===== Preparing BDD100K (full dataset) ====="
 python prepare_data.py --max_samples 0

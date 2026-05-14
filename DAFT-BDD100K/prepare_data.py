@@ -35,10 +35,22 @@ Usage
 """
 from __future__ import annotations
 
+import os
+
+# Must be set before importing fiftyone — it reads config at import time.
+# Redirects both the FiftyOne dataset dir and the HuggingFace download cache
+# (FiftyOne sets HF_HOME = <dataset_dir>/huggingface internally) to beegfs,
+# which has enough space. Falls back to the env var if already set externally.
+_BEEGFS_FIFTYONE = os.environ.get(
+    "FIFTYONE_DEFAULT_DATASET_DIR",
+    "/mnt/beegfsstudents/home/3223837/fiftyone",
+)
+os.environ["FIFTYONE_DEFAULT_DATASET_DIR"] = _BEEGFS_FIFTYONE
+os.makedirs(_BEEGFS_FIFTYONE, exist_ok=True)
+
 import argparse
 import csv
 import json
-import os
 import shutil
 from pathlib import Path
 
@@ -209,6 +221,7 @@ def main():
             max_samples=max_s,
             name=f"bdd100k_{split}",
             overwrite=True,
+            label_types=["detections"],   # skip drivable/lane fields — detection only
             **load_kwargs,
         )
 

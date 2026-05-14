@@ -18,17 +18,17 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
 #SBATCH --time=12:00:00
-#SBATCH --output=/home/3223837/DAFT-BDD100K/logs/retrain_day_%j.out
-#SBATCH --error=/home/3223837/DAFT-BDD100K/logs/retrain_day_%j.err
+#SBATCH --output=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/retrain_day_%j.out
+#SBATCH --error=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/retrain_day_%j.err
 
 set -e
-mkdir -p /home/3223837/DAFT-BDD100K/logs
+mkdir -p /mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs
 
 source /software/miniconda3/etc/profile.d/conda.sh
 conda activate daft
 module load cuda/12.4 || true
 
-cd $HOME/DAFT-BDD100K
+cd /mnt/beegfsstudents/home/3223837/DAFT-BDD100K
 
 # Verify global checkpoint is YOLOv8s (should be ~22 MB)
 GLOBAL=checkpoints/global/weights/best.pt

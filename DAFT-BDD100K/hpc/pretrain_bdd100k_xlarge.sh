@@ -1,21 +1,20 @@
 #!/bin/bash
-# BDD100K large baseline: fine-tune YOLOv8m on all conditions.
-# Produces the "Global YOLOv8m" reference point for the comparison table.
+# BDD100K xlarge baseline: fine-tune YOLOv8x on all conditions.
+# YOLOv8x is the largest/slowest YOLOv8 — optional reference point.
 # Runs independently of the DAFT pipeline — no distillation step needed.
 #
-# Usage: sbatch hpc/pretrain_bdd100k_large.sh
-# Checkpoint: checkpoints/large/weights/best.pt
-# Pass to eval:  python eval_full.py --large_ckpt checkpoints/large/weights/best.pt
+# Usage: sbatch hpc/pretrain_bdd100k_xlarge.sh
+# Checkpoint: checkpoints/xlarge/weights/best.pt
 
-#SBATCH --job-name=bdd100k-large
+#SBATCH --job-name=bdd100k-xlarge
 #SBATCH --partition=stud
 #SBATCH --qos=stud
 #SBATCH --gres=gpu:4g.40gb:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
 #SBATCH --time=23:00:00
-#SBATCH --output=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/large_%j.out
-#SBATCH --error=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/large_%j.err
+#SBATCH --output=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/xlarge_%j.out
+#SBATCH --error=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/xlarge_%j.err
 
 set -e
 mkdir -p /mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs
@@ -32,13 +31,13 @@ test -f data/bdd100k/yolo/dataset.yaml || {
     exit 1
 }
 
-echo "===== Fine-tuning YOLOv8m (large baseline) ====="
+echo "===== Fine-tuning YOLOv8x (xlarge baseline) ====="
 python train.py \
     --data     data/bdd100k/yolo/dataset.yaml \
-    --weights  yolov8m.pt \
-    --name     large \
+    --weights  yolov8x.pt \
+    --name     xlarge \
     --epochs   50 \
-    --batch    8 \
+    --batch    4 \
     --imgsz    640 \
     --lr       5e-5 \
     --patience 20 \
@@ -47,6 +46,4 @@ python train.py \
     --device   cuda
 
 echo ""
-echo "Large global model saved to: checkpoints/large/weights/best.pt"
-echo "Pass to evaluation with:"
-echo "  python eval_full.py --large_ckpt checkpoints/large/weights/best.pt"
+echo "XLarge global model saved to: checkpoints/xlarge/weights/best.pt"

@@ -552,13 +552,6 @@ def plot_accuracy_speed(demo: bool = False) -> None:
     ax.spines[["top", "right"]].set_visible(False)
     ax.tick_params(labelsize=10)
 
-    # ── Timing note ───────────────────────────────────────────────────────────
-    ax.text(0.01, 0.97,
-            "⚠ CPU timing (single image).  Hard Routing ≈ same speed as Global Distilled\n"
-            "— both use YOLOv8s; no neural router overhead for Hard Routing.",
-            transform=ax.transAxes, fontsize=7.5, va="top", color="#666",
-            bbox=dict(boxstyle="round,pad=0.3", facecolor="#f5f5f5",
-                      edgecolor="#ddd", linewidth=0.6))
 
     # ── Legend ────────────────────────────────────────────────────────────────
     legend_elements = [

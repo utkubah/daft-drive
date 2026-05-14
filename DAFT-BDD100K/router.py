@@ -157,6 +157,7 @@ class ImageRouter:
         img = cv2.resize(img, (self.IMG_SIZE, self.IMG_SIZE))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         tensor = torch.from_numpy(img).permute(2, 0, 1).float() / 255.0
+        # ImageNet mean/std normalisation — matches the transforms used during training
         tensor = TF.normalize(tensor, mean=[0.485, 0.456, 0.406],
                                        std=[0.229, 0.224, 0.225])
         tensor = tensor.unsqueeze(0).to(self.device)
@@ -207,6 +208,9 @@ def blend_detections(
 
 
 def _greedy_nms(boxes: np.ndarray, iou_thr: float) -> list[int]:
+    # Sort by confidence descending, then iteratively suppress lower-confidence
+    # boxes that overlap the current best box AND share the same class label.
+    # Cross-class suppression is intentionally skipped (a car and a bus can overlap).
     order = np.argsort(-boxes[:, 4])
     keep  = []
     while len(order):
@@ -222,6 +226,8 @@ def _greedy_nms(boxes: np.ndarray, iou_thr: float) -> list[int]:
 
 
 def _iou(box: np.ndarray, others: np.ndarray) -> np.ndarray:
+    # Standard intersection-over-union between one box and an array of boxes.
+    # Returns 0 for degenerate (zero-area) pairs to avoid divide-by-zero.
     x1 = np.maximum(box[0], others[:, 0])
     y1 = np.maximum(box[1], others[:, 1])
     x2 = np.minimum(box[2], others[:, 2])

@@ -1,7 +1,7 @@
 #!/bin/bash
-# Train the RouterHead classifier on top of the frozen global backbone.
-# Requires: checkpoints/global/weights/best.pt + prepared data manifests.
-# Run after pretrain_bdd100k.sh and prepare_data.sh complete.
+# Trains the MobileNetV3-small image router that classifies each frame
+# into one of the five driving conditions at inference time.
+# Needs the global checkpoint and the val manifests from prepare_data.sh.
 #
 # Usage: sbatch hpc/train_router.sh
 
@@ -12,17 +12,17 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=02:00:00
-#SBATCH --output=/home/3223837/DAFT-BDD100K/logs/router_%j.out
-#SBATCH --error=/home/3223837/DAFT-BDD100K/logs/router_%j.err
+#SBATCH --output=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/router_%j.out
+#SBATCH --error=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/router_%j.err
 
 set -e
-mkdir -p /home/3223837/DAFT-BDD100K/logs
+mkdir -p /mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs
 
 source /software/miniconda3/etc/profile.d/conda.sh
 conda activate daft
 module load cuda/12.4 || true
 
-cd $HOME/DAFT-BDD100K
+cd /mnt/beegfsstudents/home/3223837/DAFT-BDD100K
 
 test -f checkpoints/global/weights/best.pt || {
     echo "ERROR: checkpoints/global/weights/best.pt not found."

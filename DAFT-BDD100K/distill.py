@@ -97,7 +97,10 @@ def main():
             for p in m.parameters():
                 p.requires_grad_(False)
 
-    # --- hook SPPF outputs ---
+    # We use forward hooks to capture the SPPF output tensors without modifying
+    # the model's forward() method. The hook writes into a one-element list so
+    # the inner closure can update it across calls (plain variables can't be
+    # rebound inside a closure in Python 2-style, but a mutable container works).
     teacher_feat: list[torch.Tensor | None] = [None]
     student_feat: list[torch.Tensor | None] = [None]
 

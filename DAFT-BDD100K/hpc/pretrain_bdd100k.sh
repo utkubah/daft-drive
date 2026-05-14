@@ -1,6 +1,9 @@
 #!/bin/bash
-# BDD100K Stage 1: distillation + global fine-tune.
-# Requires data to be prepared first via sbatch hpc/prepare_data.sh
+# Trains the global YOLOv8s model used as the starting point for all specialists.
+# Step 1: distill YOLOv8m → YOLOv8s so the small model inherits good feature representations.
+# Step 2: fine-tune the distilled student on all of BDD100K.
+#
+# Run prepare_data.sh first. Output: checkpoints/global/weights/best.pt
 #
 # Usage: sbatch hpc/pretrain_bdd100k.sh
 
@@ -11,17 +14,17 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
 #SBATCH --time=5:00:00
-#SBATCH --output=/home/3223837/DAFT-BDD100K/logs/pretrain_%j.out
-#SBATCH --error=/home/3223837/DAFT-BDD100K/logs/pretrain_%j.err
+#SBATCH --output=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/pretrain_%j.out
+#SBATCH --error=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/pretrain_%j.err
 
 set -e
-mkdir -p /home/3223837/DAFT-BDD100K/logs
+mkdir -p /mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs
 
 source /software/miniconda3/etc/profile.d/conda.sh
 conda activate daft
 module load cuda/12.4 || true
 
-cd $HOME/DAFT-BDD100K
+cd /mnt/beegfsstudents/home/3223837/DAFT-BDD100K
 
 test -f data/bdd100k/yolo/dataset.yaml || {
     echo "ERROR: data/bdd100k/yolo/dataset.yaml not found."

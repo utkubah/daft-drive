@@ -16,16 +16,16 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=02:00:00
-#SBATCH --output=/home/3223837/DAFT-BDD100K/logs/eval_%j.out
-#SBATCH --error=/home/3223837/DAFT-BDD100K/logs/eval_%j.err
+#SBATCH --output=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/eval_%j.out
+#SBATCH --error=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/eval_%j.err
 
 set -e
-mkdir -p /home/3223837/DAFT-BDD100K/logs
+mkdir -p /mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs
 
 source /software/miniconda3/etc/profile.d/conda.sh
 conda activate daft
 
-cd $HOME/DAFT-BDD100K
+cd /mnt/beegfsstudents/home/3223837/DAFT-BDD100K
 
 ls checkpoints/city_day/weights/best.pt 2>/dev/null || \
 ls checkpoints/highway_day/weights/best.pt 2>/dev/null || {

@@ -1,6 +1,8 @@
 #!/bin/bash
-# BDD100K Stage 2: train all 5 DAFT specialists sequentially in one job.
-# Avoids QOSMaxSubmitJobPerUserLimit (no job array).
+# Fine-tunes one specialist per driving condition (city_day, city_night,
+# highway_day, highway_night, residential), all in a single job to stay
+# within the per-user job submission limit.
+# Needs the global checkpoint from pretrain_bdd100k.sh first.
 #
 # Usage: sbatch hpc/train_daft_bdd100k.sh
 
@@ -11,17 +13,17 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
 #SBATCH --time=23:00:00
-#SBATCH --output=/home/3223837/DAFT-BDD100K/logs/daft_%j.out
-#SBATCH --error=/home/3223837/DAFT-BDD100K/logs/daft_%j.err
+#SBATCH --output=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/daft_%j.out
+#SBATCH --error=/mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs/daft_%j.err
 
 set -e
-mkdir -p /home/3223837/DAFT-BDD100K/logs
+mkdir -p /mnt/beegfsstudents/home/3223837/DAFT-BDD100K/logs
 
 source /software/miniconda3/etc/profile.d/conda.sh
 conda activate daft
 module load cuda/12.4 || true
 
-cd $HOME/DAFT-BDD100K
+cd /mnt/beegfsstudents/home/3223837/DAFT-BDD100K
 
 test -f checkpoints/global/weights/best.pt || {
     echo "ERROR: checkpoints/global/weights/best.pt not found."
