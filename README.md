@@ -53,12 +53,12 @@ BDD100K frames
 
 ## Setup
 
-**Requirements:** Python 3.10+, CUDA 12.4, ~50 GB disk for BDD100K.
+**Requirements:** Python 3.10+, CUDA 12.4, ~20 GB disk for BDD100K.
 
 ```bash
 # Clone and create the environment
-git clone https://github.com/<your-org>/DAFT-BDD100K.git
-cd DAFT-BDD100K
+git clone https://github.com/utkubah/daft-drive.git
+cd daft-drive/DAFT-BDD100K
 conda env create -f environment.yml
 conda activate daft
 ```
@@ -117,11 +117,11 @@ sbatch --dependency=afterok:$DAFT:$RTR:$LRG hpc/eval_full.sh
 # consolidated table + plots, global baselines comparison
 sbatch hpc/eval_full.sh
 
-# Or locally (no GPU required for the plots and report):
-python compare.py --device cpu
-python eval_topk.py --device cpu --n_bench 50 --n_map 500
-python eval_full.py --device cpu --n_bench 50
-python collect_missing_data.py --device cpu --n_samples 50
+# Or locally (GPU recommended — inference scripts are slow on CPU):
+python compare.py --device cuda
+python eval_topk.py --device cuda --n_bench 50 --n_map 500
+python eval_full.py --device cuda --n_bench 50
+python collect_missing_data.py --device cuda --n_samples 50
 ```
 
 ### 4. Run inference on new images
@@ -148,7 +148,7 @@ DAFT-BDD100K/
 ├── compare.py             # per-condition mAP: global vs specialist
 ├── eval_topk.py           # k=1..5 sweep: mAP50 + GPU timing
 ├── eval_full.py           # consolidated table, plots, eval report
-├── collect_missing_data.py # global baselines comparison (distilled/m/x)
+├── collect_missing_data.py # global baselines + DAFT k=2/k=5 per-condition comparison
 ├── visualize.py           # GT / Global / Specialist side-by-side panels
 ├── plot_results.py        # regenerate all figures from saved CSVs
 ├── environment.yml        # conda environment
