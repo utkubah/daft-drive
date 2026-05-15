@@ -14,12 +14,13 @@ ImageRouter     MobileNetV3-small classifier trained on condition labels.
 
 Top-K selection
 ---------------
-select_top_k(weights, top_k="auto")
-  auto  if max_weight >= 0.70 → top-1 (single specialist, fast path)
-        else                  → top-2 (blend two specialists)
-  1     always top-1
+select_top_k(weights, top_k=1)
+  1     always top-1  ← default; used in all paper experiments
   2     always top-2
   5     blend all 5 specialists
+  "auto"  dynamic: top-1 if max_weight >= 0.70, else top-2.
+          NOT used in any reported experiment — K is a fixed
+          hyperparameter throughout the paper.
 
 Detection blending
 ------------------
@@ -45,12 +46,15 @@ CONFIDENT_THRESHOLD = 0.70
 
 def select_top_k(
     weights: dict[str, float],
-    top_k: str | int = "auto",
+    top_k: str | int = 1,
     threshold: float = CONFIDENT_THRESHOLD,
 ) -> list[tuple[str, float]]:
     """
-    Return [(condition, normalised_weight), ...] with 1 or 2 entries.
-    Only considers conditions that have weight > 0.
+    Return [(condition, normalised_weight), ...] for the top-K specialists.
+
+    top_k=1 is the default and is used in all paper experiments (Tables 1–4).
+    top_k="auto" is a convenience mode (top-1 if confident, else top-2) that
+    was NOT evaluated in the paper; K is always fixed in reported experiments.
     """
     ranked = sorted(weights.items(), key=lambda x: x[1], reverse=True)
     ranked = [(c, float(w)) for c, w in ranked if w > 0]
@@ -76,7 +80,12 @@ class MetadataRouter:
     """
     Rule-based soft weights from BDD100K scene + timeofday labels.
 
-    dawn/dusk is split 50/50 between the day and night variant of the scene.
+    This is an upper-bound oracle used for controlled experiments only.
+    Metadata (scene, timeofday) is unavailable from a live camera stream,
+    so MetadataRouter is NOT the deployable path — ImageRouter is.
+    In the paper it appears as "Hard Routing (oracle, K=1)" in Table 1.
+
+    dawn/dusk receives 50/50 day/night weight (used in Table 4 only).
     Unknown or unsupported scenes fall back to uniform weights.
     """
 

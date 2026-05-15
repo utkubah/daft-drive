@@ -1,13 +1,18 @@
 """
 inference.py
 ============
-Adaptive DAFT routing for BDD100K object detection.
+DAFT-Drive inference: route each image to the appropriate specialist(s).
 
-Supports:
-  - metadata-driven soft weights
-  - top-K selection: auto / 1 / 2 / 5
-  - weighted blending via blend_detections
-  - specialist fallback to global if missing
+Routing priority (highest to lowest):
+  1. --condition flag  → forced single specialist or global
+  2. --router_ckpt     → ImageRouter (deployable path, no metadata needed)
+  3. --manifest        → MetadataRouter oracle (controlled experiments only)
+  4. fallback          → global model
+
+top-K selection (--top_k): use a fixed integer (1, 2, or 5).
+  K=1 is the recommended operating point (84.6 FPS, 0.6819 mAP50).
+  "auto" mode (dynamic K based on router confidence) is available but
+  was NOT evaluated in the paper — K is always fixed in reported results.
 """
 
 from __future__ import annotations
@@ -216,7 +221,9 @@ def get_args():
     p.add_argument("--pred_dir",    default="data/predictions")
     p.add_argument("--conf",        type=float, default=0.25)
     p.add_argument("--iou_nms",     type=float, default=0.50)
-    p.add_argument("--top_k",       default="auto", choices=["auto", "1", "2", "5"])
+    p.add_argument("--top_k",       default="1", choices=["1", "2", "5", "auto"],
+                   help="Number of specialists to activate. K=1 matches paper results. "
+                        "'auto' (dynamic K) is not evaluated in the paper.")
     p.add_argument("--device",      default="")
     return p.parse_args()
 

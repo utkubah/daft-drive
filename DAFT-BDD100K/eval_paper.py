@@ -685,7 +685,7 @@ def plot_ablations(abl_rows: list[dict]) -> None:
                   alpha=0.88, edgecolor="white", linewidth=1.2)
     ax.bar_label(bars, fmt="%.3f", padding=3, fontsize=8)
     ax.set_ylim(0, max(vals) * 1.18)
-    ax.set_ylabel("mAP50  (torchmetrics — relative ordering)")
+    ax.set_ylabel("mAP50")
     ax.set_title("Routing Ablation Study")
     ax.tick_params(axis="x", rotation=25)
     ax.grid(axis="y")
@@ -734,8 +734,8 @@ def plot_dawn_dusk(dd_rows: list[dict]) -> None:
                   edgecolor="white", linewidth=1.2)
     ax.bar_label(bars, fmt="%.3f", padding=3, fontsize=10)
     ax.set_ylim(0, max(vals) * 1.20)
-    ax.set_ylabel("mAP50  (torchmetrics)")
-    ax.set_title("Dawn/Dusk Robustness: k=2 Blending vs Hard Routing")
+    ax.set_ylabel("mAP50")
+    ax.set_title("Blending Under Ambiguous Lighting: k=2 vs Hard Routing")
     ax.grid(axis="y")
     ax.spines[["top", "right"]].set_visible(False)
     plt.tight_layout()
@@ -884,8 +884,11 @@ def main():
 
     sizes = condition_sizes()
 
-    # ── Phase 1: per-condition model.val() for all single models ─────────────
-    print("\n===== Phase 1: Per-condition mAP (model.val()) =====")
+    # ── Phase 1: Per-condition mAP → Table 1 (per-condition columns) ─────────
+    # Uses Ultralytics model.val() on each condition YAML — same pipeline as
+    # training, directly comparable. Global models run on all 5 condition splits;
+    # each specialist runs only on its own condition split (no cross-evals).
+    print("\n===== Phase 1: Per-condition mAP (model.val()) — Table 1 =====")
     cond_results: dict[str, dict] = {}   # {cond: {model_label: {map50, map5095, per_class}}}
 
     # Global models: evaluate on all 5 condition val sets
@@ -924,8 +927,10 @@ def main():
         cond_results[cond]["specialist"] = res.get("per_class", {})
         cond_results[cond]["global"]     = eval_cache["Global Distilled"][cond].get("per_class", {})
 
-    # ── Phase 2: Speed benchmarking ───────────────────────────────────────────
-    print(f"\n===== Phase 2: Speed ({args.n_bench} images) =====")
+    # ── Phase 2: Speed benchmarking → Table 1 (FPS column) + Table 2 ────────
+    # FPS measured at batch=1 with pre-loaded models on NVIDIA A100 80GB PCIe.
+    # End-to-end latency: routing + specialist forward + merge/NMS.
+    print(f"\n===== Phase 2: Speed ({args.n_bench} images) — Table 1 FPS + Table 2 =====")
     bench = load_bench(args.n_bench)
 
     named_models = {"Global Distilled": global_m}
@@ -990,8 +995,13 @@ def main():
     # DAFT k=2..5 accuracy is measured via image-by-image eval in eval_ksweep;
     # using spec_m50 here would make k=2..5 show identical mAP as k=1 (misleading).
 
-    # ── Phase 3: Dawn/dusk ────────────────────────────────────────────────────
-    print("\n===== Phase 3: Dawn/Dusk Analysis =====")
+    # ── Phase 3: Dawn/dusk blending → Table 4 + Figure 8 ────────────────────
+    # Evaluates K=2 metadata blending vs Hard Routing vs DAFT K=1 on the 661
+    # dawn/dusk validation images. Uses MetadataRouter with 50/50 day/night
+    # weight for the K=2 blending row — this is an oracle experiment, not the
+    # deployable path. Both day and night specialists saw dawn/dusk during
+    # training, so this measures ensembling on a shared subset, not OOD robustness.
+    print("\n===== Phase 3: Dawn/Dusk Analysis — Table 4 + Figure 8 =====")
     dd_samples = load_dawn_dusk_samples(max_n=args.n_abl if args.n_abl else 0)
     dd_rows: list[dict] = []
     if dd_samples and router:
@@ -1001,10 +1011,14 @@ def main():
         print("  Skipping — no router checkpoint")
 
     # ── Phase 4: Router accuracy ──────────────────────────────────────────────
+    # ── Phase 4: Router accuracy → Figure 4 (confusion matrix) ──────────────
+    # Top-1 accuracy of ImageRouter vs ground-truth condition on val.csv.
+    # Produces router_accuracy.csv (per-condition %) and the 5×5 confusion
+    # matrix (router_confusion_matrix.csv + router_confusion_matrix.png).
     router_acc_rows:  list[dict] = []
     router_conf_rows: list[dict] = []
     if router and not args.skip_router:
-        print("\n===== Phase 4: Router Accuracy =====")
+        print("\n===== Phase 4: Router Accuracy — Figure 4 =====")
         router_acc_rows, router_conf_rows = eval_router_accuracy(router, args.device)
 
     # ── Phase 5: Ablation study ───────────────────────────────────────────────
@@ -1015,15 +1029,23 @@ def main():
     imgbyimg_val = random.sample(all_val, min(args.n_abl, len(all_val))) if args.n_abl else all_val
     print(f"\n  Image-by-image sample: {len(imgbyimg_val)} images (seed=42)")
 
+    # ── Phase 5: K-sweep + accuracy-speed tradeoff → Table 2 + Figure 3 ─────
+    # Evaluates all strategies image-by-image with torchmetrics so every point
+    # on the accuracy-speed scatter uses the same evaluator. Includes global
+    # baselines so they appear in Figure 3 alongside the DAFT K=1..5 curve.
     ksweep_rows: list[dict] = []
     if router:
-        print("\n===== Phase 5: K-sweep tradeoff (image-by-image, torchmetrics) =====")
+        print("\n===== Phase 5: K-sweep tradeoff — Table 2 + Figure 3 =====")
         ksweep_rows = eval_ksweep(imgbyimg_val, global_m, large_m, xlarge_m,
                                   specialists, router, args.device, bench)
 
+    # ── Phase 6: Routing ablation → Table 3 + Figure 7 ──────────────────────
+    # Compares: Worst Routing / Random Routing / DAFT K=1 / Uniform Blend K=5
+    # plus single-specialist baselines. Uses torchmetrics on the same
+    # imgbyimg_val sample as the K-sweep (seed=42) for consistent comparison.
     abl_rows: list[dict] = []
     if router and not args.skip_abl:
-        print("\n===== Phase 6: Ablation Study =====")
+        print("\n===== Phase 6: Routing Ablation — Table 3 + Figure 7 =====")
         print(f"  Evaluating on {len(imgbyimg_val)} val images")
         abl_rows = eval_ablations(imgbyimg_val, global_m, specialists, router, args.device, bench)
 
@@ -1039,8 +1061,24 @@ def main():
                 row["overall_map5095"] = ks.get("map5095")
                 row["fps"]             = ks["fps"]   # also align FPS
 
-    # ── Per-class aggregation ──────────────────────────────────────────────────
-    print("\n===== Per-class AP50 =====")
+        # Add DAFT k=2 and k=5 to main_rows with per-condition scores from ksweep
+        for k in [2, 5]:
+            label = f"DAFT k={k}"
+            ks = ksweep_lookup.get(label)
+            if ks:
+                row = {"strategy": label,
+                       "fps":             ks["fps"],
+                       "overall_map50":   ks["map50"],
+                       "overall_map5095": ks.get("map5095")}
+                for cond in CONDITIONS:
+                    row[f"{cond}_map50"]   = ks.get(f"{cond}_map50")
+                    row[f"{cond}_map5095"] = None   # not tracked per-condition in ksweep
+                main_rows.append(row)
+
+    # ── Per-class aggregation → Figure 5 + per_class.csv ────────────────────
+    # Weighted average of per-class AP50 across conditions (weighted by val
+    # image count). Gain = specialist_AP50 - global_AP50. Supports §5.6 analysis.
+    print("\n===== Per-class AP50 — Figure 5 =====")
     pc_rows = aggregate_per_class(cond_results, sizes)
     for r in pc_rows[:5]:
         print(f"    {r['class_name']:<16} global={r['global_ap50']:.3f}  "
