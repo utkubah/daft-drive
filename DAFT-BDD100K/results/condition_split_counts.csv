@@ -1,0 +1,8 @@
+condition,train_count,val_count
+city_day,3530,3530
+city_night,2582,2582
+highway_day,1492,1492
+highway_night,1007,1007
+residential,1253,1253
+all_val,N/A,10000
+dawn_dusk_val,N/A,661

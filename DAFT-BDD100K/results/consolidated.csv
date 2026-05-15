@@ -1,6 +1,0 @@
-strategy,note,mAP50,mAP50_95,precision,recall,mAP_source,ms_per_img,std_ms,fps,speedup_vs_large,speedup_vs_distill,delta_map50_vs_large,delta_map50_vs_distill
-Global Large,YOLOv8m pretrained COCO only — NOT fine-tuned on BDD100K,N/A,N/A,N/A,N/A,N/A,50.3400,2.4200,19.9000,1.0000,1.0000,N/A,N/A
-Global Distilled,YOLOv8s distilled from YOLOv8m + BDD100K fine-tune,0.4699,0.3456,0.7308,0.4687,torchmetrics on full val,50.2800,2.6100,19.9000,1.0000,1.0000,N/A,+0.0000
-Hard Routing,MetadataRouter → top-1 specialist; mAP ≈ adaptive k=1 (perfect routing),0.6766,N/A,N/A,N/A,approx = adaptive k=1 (router acc ~1.0),52.4300,6.8800,19.1000,0.9600,0.9600,N/A,+0.2067
-Adaptive k=1,ImageRouter → top-1 (auto confidence threshold),0.6766,N/A,N/A,N/A,torchmetrics on full val,81.1200,8.5600,12.3000,0.6200,0.6200,N/A,+0.2067
-Adaptive k=2,ImageRouter → top-2 blend (weighted NMS),0.6837,N/A,N/A,N/A,torchmetrics on full val,109.6800,3.3700,9.1000,0.4600,0.4600,N/A,+0.2138

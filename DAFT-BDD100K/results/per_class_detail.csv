@@ -1,0 +1,58 @@
+condition,class,class_name,global_ap50,spec_ap50,gain
+city_day,0,bicycle,0.5617,0.6472,0.0855
+city_day,1,bus,0.731,0.818,0.087
+city_day,2,car,0.8036,0.8251,0.0215
+city_day,3,motor,0.5626,0.6702,0.1076
+city_day,4,other person,0.0,0.0,0.0
+city_day,5,other vehicle,0.3961,0.6884,0.2923
+city_day,6,pedestrian,0.6437,0.686,0.0423
+city_day,7,rider,0.5104,0.5956,0.0852
+city_day,8,traffic light,0.6219,0.6629,0.041
+city_day,9,traffic sign,0.6219,0.6775,0.0556
+city_day,10,trailer,0.4975,0.995,0.4975
+city_day,11,train,0.0,0.0558,0.0558
+city_day,12,truck,0.7701,0.8577,0.0876
+city_night,0,bicycle,0.6134,0.7202,0.1068
+city_night,1,bus,0.7615,0.8846,0.1231
+city_night,2,car,0.7929,0.8274,0.0345
+city_night,3,motor,0.5046,0.6964,0.1918
+city_night,5,other vehicle,0.4041,0.698,0.2939
+city_night,6,pedestrian,0.6246,0.6868,0.0622
+city_night,7,rider,0.4736,0.544,0.0704
+city_night,8,traffic light,0.6084,0.6666,0.0582
+city_night,9,traffic sign,0.6725,0.7326,0.0601
+city_night,11,train,0.0,0.6959,0.6959
+city_night,12,truck,0.7608,0.8602,0.0994
+highway_day,0,bicycle,0.5342,0.5693,0.0351
+highway_day,1,bus,0.6324,0.7447,0.1123
+highway_day,2,car,0.7459,0.7807,0.0348
+highway_day,3,motor,0.4805,0.5203,0.0398
+highway_day,5,other vehicle,0.2746,0.8022,0.5276
+highway_day,6,pedestrian,0.5014,0.605,0.1036
+highway_day,7,rider,0.3674,0.5226,0.1552
+highway_day,8,traffic light,0.5557,0.6169,0.0612
+highway_day,9,traffic sign,0.698,0.762,0.064
+highway_day,10,trailer,0.0,0.995,0.995
+highway_day,11,train,0.3659,0.8703,0.5044
+highway_day,12,truck,0.6652,0.7925,0.1273
+highway_night,0,bicycle,0.7498,0.7961,0.0463
+highway_night,1,bus,0.7644,0.9096,0.1452
+highway_night,2,car,0.7425,0.8041,0.0616
+highway_night,3,motor,0.2249,0.4168,0.1919
+highway_night,5,other vehicle,0.2154,0.795,0.5796
+highway_night,6,pedestrian,0.4621,0.7091,0.247
+highway_night,7,rider,0.4452,0.495,0.0498
+highway_night,8,traffic light,0.5684,0.6661,0.0977
+highway_night,9,traffic sign,0.757,0.8239,0.0669
+highway_night,11,train,0.995,0.995,0.0
+highway_night,12,truck,0.7431,0.9068,0.1637
+residential,0,bicycle,0.5336,0.6917,0.1581
+residential,1,bus,0.7068,0.8492,0.1424
+residential,2,car,0.8236,0.8511,0.0275
+residential,3,motor,0.698,0.8154,0.1174
+residential,5,other vehicle,0.7131,0.995,0.2819
+residential,6,pedestrian,0.5977,0.7065,0.1088
+residential,7,rider,0.4776,0.6361,0.1585
+residential,8,traffic light,0.5761,0.6341,0.058
+residential,9,traffic sign,0.6698,0.748,0.0782
+residential,12,truck,0.7561,0.8804,0.1243

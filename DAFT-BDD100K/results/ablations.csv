@@ -1,0 +1,10 @@
+strategy,map50,map5095,fps
+Random Routing K=1,0.4088,0.2479,153.0
+Worst Routing K=1,0.3683,0.221,155.4
+DAFT Adaptive K=1,0.6822,0.4742,87.4
+Uniform Blend K=5,0.6573,0.4354,30.3
+Single: city_day,0.4618,0.2967,158.5
+Single: city_night,0.4285,0.2575,153.7
+Single: highway_day,0.4188,0.2447,154.6
+Single: highway_night,0.4392,0.3032,158.0
+Single: residential,0.4209,0.257,158.7

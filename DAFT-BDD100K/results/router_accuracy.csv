@@ -1,0 +1,7 @@
+condition,total,correct,accuracy
+city_day,3530,3291,0.9323
+city_night,2582,2494,0.9659
+highway_day,1492,1474,0.9879
+highway_night,1007,1003,0.996
+residential,1253,1247,0.9952
+overall,9864,9509,0.964

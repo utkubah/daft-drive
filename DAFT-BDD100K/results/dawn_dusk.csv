@@ -1,0 +1,7 @@
+strategy,map50,map5095,n_images
+Global Distilled,0.4531,0.2901,661
+Global Large,0.5053,0.324,661
+Hard Routing,0.5509,0.3751,661
+DAFT k=1,0.5441,0.3708,661
+DAFT k=2,0.5619,0.3707,661
+DAFT k=5,0.5852,0.3843,661
