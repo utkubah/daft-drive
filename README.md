@@ -76,7 +76,7 @@ This generates per-condition YAML files and the manifest CSVs used by all traini
 
 ### 3. Checkpoints
 
-Checkpoints are available on request. Place them as:
+Checkpoints are can be trained with the given scripts:
 
 ```
 checkpoints/
@@ -226,14 +226,12 @@ These five conditions cover 98.6% of the sampled images. Dawn/dusk images (661 i
 | residential | 99.5% |
 | **Overall** | **96.4%** |
 
-Main confusion: city_day ↔ residential (similar daytime lighting and object density).
-
 ## Citation
 
 ```bibtex
-@article{bahcivanoglu2025daftdrive,
+@article{bahcivanoglu2026daftdrive,
   title   = {DAFT-Drive: Condition-Aware Specialist Routing for Autonomous Driving Object Detection},
   author  = {Bah\c{c}{\i}vano\u{g}lu, Utku and Demirkaz{\i}k, Berkay and Karsavurano\u{g}lu, Eren},
-  year    = {2025}
+  year    = {2026}
 }
 ```
