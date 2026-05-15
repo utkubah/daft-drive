@@ -49,4 +49,4 @@ python train.py \
 echo ""
 echo "Large global model saved to: checkpoints/large/weights/best.pt"
 echo "Pass to evaluation with:"
-echo "  python eval_full.py --large_ckpt checkpoints/large/weights/best.pt"
+echo "  python eval.py --large_ckpt checkpoints/large/weights/best.pt"
